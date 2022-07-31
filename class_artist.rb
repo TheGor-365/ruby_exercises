@@ -13,11 +13,10 @@ class Artist
 
   def albums
     puts "The albums of #{name}:"
-    puts
+
     @albums.each_with_index do |album, index|
       puts "\t#{index + 1}. #{album.name} #{album.date} #{album.style}"
     end
-    puts
   end
 end
 
@@ -37,11 +36,10 @@ class Album
 
   def puts_songs
     puts "The album #{name} #{date}, #{style}:"
-    puts
+
     @a_songs.each_with_index do |song_pare, index|
       puts "\tTrack #{index + 1}. #{song_pare.name} #{song_pare.duration}"
     end
-    puts
   end
 end
 
@@ -58,6 +56,7 @@ class Song
     @songs = {@name => @duration}
   end
 end
+
 
 song1 = Song.new 'Nokie', '5 min'
 song2 = Song.new 'My way', '6 min'

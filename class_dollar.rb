@@ -1,5 +1,6 @@
 class DollarRate
   attr_accessor :currency, :sum
+
   @@dollar_rate = 67.15
 
   def initialize currency, sum
@@ -28,3 +29,8 @@ class DollarRate
     puts "The converted sum: #{@result.round(2)}"
   end
 end
+
+rate = DollarRate.menu
+rate2 = DollarRate.new 2, 349
+rate2.convert
+rate2.show_result

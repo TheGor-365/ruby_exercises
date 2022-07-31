@@ -2,7 +2,9 @@ require 'net/http'
 require "uri"
 
 
-class Ipgeobase2
+module Ipgeobase
+  class Error < StandardError; end
+
   attr_reader :country, :countryCode, :city, :lat, :lon
 
   def initialize
@@ -13,53 +15,49 @@ class Ipgeobase2
     @lon = lon
   end
 
-  def lookup(ip)
+  def self.lookup(ip)
     lookup_query = "fields=country,countryCode,city,lat,lon"
     @lookup = URI.parse "http://ip-api.com/xml/#{@ip}?#{lookup_query}"
-    Net::HTTP.get @lookup
+    puts Net::HTTP.get @lookup
   end
 
   def country
-    country_query = "fields=country"
-    @country = URI.parse "http://ip-api.com/xml/#{@ip}?#{country_query}"
-    Net::HTTP.get @country
+    @ip_meta.Ipgeobase.lookup(ip).country
   end
 
-  def countryCode
+  def self.countryCode
     countryCode_query = "fields=countryCode"
     @countryCode = URI.parse "http://ip-api.com/xml/#{@ip}?#{countryCode_query}"
     Net::HTTP.get @countryCode
   end
 
-  def city
+  def self.city
     city_query = "fields=city"
     @city = URI.parse "http://ip-api.com/xml/#{@ip}?#{city_query}"
     Net::HTTP.get @city
   end
 
-  def lat
+  def self.lat
     lat_query = "fields=lat"
     @lat = URI.parse "http://ip-api.com/xml/#{@ip}?#{lat_query}"
     Net::HTTP.get @lat
   end
 
-  def lon
+  def self.lon
     lon_query = "fields=lon"
     @lon = URI.parse "http://ip-api.com/xml/#{@ip}?#{lon_query}"
     Net::HTTP.get @lon
   end
 end
 
-ip_meta = Ipgeobase2.new
-puts
-puts ip_meta.lookup('83.169.216.199')
+ip_meta = Ipgeobase.lookup('83.169.216.199')
 puts
 puts ip_meta.country
 puts
-puts ip_meta.countryCode
-puts
-puts ip_meta.city
-puts
-puts ip_meta.lat
-puts
-puts ip_meta.lon
+# puts ip_meta.countryCode
+# puts
+# puts ip_meta.city
+# puts
+# puts ip_meta.lat
+# puts
+# puts ip_meta.lon

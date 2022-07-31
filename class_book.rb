@@ -23,12 +23,13 @@ class Book
   end
 end
 
+
 book1 = Book.new 'MAN'
 book2 = Book.new 'WOMAN'
 
-book1.add_person :name => 'Walt', :age => 33
-book2.add_person :name => 'Jessie', :age => 32
-book2.add_person :name => 'Eric', :age => 44
+book1.add_person name: 'Walt',   age: 33
+book2.add_person name: 'Jessie', age: 32
+book2.add_person name: 'Eric',   age: 44
 
 book1.show_all
 book2.show_all

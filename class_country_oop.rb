@@ -32,6 +32,7 @@ class Plane
   end
 end
 
+
 airports = []
 
 airport1 = Airport.new 'SVO'
@@ -86,14 +87,11 @@ countries.each do |country|
   country.airports.each do |airport|
     puts "Airport #{airport}"
   end
-  puts
 end
-puts
 
 airports.each do |airport|
   puts "Airport #{airport.name}:"
   airport.planes.each do |plane|
     puts "Plane: #{plane.model}"
   end
-  puts
 end

@@ -2,7 +2,7 @@ require 'net/http'
 require "uri"
 
 
-class Ipgeobase2
+class << self
   attr_reader :country, :countryCode, :city, :lat, :lon
 
   def initialize
@@ -50,16 +50,14 @@ class Ipgeobase2
   end
 end
 
-ip_meta = Ipgeobase2.new
+puts lookup('83.169.216.199')
 puts
-puts ip_meta.lookup('83.169.216.199')
+puts country
 puts
-puts ip_meta.country
+puts countryCode
 puts
-puts ip_meta.countryCode
+puts city
 puts
-puts ip_meta.city
+puts lat
 puts
-puts ip_meta.lat
-puts
-puts ip_meta.lon
+puts lon

@@ -20,6 +20,7 @@ class Song
   end
 end
 
+
 album1 = Album.new 'Rock legends'
 
 song1 = Song.new 'Blury', 4
@@ -29,8 +30,10 @@ album1.add_songs song1
 album1.add_songs song2
 
 puts album1.name
+
 album1.songs.each do |song, duration|
   puts "Album: #{song.name} #{song.duration}"
 end
 puts
+
 puts album1.songs[1].name

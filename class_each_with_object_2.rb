@@ -2,7 +2,6 @@ require 'forwardable'
 require 'uri'
 
 class Url
-
   extend Forwardable
   include Comparable
 

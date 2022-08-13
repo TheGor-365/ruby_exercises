@@ -1,65 +1,64 @@
+require "addressable/template"
+require 'happymapper'
 require 'net/http'
-require "uri"
 
 
-class Ipgeobase2
-  attr_reader :country, :countryCode, :city, :lat, :lon
+class Ipgeobase
+  # attr_reader :country, :city, :country_code, :lat, :lon
+  #
+  # def initialize
+  #   @country, @city, @country_code, @lat, @lon = country, city, country_code, lat, lon
+  # end
 
-  def initialize
-    @country = country
-    @countryCode = countryCode
-    @city = city
-    @lat = lat
-    @lon = lon
-  end
-
-  def lookup(ip)
+  def self.lookup(ip)
     lookup_query = "fields=country,countryCode,city,lat,lon"
     @lookup = URI.parse "http://ip-api.com/xml/#{@ip}?#{lookup_query}"
-    Net::HTTP.get @lookup
+    pp HappyMapper.parse(Net::HTTP.get @lookup)
   end
 
-  def country
-    country_query = "fields=country"
-    @country = URI.parse "http://ip-api.com/xml/#{@ip}?#{country_query}"
-    Net::HTTP.get @country
-  end
-
-  def countryCode
-    countryCode_query = "fields=countryCode"
-    @countryCode = URI.parse "http://ip-api.com/xml/#{@ip}?#{countryCode_query}"
-    Net::HTTP.get @countryCode
-  end
-
-  def city
-    city_query = "fields=city"
-    @city = URI.parse "http://ip-api.com/xml/#{@ip}?#{city_query}"
-    Net::HTTP.get @city
-  end
-
-  def lat
-    lat_query = "fields=lat"
-    @lat = URI.parse "http://ip-api.com/xml/#{@ip}?#{lat_query}"
-    Net::HTTP.get @lat
-  end
-
-  def lon
-    lon_query = "fields=lon"
-    @lon = URI.parse "http://ip-api.com/xml/#{@ip}?#{lon_query}"
-    Net::HTTP.get @lon
-  end
+  # def country
+  #   country_query = "fields=country"
+  #   @country = URI.parse "http://ip-api.com/xml/#{@ip}?#{country_query}"
+  #   pp HappyMapper.parse(Net::HTTP.get @country)
+  # end
+  #
+  # def country_code
+  #   country_code_query = "fields=countryCode"
+  #   @country_code = URI.parse "http://ip-api.com/xml/#{@ip}?#{country_code_query}"
+  #   pp HappyMapper.parse(Net::HTTP.get @country_code)
+  # end
+  #
+  # def city
+  #   city_query = "fields=city"
+  #   @city = URI.parse "http://ip-api.com/xml/#{@ip}?#{city_query}"
+  #   pp HappyMapper.parse(Net::HTTP.get @city)
+  # end
+  #
+  # def lat
+  #   lat_query = "fields=lat"
+  #   @lat = URI.parse "http://ip-api.com/xml/#{@ip}?#{lat_query}"
+  #   pp HappyMapper.parse(Net::HTTP.get @lat)
+  # end
+  #
+  # def lon
+  #   lon_query = "fields=lon"
+  #   @lon = URI.parse "http://ip-api.com/xml/#{@ip}?#{lon_query}"
+  #   pp HappyMapper.parse(Net::HTTP.get @lon)
+  # end
 end
 
-ip_meta = Ipgeobase2.new
+
+ip_meta = Ipgeobase.lookup('83.169.216.199')
+
+# ip_meta.lookup('83.169.216.199')
 puts
-puts ip_meta.lookup('83.169.216.199')
 puts
-puts ip_meta.country
+p ip_meta.country
 puts
-puts ip_meta.countryCode
+ip_meta.country_code
 puts
-puts ip_meta.city
+ip_meta.city
 puts
-puts ip_meta.lat
+ip_meta.lat
 puts
-puts ip_meta.lon
+ip_meta.lon

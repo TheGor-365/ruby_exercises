@@ -1,34 +1,27 @@
+require "addressable/template"
+require 'happymapper'
 require 'net/http'
-require "uri"
 
 
 module Ipgeobase
   class Error < StandardError; end
 
-  attr_reader :country, :countryCode, :city, :lat, :lon
-
-  def initialize
-    @country = country
-    @countryCode = countryCode
-    @city = city
-    @lat = lat
-    @lon = lon
-  end
-
   def self.lookup(ip)
     lookup_query = "fields=country,countryCode,city,lat,lon"
     @lookup = URI.parse "http://ip-api.com/xml/#{@ip}?#{lookup_query}"
-    puts Net::HTTP.get @lookup
+    pp Net::HTTP.get @lookup
   end
 
-  def country
-    @ip_meta.Ipgeobase.lookup(ip).country
+  def self.country
+    country_query = "fields=country"
+    @country = URI.parse "http://ip-api.com/xml/#{@ip}?#{country_query}"
+    Net::HTTP.get @country_code
   end
 
-  def self.countryCode
-    countryCode_query = "fields=countryCode"
-    @countryCode = URI.parse "http://ip-api.com/xml/#{@ip}?#{countryCode_query}"
-    Net::HTTP.get @countryCode
+  def self.country_code
+    country_code_query = "fields=countryCode"
+    @country_code = URI.parse "http://ip-api.com/xml/#{@ip}?#{country_code_query}"
+    Net::HTTP.get @country_code
   end
 
   def self.city
@@ -53,8 +46,8 @@ end
 ip_meta = Ipgeobase.lookup('83.169.216.199')
 puts
 puts ip_meta.country
-puts
-# puts ip_meta.countryCode
+# puts
+# puts ip_meta.country_code
 # puts
 # puts ip_meta.city
 # puts

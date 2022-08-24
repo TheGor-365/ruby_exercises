@@ -8,5 +8,11 @@ class Something
   end
 end
 
-s = Something.new name: 'Mike', age: 60, country: 'USA'
-puts s.inspect
+pp s = Something.new(name: 'Mike', age: 60, country: 'USA')
+puts
+p s.name
+p s.age
+p s.country
+puts
+s.name = 'Steve'
+pp s

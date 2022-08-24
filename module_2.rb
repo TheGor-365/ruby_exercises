@@ -5,3 +5,5 @@ module Hi
     end
   end
 end
+
+pp Hi::Say_Hi.say_hi

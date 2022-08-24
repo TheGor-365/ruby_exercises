@@ -4,8 +4,8 @@ class Cat
       define_method "#{attribute}" do
         self.instance_variable_get "@#{attribute}"
       end
-      define_method "#{attribute}=" do
-        self.instance_variable_set "@#{attribute}"
+      define_method "#{attribute}=" do |value|
+        self.instance_variable_set"@#{attribute}", value
       end
     end
   end

@@ -4,6 +4,8 @@ end
 
 aaa
 
-send :define_method, "bbb" do puts "Hello, I'm newest method" end
+send :define_method, "bbb" do
+  puts "Hello, I'm newest method"
+end
 
 bbb

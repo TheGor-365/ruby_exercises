@@ -4,8 +4,6 @@ require 'net/http'
 
 
 module Ipgeobase
-  class Error < StandardError; end
-
   class << self
     def lookup(ip)
       lookup_query = "fields=country,countryCode,city,lat,lon"

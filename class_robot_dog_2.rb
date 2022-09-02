@@ -1,5 +1,4 @@
 class Robot
-
   attr_accessor :x, :y
 
   def initialize(options={})
@@ -7,30 +6,16 @@ class Robot
     @y = options[:y] || 0
   end
 
-  def right
-    self.x += 1
-  end
-
-  def left
-    self.x -= 1
-  end
-
-  def up
-    self.y += 1
-  end
-
-  def down
-    self.y -= 1
-  end
-
+  def right; self.x += 1; end
+  def left; self.x -= 1; end
+  def up; self.y += 1; end
+  def down; self.y -= 1; end
 end
 
 class Commander
-
   def move(who)
     m = [ :right, :left, :up, :down ].sample
   end
-
 end
 
 commander = Commander.new
@@ -38,7 +23,6 @@ commander = Commander.new
 arr = Array.new(10) { Robot.new }
 
 loop do
-
   puts "\e[H\e2J"
 
   (12).downto(-12) do |y|
@@ -59,5 +43,4 @@ loop do
   end
 
   sleep 0.5
-
 end

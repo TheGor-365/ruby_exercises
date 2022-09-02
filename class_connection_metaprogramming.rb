@@ -13,6 +13,7 @@ class Connection
 end
 
 p connection = Connection.new
+
 p connection.timeout = 4
 p connection.instance_variables
 p connection.protocol

@@ -1,4 +1,4 @@
-require_relative "ary_qty_method.rb"
+require_relative "ary_take_item.rb"
 arr = [:Gor, :John, 12, 44, "aaa", "bbb", [cool: "deal"]]
 
 puts arr.inspect

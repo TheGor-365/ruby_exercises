@@ -1,43 +1,28 @@
-def display_1
-  yield "whatsup"
+def secondary_method
+  yield "Hello"
 end
 
-display_1 do |msg|
-  puts "#{msg} " * 3
+def my_method(msg, callable, callable_2)
+  callable.call("Hello")
+  callable_2.call(msg)
 end
 
-
-
-def display_2(&block)
-  puts block.inspect
-  block.call("whatsup")
-end
-puts
-
-display_2 do |msg|
-  puts "#{msg} " * 2
-end
-puts
-
-
-
-def display_3
-  yield "whatsup"
-end
-
-l = ->(msg) { puts "#{msg} " * 6 }
-display_3 &l
+my_method "Calling block...", ->(msg) { puts msg }, ->(msg) { puts msg.upcase.inspect }
 puts
 
 
 
 def secondary_method
-  yield '!!!'
+  yield "Hello"
 end
 
-def display_4(msg, &block)
-  puts msg
-  secondary_method &block
+def my_method(msg, callable, callable_2)
+  callable.call("Hello")
+  callable_2.call(msg)
 end
 
-display_4 "my msg", &l
+l_1 = ->(msg) { puts msg }
+l_2 = ->(msg) { puts msg.upcase.inspect }
+msg = "Calling block..."
+
+my_method msg, l_1, l_2

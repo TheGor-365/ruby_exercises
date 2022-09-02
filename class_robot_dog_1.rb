@@ -1,5 +1,4 @@
 class Robot
-
   attr_accessor :x, :y
 
   def initialize(options={})
@@ -7,31 +6,14 @@ class Robot
     @y = options[:y] || 0
   end
 
-  def right
-    self.x += 1
-  end
-
-  def left
-    self.x -= 1
-  end
-
-  def up
-    self.y += 1
-  end
-
-  def down
-    self.y -= 1
-  end
-
-  def label
-    ' * '
-  end
-
+  def right; self.x += 1; end
+  def left; self.x -= 1; end
+  def up; self.y += 1; end
+  def down; self.y -= 1; end
+  def label; ' * '; end
 end
-
 
 class Dog
-
   attr_accessor :x, :y
 
   def initialize(options={})
@@ -39,36 +21,18 @@ class Dog
     @y = options[:y] || 0
   end
 
-  def right
-    self.x += 1
-  end
-
-  def left
-    self.x -= 1
-  end
-
-  def up
-    self.y += 1
-  end
-
-  def down
-    self.y -= 1
-  end
-
-  def label
-    ' @ '
-  end
-
+  def right; self.x += 1; end
+  def left; self.x -= 1; end
+  def up; self.y += 1; end
+  def down; self.y -= 1; end
+  def label; ' @ '; end
 end
 
-
 class Commander
-
   def move(who)
     m = [ :right, :left, :up, :down ].sample
     who.send(m)
   end
-
 end
 
 commander = Commander.new
@@ -76,22 +40,14 @@ commander = Commander.new
 arr = Array.new(10) { Robot.new }
 arr.push(Dog.new(x: -12, y: 12))
 
-
 loop do
-
   puts "\e[H\e[2J"
 
   (12).downto(-12) do |y|
     (-12).upto(12) do |x|
       someday = arr.find { |somebody| somebody.x == x && somebody.y == y }
-
-      if someday
-        print someday.label
-      else
-        print ' . '
-      end
+      someday ? print someday.label : print ' . '
     end
-
     puts
   end
 

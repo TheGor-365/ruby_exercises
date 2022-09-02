@@ -1,27 +1,15 @@
-class Article
-  def self.upcase(attribute_name)
-    @upcased ||= []
-    @upcased << attribute_name
-  end
+require_relative './class_article_model_metaprogramming'
 
-  def self.upcased
-    @upcased
-  end
+class Article
+  include Model
 
   upcase :title
   upcase :author
-
-  def initialize(params)
-    @attributes = {}
-    params.each do |name, value|
-      value.upcase! if self.class.upcased.include?(name)
-      @attributes[name] = value
-    end
-  end
-
-  attr_reader :attributes
 end
 
 p article = Article.new(title: 'article', author: 'John', chapter: 'first')
-
 p article.attributes #=> {:title=>"ARTICLE", :author=>"JOHN", :chapter=>'first'}
+puts
+p article.title
+p article.attributes
+p Article.upcased

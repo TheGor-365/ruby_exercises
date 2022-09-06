@@ -15,11 +15,9 @@ class Song
   attr_reader :name, :duration
 
   def initialize name, duration
-    @name = name
-    @duration = duration
+    @name, @duration = name, duration
   end
 end
-
 
 album1 = Album.new 'Rock legends'
 

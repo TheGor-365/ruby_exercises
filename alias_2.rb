@@ -24,7 +24,6 @@
 
 
 class User
-
   def full_name
     puts "Johnnie Walker"
   end

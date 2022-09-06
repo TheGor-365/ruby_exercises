@@ -1,5 +1,4 @@
 class Animal
-
   def initialize name
     @name = name
   end
@@ -14,7 +13,6 @@ class Animal
 end
 
 class Cat < Animal
-
   def initialize
     super 'cat'
   end
@@ -25,7 +23,6 @@ class Cat < Animal
 end
 
 class Dog < Animal
-
   def initialize
     super 'dog'
   end

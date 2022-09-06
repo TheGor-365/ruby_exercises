@@ -8,10 +8,7 @@ if File.exist? file_path
   lines = f.readlines
   f.close
   number = rand(lines.length)
-
-  if number % 2 == 1
-    number -= 1
-  end
+  number -= 1 if number % 2 == 1
 
   puts lines[number]
   puts lines[number + 1]

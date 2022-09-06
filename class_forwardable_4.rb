@@ -3,7 +3,6 @@ require 'forwardable'
 User = Struct.new(:first_name, :last_name)
 
 class UserDecorator
-
   extend Forwardable
 
   def_delegators :@user, :first_name, :last_name

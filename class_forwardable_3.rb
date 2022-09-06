@@ -1,7 +1,6 @@
 require 'forwardable'
 
 class MyQueue
-
   CONST = 1
 
   extend Forwardable

@@ -24,9 +24,7 @@ class Album
   attr_reader :name, :date, :style
 
   def initialize name, date, style
-    @name = name
-    @date = date
-    @style = style
+    @name, @date, @style = name, date, style
     @a_songs = []
   end
 
@@ -47,8 +45,7 @@ class Song
   attr_reader :name, :duration
 
   def initialize name, duration
-    @name = name
-    @duration = duration
+    @name, @duration = name, duration
     @songs = {}
   end
 
@@ -56,7 +53,6 @@ class Song
     @songs = {@name => @duration}
   end
 end
-
 
 song1 = Song.new 'Nokie', '5 min'
 song2 = Song.new 'My way', '6 min'

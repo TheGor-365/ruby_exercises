@@ -1,27 +1,33 @@
 module Model
-  def self.included(base)
-    base.extend(ClassMethods)
+  def self.included base
+    base.extend ClassMethods
   end
+
+  attr_accessor :attributes
 
   module ClassMethods
-    def upcase(attribute_name)
-      @upcased ||= []
-      @upcased << attribute_name
-    end
+    attr_reader :upcased
 
-    def upcased
-      @upcased
+    def upcase attribute_name
+      @upcased ||= []
+
+      define_method "#{attribute_name}" do
+        @attributes[attribute_name]
+      end
+      define_method "#{attribute_name}=" do |value|
+        @attributes[attribute_name] = value
+        value.upcase! if self.class.upcased.include? attribute_name
+      end
+      @upcased << attribute_name
     end
   end
 
-  def initialize(params)
+  def initialize params
     @attributes = {}
 
     params.each do |name, value|
-      value.upcase! if self.class.upcased.include?(name)
       @attributes[name] = value
+      value.upcase! if self.class.upcased.include? name
     end
   end
-
-  attr_reader :attributes
 end

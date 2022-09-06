@@ -15,7 +15,6 @@ end
 f.each_line do |line|
   arr = line.split(/\s|\n|\.|,|\;|\-|\'|\"|\(|\)|\-/)
   arr.each {|word| add_to_hash(word)}
-
 end
 
 f.close

@@ -5,11 +5,21 @@ class Article
 
   upcase :title
   upcase :author
+  # upcase :chapter
 end
 
-p article = Article.new(title: 'article', author: 'John', chapter: 'first')
+pp article = Article.new(title: 'article', author: 'John', chapter: 'first')
+puts
 p article.attributes #=> {:title=>"ARTICLE", :author=>"JOHN", :chapter=>'first'}
 puts
 p article.title
+puts
+p article.instance_variables
+puts
+puts
+puts
+puts
+p article.title = 'article_2'
 p article.attributes
-p Article.upcased
+puts
+pp article

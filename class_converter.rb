@@ -4,8 +4,7 @@ class DollarRate
   @@dollar_rate = 67.15
 
   def initialize currency, sum
-    @currency = currency
-    @sum = sum
+    @currency, @sum = currency, sum
     @result = 0
   end
 

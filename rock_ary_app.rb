@@ -1,4 +1,5 @@
 arr = [:rock, :scissors, :paper]
+
 loop do
   c_choice = arr[rand(0..2)]
 
@@ -29,9 +30,7 @@ loop do
   puts "User:     \t#{u_choice}"
 
   matrix.each do |item|
-
     if item[0] == u_choice && item[1] == c_choice
-
       if item[2] == :draw
         puts "The result:  \tDRAW"
       elsif item[2] == :first
@@ -39,9 +38,6 @@ loop do
       elsif item[2] == :second
         puts "The result  \tYOU LOSE"
       end
-
     end
-
   end
-
 end

@@ -1,5 +1,4 @@
 module Cat
-
   def self.my_attr_accessor *attributes
     attributes.each do |attribute|
       define_method "#{attribute}" do
@@ -28,8 +27,6 @@ class Tiger
   R = 12
 end
 
-
-
 p tiger = Tiger.new('Boris', 5, '133_kg')
 puts
 puts tiger.name
@@ -37,7 +34,6 @@ puts tiger.age
 puts tiger.weight
 puts
 tiger.attribute
-
 
 
 # print "\n" * 2 + 'tiger.methods' + "\n"  + '-' * 80 + "\n"

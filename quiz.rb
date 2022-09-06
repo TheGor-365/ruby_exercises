@@ -66,11 +66,8 @@ questions.each do |item|
   while user_input != "Y" && user_input != "N" && user_input != "W"
     print "Enter your choice (Y)es, (N)o or (W)hatever: "
     user_input = STDIN.gets.strip.capitalize
-  end
-
-  if user_input == "Y"
-    yes_answers += 1
-  end
+  end  
+  yes_answers += 1 if user_input == "Y"
 end
 
 puts "\n#{name}"

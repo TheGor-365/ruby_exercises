@@ -4,7 +4,6 @@ movies = {
 }
 
 puts "What would you like to do? "
-
 choice = gets.chomp
 
 case choice
@@ -35,11 +34,7 @@ when "display"
 when "delete"
   puts "What movie would you like to delete? "
   title = gets.chomp
-  if movies[title.to_sym].nil?
-    puts "That movie does not exist."
-  else
-    movies.delete(title.to_sym)
-  end
+  if movies[title.to_sym].nil? ? (puts "That movie does not exist.") : movies.delete(title.to_sym)
 else
   puts "Error!"
 end

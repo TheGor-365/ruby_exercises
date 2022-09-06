@@ -4,4 +4,4 @@ def mm names
   end
 end
 
-send :mm, :nick => 'Nick', :mike => 'Mike'
+send :mm, :nick => 'nick', :mike => 'mike'

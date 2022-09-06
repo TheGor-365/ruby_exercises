@@ -1,6 +1,6 @@
 def link_to(name, link, attributes = {})
   attr_pairs = attributes.any? ? [''] : []
-  
+
   attributes.each do |key, value|
     attr_pairs << "#{key}=\"#{value}\""
   end

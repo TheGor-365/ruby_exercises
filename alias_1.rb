@@ -1,7 +1,5 @@
 # Usage of alias
-
 class User
-
   def full_name
     puts "Johnnie Walker"
   end
@@ -16,7 +14,6 @@ puts
 # Usage of alias_method
 
 class User
-
   def full_name
     puts "Johnnie Walker"
   end

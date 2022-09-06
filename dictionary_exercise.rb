@@ -5,10 +5,8 @@ hh = {
 }
 
 loop do
-
   print "Enter word: "
   word = gets.strip
-
   translate = hh[word]
 
   puts "Translates: #{translate.size}"
@@ -18,5 +16,4 @@ loop do
   translate.each.with_index do |item, index|
     puts "#{index + 1}. #{item.capitalize}"
   end
-
 end

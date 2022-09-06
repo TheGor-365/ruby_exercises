@@ -29,13 +29,8 @@ planes = []
 1000.times do
   model = models[rand(0..2)]
   plane = Airplane.new(model)
-
-  if rand(0..1) == 1
-    plane.fly
-  end
-
+  plane.fly if rand(0..1) == 1
   plane.speed = rand(500..800)
-
   planes << plane
 end
 

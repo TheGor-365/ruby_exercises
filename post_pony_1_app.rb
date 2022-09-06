@@ -12,8 +12,7 @@ send_to = STDIN.gets.chomp
 print "Enter message body: "
 body = STDIN.gets.chomp
 
-Pony.mail(
-  {
+Pony.mail({
     :subject => "hi from Ruby!",
     :body => body,
     :to => send_to,

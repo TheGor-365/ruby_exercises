@@ -1,6 +1,6 @@
 require 'sqlite3'
 
-db = SQlite3::Database.new 'sinatra_barber_shop.sqlite'
+db = SQLite3::Database.new 'sinatra_barber_shop.sqlite'
 db.results_as_hash = true
 
 db.execute 'SELECT * FROM Users' do |row|

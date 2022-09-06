@@ -18,10 +18,7 @@ class Computer
   # end
 end
 
-
-
 class Memory
-
   def initialize
     @data = []
   end

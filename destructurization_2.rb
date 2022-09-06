@@ -1,5 +1,3 @@
-
-
 data = ['hexlet', 'online courses', ['php', 'js']]
 # для доступа ко вложенному массиву используются круглые скобки
 name, description, (first_topic, second_topic) = data # учли количество элементов

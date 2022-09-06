@@ -8,13 +8,8 @@ class FileOutput
 
   def file_read
     @lines.each_with_index do |line, index|
-      if line == "\n"
-        @empty_line_counter += 1
-      end
-
-      if @lines.size <= 5
-        @last_five_lines << line
-      end
+      @empty_line_counter += 1 if line == "\n"
+      @last_five_lines << line if @lines.size <= 5
     end
   end
 
@@ -23,6 +18,7 @@ class FileOutput
     puts "All lines: #{@lines.lenght.to_s}"
     puts "Empty lines: #{@empty_line_counter.to_s}"
     puts "Last five lines:"
+    
     @last_five_lines.each_with_index do |item, index|
       puts "#{index + 1}. #{item}"
     end

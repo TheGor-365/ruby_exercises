@@ -18,7 +18,7 @@ class FileOutput
     puts "All lines: #{@lines.lenght.to_s}"
     puts "Empty lines: #{@empty_line_counter.to_s}"
     puts "Last five lines:"
-    
+
     @last_five_lines.each_with_index do |item, index|
       puts "#{index + 1}. #{item}"
     end

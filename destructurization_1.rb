@@ -1,4 +1,5 @@
 data = ['hexlet', 'online courses', topics: ['php', 'js']]
+
 name, description, topics = data
 puts name # "hexlet"
 puts description # "online courses"

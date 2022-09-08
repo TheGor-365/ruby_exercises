@@ -1,4 +1,4 @@
-input = File.open 'test.txt', 'r'
+input = File.open 'text_files/text.txt', 'r'
 
 while line = input.gets
   puts line

@@ -1,6 +1,6 @@
 hh = {
-  "dog" => ["sobaka", "pyos"],
-  "cat" => ["koshka", "kot"],
+  "dog"  => ["sobaka", "pyos"],
+  "cat"  => ["koshka", "kot"],
   "girl" => ["devushka"]
 }
 

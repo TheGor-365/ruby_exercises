@@ -1,9 +1,9 @@
 def intersection(ary1, ary2)
-  ary3 = []
+  resalt = []
   ary1.sort.each do |item|
-    ary3 << item if ary2.include?(item)
+    resalt << item if ary2.include?(item)
   end
-  ary3
+  resalt
 end
 
 ary1 = [1, 8, 0]

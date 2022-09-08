@@ -1,4 +1,4 @@
-list = ["a", "b", "b", "a", "c", "d", "d", "d", "e"]
+list = %w[ a b b a c d d d e ]
 
 list.group_by { |v| v }.map { |k, v| [k, v.size] }.to_h
 #=> {"a"=>2, "b"=>2, "c"=>1, "d"=>3, "e"=>1}
@@ -15,7 +15,7 @@ hashes.group_by(&:itself).map { |k, v| k.merge(count: v.length)}
 
 
 
-list = ["a", "b", "b", "a", "c", "d", "d", "d", "e"]
+list = %w[ a b b a c d d d e ]
 list.tally
 #=> {"a"=>2, "b"=>2, "c"=>1, "d"=>3, "e"=>1}
 

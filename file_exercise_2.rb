@@ -1,4 +1,4 @@
-f = File.open 'trump.txt', 'r+'
+f = File.open 'text_files/trump.txt', 'r+'
 
 @arr = []
 @hh = {}

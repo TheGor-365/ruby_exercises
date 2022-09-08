@@ -1,8 +1,8 @@
-def ini_db
-  @db = SQLite::Database.new 'leprosorium.sqlite'
-  @db.results_as_hash = true
+require 'sqlite3'
+
+def init_db
+  db = SQLite3::Database.new 'db/leprosorium.sqlite'
+  db.results_as_hash = true
 end
 
-before do
-  init_db
-end
+init_db

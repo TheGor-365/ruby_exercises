@@ -1,4 +1,4 @@
-f = File.open 'C:\Projects\ruby\ruby_helpers\trump.txt', 'r'
+f = File.open 'text_files/trump.txt', 'r'
 
 @hh = {}
 

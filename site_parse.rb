@@ -7,7 +7,7 @@ def is_wrong_password? password
   puts response.include? "logo"
 end
 
-input = File.open "files/passwords.txt", "r"
+input = File.open "text_files/passwords.txt", "r"
 
 while (line = input.gets)
   line.strip!

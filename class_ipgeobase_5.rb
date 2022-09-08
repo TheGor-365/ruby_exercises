@@ -3,8 +3,6 @@ require 'happymapper'
 require 'net/http'
 
 module Ipgeobase
-  # class Error < StandardError; end
-
   class << self
     def lookup(ip)
       lookup_uri = Addressable::Template.new("http://{host}{/segments*}{?fields}").expand({

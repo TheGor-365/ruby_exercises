@@ -1,4 +1,4 @@
-input = File.open 'task.txt', 'r'
+input = File.open 'text_files/text.txt', 'r'
 total = 0
 
 while line = input.gets

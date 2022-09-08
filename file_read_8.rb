@@ -1,6 +1,6 @@
-require_relative 'file.txt'
+require_relative 'text_files/file_2.txt'
 
-file = File.new 'file.txt'
+file = File.new 'text_files/file_2.txt'
 lines = file.readlines
 
 empty_lines_counter = 0

@@ -4,8 +4,6 @@ require 'net/http'
 
 
 module Ipgeobase
-  class Error < StandardError; end
-
   def self.lookup(ip)
     lookup_query = "fields=country,countryCode,city,lat,lon"
     @lookup = URI.parse "http://ip-api.com/xml/#{@ip}?#{lookup_query}"

@@ -7,7 +7,7 @@ def is_wrong_password? password
   response.include? 'denied'
 end
 
-input = File.open 'passwords.txt', 'r'
+input = File.open 'text_files/passwords.txt', 'r'
 
 while (line = input.gets)
   line.strip!

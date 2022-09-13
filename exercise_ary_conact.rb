@@ -2,7 +2,6 @@ arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 
 def select_item quantity, arr
   arr = arr.take(quantity)
-  arr
 end
 
 choice = ARGV[0]

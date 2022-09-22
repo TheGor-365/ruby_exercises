@@ -15,7 +15,6 @@ end
 
 @log = File.open("text_files/log_#{Time.now.to_i}.txt","w+")
 
-#Blocks take their variable scope with them, including globals
 status_code = with_logging("Calculate seconds in a day") do
   puts 60 * 60 * 24
 end

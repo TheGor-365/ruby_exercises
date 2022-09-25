@@ -1,5 +1,5 @@
 def merge_all(hash, *hashes)
-  hash.merge( *hashes )
+  hash.merge(*hashes)
 end
 
 hash_1 = { key_1: 'value_1' }

@@ -1,6 +1,6 @@
 hi_proc = Proc.new { |msg| p msg }
-i_proc = proc { |i| p i ** 3 }
 hi_lambda = lambda { |msg| p msg }
+i_proc = proc { |i| p i ** 3 }
 i_lambda = ->(i) { p i ** 3 }
 
 hi_proc.call 'hi'

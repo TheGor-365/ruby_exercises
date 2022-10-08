@@ -12,7 +12,7 @@ def whatsup
 end
 
 whatsup do
-  puts "hi"
+  puts "hello"
 end
 whatsup { puts "hi" }
 puts '---------------------------------------------------------------'

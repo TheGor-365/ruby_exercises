@@ -60,9 +60,9 @@ run_proc_with_random_number { |n| puts "#{n}!" }
 puts
 
 
-pp [1,2,3].map(&:to_s)
-pp [1,2,3].map {|i| i.to_s }
-pp [1,2,3].map {|i| i.send(:to_s) }
+pp [1, 2, 3].map(&:to_s)
+pp [1, 2, 3].map {|i| i.to_s }
+pp [1, 2, 3].map {|i| i.send(:to_s) }
 puts
 
 

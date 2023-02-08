@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<account>
+  <photos>
+    <photo title="photo-1" />
+    <photo title="photo-1" />
+  </photos>
+
+  <friends>
+    <friend title="photo-1" />
+    <friend title="photo-1" />
+  </friends>
+</account>

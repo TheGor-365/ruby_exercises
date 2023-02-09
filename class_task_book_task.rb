@@ -23,4 +23,13 @@ class Task < Post
     deadline = "Deadline #{@due_date}"
     return [deadline, @text, time_string]
   end
+
+  def to_db_hash
+    return super.merge(
+      {
+        'text': @text,
+        'due_date': @due_date.to_s
+      }
+    )
+  end
 end

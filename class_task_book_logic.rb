@@ -6,7 +6,7 @@ require_relative 'class_task_book_task.rb'
 puts "Wellcome"
 puts "Add task"
 
-choices = Post.post_types
+choices = Post.post_types.keys
 choice = -1
 
 until choice >= 0 && choice < choices.size
@@ -17,9 +17,9 @@ until choice >= 0 && choice < choices.size
   choice = STDIN.gets.chomp.to_i
 end
 
-entry = Post.create(choice)
+entry = Post.create(choices[choice])
 
 entry.read_from_console
-entry.save
+id = entry.save_to_db
 
-puts "New task created"
+puts "New task created, id = #{id}"

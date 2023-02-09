@@ -1,11 +1,14 @@
+require 'sqlite3'
+
 class Post
+  @@SQLITE_DB_FILE = 'sqlite/task_book.sqlite'
 
   def self.post_types
-    [Memo, Link, Task]
+    {'Memo': Memo, 'Link': Link, 'Task': Task}
   end
 
-  def self.create(type_index)
-    return post_types[type_index].new
+  def self.create(type)
+    return post_types[type].new
   end
 
   def initialize
@@ -13,13 +16,8 @@ class Post
     @text = nil
   end
 
-  def read_from_console
-
-  end
-
-  def to_strings
-
-  end
+  def read_from_console; end
+  def to_strings; end
 
   def save
     file = File.new(file_path, "w:UTF-8")
@@ -35,5 +33,42 @@ class Post
     file_name = @created_at.strftime("#{self.class.name}_%Y_%m_$d_%H_%M_%S.txt")
 
     return file_path + '/' + file_name
+  end
+
+  def save_to_db
+    db = SQLite3::Database.open(@@SQLITE_DB_FILE)
+    db.results_as_hash = true
+
+    db.execute(
+      "CREATE TABLE IF NOT EXISTS Posts (
+        id INTEGER PRIMARY KEY,
+        type TEXT,
+        created_at DATETIME,
+        text TEXT,
+        url TEXT,
+        due_date DATETIME
+      )")
+
+    db.execute(
+
+      "INSERT INTO Posts (" +
+      to_db_hash.keys.join(', ') +
+      ")" +
+      " VALUES (" +
+      ('?,' * to_db_hash.size).chomp(',') +
+      ")",
+      to_db_hash.values
+    )
+
+    insert_row_id = db.last_insert_row_id
+    db.close
+    return insert_row_id
+  end
+
+  def to_db_hash
+    {
+      'type': self.class.name,
+      'created_at': @created_at.to_s
+    }
   end
 end

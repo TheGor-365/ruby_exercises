@@ -4,8 +4,7 @@ class Airplane
 
   def initialize model
     @model = model
-    @speed = 0
-    @altitude = 0
+    @speed, @altitude = 0
   end
 
   def fly
@@ -14,8 +13,7 @@ class Airplane
   end
 
   def land
-    @speed = 0
-    @altitude = 0
+    @speed, @altitude = 0
   end
 
   def moving?
@@ -29,6 +27,7 @@ planes = []
 1000.times do
   model = models[rand(0..2)]
   plane = Airplane.new(model)
+
   plane.fly if rand(0..1) == 1
   plane.speed = rand(500..800)
   planes << plane
@@ -41,6 +40,7 @@ end
 
 plane1 = Airplane.new('Boeing-777')
 plane2 = Airplane.new('Airbus-320')
+
 puts "Model: #{plane1.model} Speed: #{plane1.speed} Altitude: #{plane1.altitude}"
 puts "Is moving: #{plane1.moving?}"
 

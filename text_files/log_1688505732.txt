@@ -1,0 +1,4 @@
+Starting 'Calculate seconds in a day'
+Completed 'Calculate seconds in a day'
+Starting 'Open a file I know doesn't exist'
+'Open a file I know doesn't exist' FAILED!

@@ -7,8 +7,7 @@ class RecordCollection
   def_delegator :@records, :[], :record_number
 end
 
-r = RecordCollection.new
+collection = RecordCollection.new
 
-p r.records = [4,5,6]
-puts
-p r.record_number(0)
+pp collection.records = [4, 5, 6]
+pp collection.record_number(0)

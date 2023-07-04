@@ -1,7 +1,7 @@
-str = "Madam, I'm Adam"
-temp_str = str.gsub(/\W/, '').downcase
+string = "Madam, I'm Adam"
+temp_string = string.gsub(/\W/, '').downcase
 
-temp_str.reverse.equal? str.gsub(/\W/, '').downcase ? (p 'yes') : (p 'no')
+temp_string.reverse.equal? string.gsub(/\W/, '').downcase ? (p 'yes') : (p 'no')
 puts
 
 
@@ -11,16 +11,21 @@ class String
   end
 end
 
-str.palindrome? ? (p 'yes') : (p 'no')
+string.palindrome? ? (p 'yes') : (p 'no')
 puts
 
 
 
-def str.palindrome?
+def string.palindrome?
   self.gsub(/\W/, '').downcase.reverse == self.gsub(/\W/, '').downcase
 end
 
-str.palindrome? ? (p 'yes') : (p 'no')
+string.palindrome? ? (p 'yes') : (p 'no')
 puts
-p str.singleton_class
-pp str.singleton_class.instance_methods[0..5]
+
+
+pp string.singleton_class
+puts
+
+
+pp string.singleton_class.instance_methods[0..5]

@@ -1,28 +1,28 @@
 def secondary_method
-  yield "Hello"
+  yield "Hello here"
 end
 
-def my_method(msg, callable, callable_2)
-  callable.call("Hello")
-  callable_2.call(msg)
+def my_method(message, callable, callable_2)
+  callable.call("Hello there")
+  callable_2.call(message)
 end
 
-my_method "Calling block...", ->(msg) { puts msg }, ->(msg) { puts msg.upcase.inspect }
+my_method "Calling block...", ->(message) { puts message }, ->(message) { puts message.upcase.inspect }
 puts
 
 
 
 def secondary_method
-  yield "Hello"
+  yield "Hello bro"
 end
 
-def my_method(msg, callable, callable_2)
-  callable.call("Hello")
-  callable_2.call(msg)
+def my_method(message, callable, callable_2)
+  callable.call("Hello man")
+  callable_2.call(message)
 end
 
-l_1 = ->(msg) { puts msg }
-l_2 = ->(msg) { puts msg.upcase.inspect }
-msg = "Calling block..."
+my_lambda_1 = ->(message) { puts message }
+my_lambda_2 = ->(message) { puts message }
+message = "Calling block..."
 
-my_method msg, l_1, l_2
+my_method message, my_lambda_1, my_lambda_2

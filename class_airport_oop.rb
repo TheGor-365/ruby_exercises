@@ -46,12 +46,16 @@ airport2.add_planes plane6
 puts airport1.name
 puts airport2.name
 puts
+
+
+
 puts airport1.planes
 puts airport2.planes
 puts
 
 airports.each do |airport|
   puts "Airport #{airport.name}:"
+  
   airport.planes.each do |plane|
     puts "Plane: #{plane.model}"
   end

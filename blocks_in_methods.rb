@@ -1,13 +1,18 @@
-def my_filter(coll)
+def my_filter(collection)
   result = []
-  coll.each do |elem|
+
+  collection.each do |elem|
     result << elem if yield(elem)
   end
+
   result
 end
 
-coll = [1, 2, 3]
+my_collection = [1, 2, 3]
 
-puts my_filter(coll, &:even?)
+puts my_filter(my_collection, &:even?)
 puts
-puts my_filter(coll, &:odd?)
+
+
+
+puts my_filter(my_collection, &:odd?)

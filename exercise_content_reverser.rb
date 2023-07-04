@@ -1,7 +1,7 @@
-f = File.open 'trump.txt', 'r'
+file = File.open 'trump.txt', 'r'
 @arr = []
 
-f.each_line do |line|
+file.each_line do |line|
   words = line.split(/\s|\n|\.|\,|\(|\)|\-|\$/)
 
   words.each do |word|

@@ -1,5 +1,5 @@
-hi_proc = Proc.new { |msg| p msg }
-hi_lambda = lambda { |msg| p msg }
+hi_proc = Proc.new { |message| p message }
+hi_lambda = lambda { |message| p message }
 i_proc = proc { |i| p i ** 3 }
 i_lambda = ->(i) { p i ** 3 }
 
@@ -11,21 +11,21 @@ puts
 
 
 
-block_lambda = ->(msg) do
-  p 'hi'
-  return msg
+block_lambda = ->(message) do
+  pp 'hi'
+  return message
 end
 
-block_proc = proc do |msg|
-  p 'hi'
-  return msg
+block_proc = proc do |message|
+  pp 'hi'
+  return message
 end
 
 
 def block_check callable
-  res = callable.call "hi"
-  p "The result is --#{res}--"
-  p "I have called #{callable.inspect}"
+  result = callable.call "hi"
+  pp "The result is --#{result}--"
+  pp "I have called #{callable.inspect}"
 end
 
 block_check hi_lambda

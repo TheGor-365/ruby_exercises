@@ -1,21 +1,24 @@
 def whatsup
-  puts "whatsup"
+  puts "hi_1"
 end
 
 whatsup do
-  puts "hi"
+  puts "hi_2"
 end
-whatsup { puts "hi" }
+
+whatsup { puts "hi_3" }
 
 def whatsup
   yield
 end
 
 whatsup do
-  puts "hello"
+  puts "hi_4"
 end
-whatsup { puts "hi" }
-puts '---------------------------------------------------------------'
+
+whatsup { puts "hi_5" }
+puts
+
 
 
 def reached
@@ -27,7 +30,8 @@ end
 reached do
   puts "the yield"
 end
-puts '---------------------------------------------------------------'
+puts
+
 
 
 def how_old
@@ -37,20 +41,24 @@ end
 how_old do |name, age|
   puts "#{name} is #{age} years old"
 end
-puts '---------------------------------------------------------------'
+puts
 
 
-[1, 2, 3].each do |n|
-  puts "Number #{n}"
+
+[1, 2, 3].each do |number|
+  puts "Number #{number}"
 end
-puts '---------------------------------------------------------------'
+puts
+
 
 
 def two(&block)
   puts "two is: #{yield}"
 end
+
 two { 2 }
-puts '---------------------------------------------------------------'
+puts
+
 
 
 def my_map(array)
@@ -66,7 +74,8 @@ end
 my_map([1, 2, 3]) do |number|
   number * 2
 end
-puts '---------------------------------------------------------------'
+puts
+
 
 
 def a_method(&block)
@@ -74,7 +83,8 @@ def a_method(&block)
 end
 
 a_method { "x" }
-puts '---------------------------------------------------------------'
+puts
+
 
 
 class Car
@@ -89,17 +99,21 @@ car = Car.new do |c|
   c.color = "Red"
   c.doors = 4
 end
+
 pp car
 puts "color: #{car.color}\ndoors: #{car.doors}"
 
 Bus = Struct.new(:color, :doors, keyword_init: true)
+
 bus = Bus.new(color: 'Green', doors: 3) do |c|
   c.color
   c.doors
 end
+
 pp bus
 puts "color: #{bus.color}\ndoors: #{bus.doors}"
-puts '---------------------------------------------------------------'
+puts
+
 
 
 class Note
@@ -121,7 +135,7 @@ class Note
     puts "Writing \"#{@note}\" to the database."
   end
 
-private
+  private
 
   def self.connect
     puts "Connecting to the database..."
@@ -137,17 +151,17 @@ puts
 note = Note.create do |s|
   pp s
 end
-puts '---------------------------------------------------------------'
+puts
+
 
 
 class Fixnum
   def to_proc
-    Proc.new do |obj, *args|
-      obj % self == 0
+    Proc.new do |object, *arguments|
+      object % self == 0
     end
   end
 end
 
 numbers = [1,2,3,4,5,6,7,8,9,10].select(&3)
 pp numbers
-puts '---------------------------------------------------------------'

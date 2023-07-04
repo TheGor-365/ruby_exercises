@@ -24,7 +24,8 @@ status_code = with_logging("Open a file I know doesn't exist") do
   File.readlines("100_%_not_a_file.txt") {|line| puts line}
 end
 pp status_code
-puts '-' * 80
+puts
+
 
 
 def say_with_time

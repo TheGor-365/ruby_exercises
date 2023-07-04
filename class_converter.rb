@@ -1,7 +1,7 @@
 class DollarRate
   attr_accessor :currency, :sum
 
-  @@dollar_rate = 67.15
+  @@dollar_rate = 87.15
 
   def initialize currency, sum
     @currency, @sum = currency, sum
@@ -30,6 +30,15 @@ class DollarRate
 end
 
 rate = DollarRate.menu
+puts
+
+
 rate2 = DollarRate.new 2, 349
 rate2.convert
 rate2.show_result
+puts
+
+
+rate3 = DollarRate.new 1, 65_678
+rate3.convert
+rate3.show_result

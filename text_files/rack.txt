@@ -1,0 +1,2 @@
+curl -X GET https://ru.hexlet.io
+curl --head https://ru.hexlet.io

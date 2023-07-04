@@ -1,5 +1,5 @@
-a = 'Hello'
+word = 'Hello'
 
 binding.irb
 
-puts a
+puts word

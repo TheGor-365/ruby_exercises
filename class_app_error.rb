@@ -7,5 +7,5 @@ end
 class SuperBadError < ApplicationError
 end
 
-err = SuperBadError.new
-err.display_error
+error = SuperBadError.new
+error.display_error

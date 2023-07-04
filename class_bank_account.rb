@@ -31,4 +31,4 @@ class Account
   def pin_error; "Access denied: incorrect PIN."; end
 end
 
-checking_account = Account.new 'Gor', 100000
+checking_account = Account.new 'Gor', 100_000

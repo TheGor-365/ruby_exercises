@@ -1,5 +1,5 @@
-str = "white chocolate"
-p str.gsub("white", "dark")
+string = "white chocolate"
+p string.gsub("white", "dark")
 
 p "a1".gsub(/\d/, "2")
 

@@ -14,13 +14,19 @@ end
 
 p connection = Connection.new
 puts
+
+
 p connection.timeout = 4
 p connection.instance_variables
 puts
+
+
 p connection.protocol
 p connection.protocol = 'qnq'
 p connection.instance_variables
 puts
+
+
 p connection
 p connection.protocol = 'ssh'
 p connection

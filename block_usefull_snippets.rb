@@ -9,9 +9,9 @@ puts
 
 
 
-p ({ a: 1 }.fetch(:a))
-p ({ a: 1 }.fetch(:a) { 123 })
-p ({ a: 1 }.fetch(:c) { 123 })
+pp ({ a: 1 }.fetch(:a))
+pp ({ a: 1 }.fetch(:a) { 123 })
+pp ({ a: 1 }.fetch(:c) { 123 })
 puts
 
 

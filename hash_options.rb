@@ -1,15 +1,15 @@
-@hh = {}
+@book = {}
 
 def add_person options
-  puts "Already exists!" if @hh[options[:name]]
+  puts "Already exists!" if @book[options[:name]]
 
-  @hh[options[:name]] = options[:age]
+  @book[options[:name]] = options[:age]
 end
 
-def show_hh
-  @hh.keys.each do |key|
-    age = @hh[key]
-    puts "Name: #{key}, age: #{@hh[key]}"
+def show_book
+  @book.keys.each do |name|
+    age = @book[name]
+    puts "Name: #{name}, age: #{@book[name]}"
   end
 end
 
@@ -17,10 +17,10 @@ loop do
   print "Input name: "
   name = gets.strip.capitalize
 
-  show_hh  if name == ""
+  show_book  if name == ""
 
   print "Input age: "
   age = gets.strip
 
-  add_person :name => name, :age => age
+  add_person name: name, age: age
 end

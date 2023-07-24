@@ -9,7 +9,7 @@ module M
 
   module ClassMethods
     def who_am_i
-      puts self
+      puts 'i am ' + self.to_s
     end
   end
 end
@@ -18,8 +18,10 @@ class C
   include M
   who_am_i
 end
-
 puts
+
 p c = C.new.speak_up('Sarah')
 puts
+
 p C.who_am_i
+puts

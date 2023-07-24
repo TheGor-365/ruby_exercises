@@ -4,7 +4,7 @@ class User
   end
 
   def hello
-    puts "Hello, #{@name}!"
+    puts "Hello, #{@name}"
   end
 
   def method_missing(_)
@@ -12,11 +12,13 @@ class User
   end
 end
 
-user = User.new('Gregory')
+user = User.new('Greg')
 
 user.hello
 user.send(:hello)
+user.send :hello
 user.public_send(:hello)
+user.public_send :hello
 user.method(:hello).call
 user.method(:hello).()
 user.method(:hello)[]

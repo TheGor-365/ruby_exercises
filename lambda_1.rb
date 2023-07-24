@@ -4,5 +4,5 @@ say_by = lambda { puts 'Bye' }
 week = %w[ say_hi say_hi say_hi say_hi say_hi say_hi say_by say_by ]
 
 week.each do |f|
-  f.call
+  pp f
 end

@@ -1,17 +1,18 @@
-f = File.open 'text_files/trump.txt', 'r+'
+file = File.open 'text_files/trump.txt', 'r+'
 
-@arr = []
-@hh = {}
+@array = []
+@options = {}
 
 f.each_line do |line|
   path_name = line.split(/\ /)
-  @arr << path_name
+  @array << path_name
 end
 
-@arr.each do |array|
-  @hh[array[0]] = array[1].strip!
+@array.each do |element|
+  @options[element[0]] = element[1].strip!
 end
 
-puts @arr.inspect
+puts @array.inspect
 puts
-puts @hh.inspect
+
+puts @options.inspect

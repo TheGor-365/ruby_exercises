@@ -1,8 +1,9 @@
-pp hash = {
+hash = {
   "cat" => "feline",
   "dog" => "canine",
   "cow" => "bovine"
 }
+pp hash
 puts
 
 pp hash.fetch_values("cow", "cat")
@@ -14,12 +15,13 @@ puts
 
 
 
-pp hash = {
+hash = {
   foo: 0,
   bar: 1,
   baz: 2
 }
+pp hash
 puts
 
-pp values = hash.fetch_values( :bar, :foo, :bad, :bam, :baz, :mmm ) { |key| key.to_s }
+values = hash.fetch_values( :bar, :foo, :bad, :bam, :baz, :mmm ) { |key| key.to_s }
 pp values

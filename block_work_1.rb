@@ -78,11 +78,12 @@ puts
 
 
 
-def a_method(&block)
-  pp block.call
+def method_with_block(&block)
+  block.call
 end
 
-a_method { "x" }
+method_with_block { pp "#{'calling block for'.upcase} method_with_block" }
+puts
 puts
 
 
@@ -101,17 +102,17 @@ car = Car.new do |c|
 end
 
 pp car
-puts "color: #{car.color}\ndoors: #{car.doors}"
+puts "color: #{car.color} \ndoors: #{car.doors}"
+puts
 
 Bus = Struct.new(:color, :doors, keyword_init: true)
-
 bus = Bus.new(color: 'Green', doors: 3) do |c|
   c.color
   c.doors
 end
-
 pp bus
-puts "color: #{bus.color}\ndoors: #{bus.doors}"
+puts "color: #{bus.color} \ndoors: #{bus.doors}"
+puts
 puts
 
 
@@ -146,7 +147,7 @@ class Note
   end
 end
 
-Note.create { "Foo" }
+note = Note.create { "Hello" }
 puts
 note = Note.create do |s|
   pp s
@@ -163,5 +164,12 @@ class Fixnum
   end
 end
 
-numbers = [1,2,3,4,5,6,7,8,9,10].select(&3)
-pp numbers
+number_3 = [1,2,3,4,5,6,7,8,9,10].select(&3)
+number_5 = [1,2,3,4,5,6,7,8,9,10].select(&5)
+number_1 = [1,2,3,4,5,6,7,8,9,10].select(&1)
+number_2 = [1,2,3,4,5,6,7,8,9,10].select(&2)
+
+pp "3: #{number_3}"
+pp "5: #{number_5}"
+pp "1: #{number_1}"
+pp "2: #{number_2}"

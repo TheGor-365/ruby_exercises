@@ -23,7 +23,7 @@ module HexletCode
 
     def input(struct, *attributes)
       input_tag = []
-      
+
       attributes = struct.to_h
       p attributes
 

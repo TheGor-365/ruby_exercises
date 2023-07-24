@@ -3,15 +3,21 @@ class Albuquerque
     @actions = actions
   end
 
-  def method_missing name
+  def method_missing name, **options
     value = @actions[name]
-    puts "If you want to #{name}, you must call #{value}"
+
+    pp "#{name}: #{value}"
   end
 end
 
-a = Albuquerque.new cook: 'Walt', take_a_ride: 'Jessie', die: 'Gus'
+albuquerque = Albuquerque.new cook: 'Walt', take_a_ride: 'Jessie', die: 'Gus'
 
-a.cook
-a.take_a_ride
-a.die
-a.aaa
+pp albuquerque
+puts
+
+albuquerque.cook
+albuquerque.take_a_ride
+albuquerque.die
+puts
+
+albuquerque.aaa

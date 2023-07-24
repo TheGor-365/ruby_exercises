@@ -4,9 +4,10 @@ current_path = File.dirname __FILE__
 file_path = current_path + '/filmDescription.txt'
 
 if File.exist? file_path
-  f = File.new file_path
-  lines = f.readlines
-  f.close
+  file = File.new file_path
+  lines = file.readlines
+  file.close
+  
   number = rand(lines.length)
   number -= 1 if number % 2 == 1
 

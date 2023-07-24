@@ -9,5 +9,5 @@ end
 
 collection = RecordCollection.new
 
-pp collection.records = [4, 5, 6]
+pp collection.records = [ 4, 5, 6 ]
 pp collection.record_number(0)

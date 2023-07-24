@@ -1,12 +1,13 @@
-def intersection(ary1, ary2)
-  resalt = []
-  ary1.sort.each do |item|
-    resalt << item if ary2.include?(item)
+def intersection array_1, array_2
+  result = []
+
+  array_1.sort.each do |item|
+    result << item if array_2.include? item
   end
-  resalt
+  result
 end
 
-ary1 = [1, 8, 0]
-ary2 = [1, 9, 0]
+array_1 = [ 1, 8, 0 ]
+array_2 = [ 1, 9, 0 ]
 
-p intersection(ary1, ary2)
+pp intersection(array_1, array_2)

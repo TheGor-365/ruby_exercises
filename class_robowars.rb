@@ -36,7 +36,7 @@ def stats
   puts "Second robots team: #{cnt_2} robots ready"
 end
 
-loop do
+10.times do
   puts "First team attack..."
   attack @arr_2
   exit if victory?

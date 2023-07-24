@@ -4,6 +4,6 @@ def convert(strings)
   .sort
 end
 
-strings = ['wow?', 'One?', 'tWo!', 'THREE']
+strings = %w[ wow? One? tWo! THREE ]
 
 puts convert strings

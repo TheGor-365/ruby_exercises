@@ -1,6 +1,6 @@
-def get_men_count_by_year(users)
-  men = users.filter { |u| u[:gender] == 'male' }
-  years = men.map { |u| u[:birthday][0, 4] }
+def get_men_count_by_year users
+  men = users.filter { |user| user[:gender] == 'male' }
+  years = men.map { |user| user[:birthday][0, 4] }
 
   years.reduce({}) do |acc, year|
     acc[year] ||= 0

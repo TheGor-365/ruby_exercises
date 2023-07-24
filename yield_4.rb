@@ -4,15 +4,15 @@ def run_5_times
   end
 end
 
-run_5_times {puts 'Something'}
+run_5_times { pp 'Something' }
 puts
 
 def run_6_times
-  x = 0
-  while x < 6
-    yield x, 33
-    x += 1
+  index = 0
+  while index < 6
+    yield index, 33
+    index += 1
   end
 end
 
-run_6_times {|i, y| puts "Something else, index = #{i} value: #{y}"}
+run_6_times { |index, value| pp "Something else, index: #{index} value: #{value}" }

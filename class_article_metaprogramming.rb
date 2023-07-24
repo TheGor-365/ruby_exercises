@@ -8,18 +8,50 @@ class Article
   # upcase :chapter
 end
 
-pp article = Article.new(title: 'article', author: 'John', chapter: 'first')
-puts
-p article.attributes #=> {:title=>"ARTICLE", :author=>"JOHN", :chapter=>'first'}
-puts
-p article.title
-puts
-p article.instance_variables
-puts
-puts
-puts
-puts
-p article.title = 'article_2'
-p article.attributes
-puts
+article = Article.new(
+  title:    'article',
+  author:   'John',
+  chapter:  'first'
+)
+
 pp article
+puts
+pp article.attributes
+pp article.title
+pp article.instance_variables
+puts
+puts
+
+pp article.title = 'article_2'
+pp article.attributes
+pp article.attributes.to_a
+puts
+
+pp article
+puts
+puts
+
+article.attributes.each_pair do |attribute|
+  pp attribute.first
+end
+puts
+
+article.attributes.each_pair do |attribute|
+  pp attribute.last
+end
+puts
+
+article.attributes.each_pair do |attribute|
+  pp attribute
+end
+puts
+
+article.attributes.to_h.each_pair do |name, value|
+  pp name
+end
+puts
+
+pp article.attributes[:chapter]
+pp article.attributes[:author]
+pp article.attributes[:title]
+puts

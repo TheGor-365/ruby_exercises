@@ -1,11 +1,13 @@
 def link_to(name, link, attributes = {})
   attr_pairs = attributes.any? ? [''] : []
 
-  attributes.each do |key, value|
-    attr_pairs << "#{key}=\"#{value}\""
+  attributes.each do |name, value|
+    attr_pairs << "#{name}='#{value}'"
   end
-  attr_line = attr_pairs.join(' ')
-  "<a href=\"#{link}\"#{attr_line}>#{name}</a>"
+
+  html_attr = attr_pairs.join(' ')
+
+  puts "<a href='#{link}'#{html_attr}>#{name}</a>"
 end
 
-puts link_to 'name', '/url', class: 'link'
+link_to 'link_name', '/url', class: 'link'

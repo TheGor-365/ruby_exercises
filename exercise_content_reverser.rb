@@ -1,12 +1,12 @@
 file = File.open 'trump.txt', 'r'
-@arr = []
+@array = []
 
 file.each_line do |line|
   words = line.split(/\s|\n|\.|\,|\(|\)|\-|\$/)
 
   words.each do |word|
-    @arr << word
+    @array << word
   end
 end
 
-puts @arr.reverse.join(' ')
+puts @array.reverse.join(' ')

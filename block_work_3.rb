@@ -24,7 +24,7 @@ def each
 end
 
 [1, 2, 3].each do |number|
-  puts number
+  pp number.to_s
 end
 puts
 
@@ -49,16 +49,18 @@ def run_proc_with_random_number(proc)
   proc.call(rand(0..6))
 end
 
-proc = Proc.new { |number| puts "#{number}!" }
-run_proc_with_random_number(proc)
+my_proc = Proc.new { |number| pp "#{number}!" }
+
+run_proc_with_random_number(my_proc)
 puts
 
 
 
 def run_proc_with_random_number(&proc)
-  proc.call(rand(0..6))
+  proc.call(rand(700...1600))
 end
-run_proc_with_random_number { |number| puts "#{number}!" }
+
+run_proc_with_random_number { |number| pp number * 23.15 }
 puts
 
 
@@ -66,6 +68,9 @@ puts
 pp [1, 2, 3].map(&:to_s)
 pp [1, 2, 3].map {|number| number.to_s }
 pp [1, 2, 3].map {|number| number.send(:to_s) }
+pp [1, 2, 3].map {|number| number.send :to_s }
+
+pp %w[ words upcased ].map {|number| number.send :upcase }
 puts
 
 
@@ -75,11 +80,15 @@ class Symbol
   end
 end
 
+pp symbol = :symbol
+
+pp symbol.to_proc
+
 
 
 def return_from_proc
   ten = Proc.new { return 10 }.call
-  puts "This will never be printed."
+  puts "This #{ten} will never be printed."
 end
 return_from_proc
 puts

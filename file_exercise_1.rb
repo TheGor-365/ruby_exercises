@@ -1,24 +1,24 @@
-f = File.open 'text_files/trump.txt', 'r'
+file = File.open 'text_files/trump.txt', 'r'
 
-@hh = {}
+@options = {}
 
 def add_to_hash word
   if !word.empty?
     word.downcase!
 
-    cnt = @hh[word].to_i
-    cnt += 1
-    @hh[word] = cnt
+    count = @options[word].to_i
+    count += 1
+    @options[word] = count
   end
 end
 
-f.each_line do |line|
-  arr = line.split(/\s|\n|\.|,|\;|\-|\'|\"|\(|\)|\-/)
-  arr.each {|word| add_to_hash(word)}
+file.each_line do |line|
+  array = line.split(/\s|\n|\.|,|\;|\-|\'|\"|\(|\)|\-/)
+  array.each {|word| add_to_hash(word)}
 end
 
-f.close
+file.close
 
-@hh.each do |k,v|
-  puts "#{v} #{k}"
+@options.each do |name, value|
+  puts "#{value} #{name}"
 end

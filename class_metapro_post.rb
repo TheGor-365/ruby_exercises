@@ -4,14 +4,14 @@ require 'date'
 class Post
   include Model
 
-  attribute :id, type: :integer
-  attribute :title, type: :string
-  attribute :body, type: :string
+  attribute :id,         type: :integer
+  attribute :title,      type: :string
+  attribute :body,       type: :string
   attribute :created_at, type: :datetime
-  attribute :published, type: :boolean
+  attribute :published,  type: :boolean
 end
 
-pp post = Post.new(
+post = Post.new(
   id:         '1',
   title:      'First Post',
   body:       'Hello, World!',
@@ -20,11 +20,12 @@ pp post = Post.new(
 )
 puts
 
-pp post.id         # => 1
-pp post.title      # => 'Hello, World!'
-pp post.body       # => 'First Post'
-pp post.created_at # => #<DateTime: 1983-11-18T00:00:00+00:00 (4891313/2,0/1,2299161)>
-pp post.published  # => true
+
+pp post.id
+pp post.title
+pp post.body
+pp post.created_at
+pp post.published
 puts
 
 pp post
@@ -41,6 +42,8 @@ pp post.attributes
 puts
 
 pp post_2 = Post.new(id: '2')
+puts
+
 pp post_2.id = '3'
 pp post_2
 puts

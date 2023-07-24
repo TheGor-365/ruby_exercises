@@ -5,6 +5,7 @@ Customer = Struct.new(:name, :address) do
 end
 
 pp dave = Customer.new("Dave", "123 Main")
+puts
 
 pp dave.name
 pp dave.address

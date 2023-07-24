@@ -1,7 +1,7 @@
-def mm names
-  names.each do |k, v|
-    puts "Hello, #{v.capitalize}"
+def value_upcaser params
+  params.each do |name, value|
+    puts "#{name}: #{value.upcase}"
   end
 end
 
-send :mm, :nick => 'nick', :mike => 'mike'
+send :value_upcaser, nick: 'Nick', mike: 'Mike', eric: 'Alice'

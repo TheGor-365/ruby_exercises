@@ -1,12 +1,12 @@
-def gen_diff(data1, data2)
-  keys = data1.keys | data2.keys
+def gen_diff data_1, data_2
+  keys = data_1.keys | data_2.keys
 
   keys.each_with_object({}) do |key, acc|
-    acc[key] = if !data1.key?(key)
+    acc[key] = if !data_1.key?(key)
       'added'
-    elsif !data2.key?(key)
+    elsif !data_2.key?(key)
       'deleted'
-    elsif data1[key] == data2[key]
+    elsif data_1[key] == data_2[key]
       'unchanged'
     else
       'changed'

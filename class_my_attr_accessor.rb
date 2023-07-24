@@ -18,7 +18,8 @@ class Cat
 end
 
 cat = Cat.new 'Kitty', 4, 23
-p cat
-p cat.name
-p cat.age
-p cat.weight
+
+pp cat
+pp cat.name
+pp cat.age
+pp cat.weight

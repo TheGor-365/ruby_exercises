@@ -1,12 +1,14 @@
 class Something
-  attr_accessor :x, :y
+  attr_accessor :first_attribute, :second_attribute
 
-  def initialize hash
-    hash.each do |key, value|
-      send "#{key}=", value
+  def initialize params
+    params.each do |name, value|
+      send "#{name}=", value
     end
   end
 end
 
-s = Something.new :x => 1, :y => 2
-puts s.x
+something = Something.new first_attribute: 1, second_attribute: 2
+
+pp something.first_attribute
+pp something.second_attribute

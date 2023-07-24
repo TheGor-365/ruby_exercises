@@ -1,5 +1,6 @@
 def convert(languages)
   result = []
+
   languages.each do |name, _, typing_name|
     result << [name, typing_name]
   end
@@ -15,4 +16,4 @@ data = [
   ['kotlin', 'static', 'strong']
 ]
 
-puts convert(data)
+pp convert(data)

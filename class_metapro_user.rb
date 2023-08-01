@@ -13,10 +13,12 @@ pp user = User.new(
   birthday: '03/02/1987',
   active:   'true'
 )
+
 puts
 puts
 
 pp user.attributes
+
 puts
 puts
 
@@ -25,6 +27,7 @@ pp user_2 = User.new
 pp user_2.name
 pp user_2.birthday
 pp user_2.active
+
 puts
 
 pp user_2.attributes

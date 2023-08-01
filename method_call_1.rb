@@ -12,6 +12,8 @@ class User
   end
 end
 
+
+
 user = User.new('Greg')
 
 user.hello

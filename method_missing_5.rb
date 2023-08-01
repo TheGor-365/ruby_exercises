@@ -8,9 +8,12 @@ class Names
   extend SomethingEx
   method_with_custom_name 'Polly', 'Eric', 'John'
 end
+
 puts
 
-pp something = Names.new
+something = Names.new
+pp something
+
 puts
 puts
 puts
@@ -27,10 +30,13 @@ class Names
   include SomethingIn
 end
 
-pp something = Names.new
+something = Names.new
+pp something
+
 puts
 
 something.method_with_custom_name 'Polly', 'Eric', 'John'
+
 puts
 puts
 puts
@@ -49,7 +55,10 @@ class Names
   include SomethingHash
 end
 
-pp something = Names.new
+
+something = Names.new
+pp something
+
 puts
 
 something.method_with_custom_name polly: 'Polly', eric: 'Eric', john: 'John'

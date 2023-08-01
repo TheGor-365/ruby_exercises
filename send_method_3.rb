@@ -8,11 +8,19 @@ class Something
   end
 end
 
-pp s = Something.new(name: 'Mike', age: 60, country: 'USA')
+
+
+something = Something.new name: 'Mike', age: 60, country: 'USA'
+
+pp something
+
 puts
-p s.name
-p s.age
-p s.country
+
+pp something.name
+pp something.age
+pp something.country
+
 puts
-s.name = 'Steve'
-pp s
+
+something.name = 'Steve'
+pp something

@@ -1,17 +1,20 @@
-define_method("example") do |fixed, default = {}|
+define_method("first_example") do |fixed, default = {}|
   puts fixed
   puts default
 end
 
-example('Hello', key: :value)
-example('Hello')
+first_example('Hello', key: :value)
+first_example('Hello')
+
 puts
 
-define_method(:my_method) do |foo, bar|
+
+
+define_method(:second_example) do |foo, bar|
   bar ||= {}
   puts foo
   puts bar
 end
 
-my_method('Hello', key: :value)
-my_method('Hello', nil)
+second_example('Hello', key: :value)
+second_example('Hello', nil)

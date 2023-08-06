@@ -15,3 +15,10 @@ class Book
     end
   end
 end
+
+
+book = Book.new.show_cover?
+
+pp book
+# pp book.book_html
+# pp book.show_cover

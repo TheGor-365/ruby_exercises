@@ -20,10 +20,10 @@ class Device
 
   def tech_details
     {
-      'name':  name,
-      'type':  type,
-      'price': price,
-      'model': model
+      name:  name,
+      type:  type,
+      price: price,
+      model: model
     }
   end
 

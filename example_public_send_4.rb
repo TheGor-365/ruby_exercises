@@ -1,15 +1,19 @@
-class Klass
+class Greet
+  def public_greet
+    pp 'greet from public'
+  end
+
   private
-  def private_method
-    puts "Hello"
+
+  def private_greet
+    pp 'greet from private'
   end
 end
 
 
-klass_instance = Klass.new
+greet = Greet.new
 
-klass_instance.send(:private_method)
-# => "Hello"
-
-klass_instance.public_send(:private_method)
-# => `public_send': private method `private_method' called for #<Klass:0x007f5fd7159a80> (NoMethodError)
+greet.send(:public_greet)
+greet.send(:private_greet)
+greet.public_send(:public_greet)
+# greet.public_send(:private_greet)

@@ -1,15 +1,13 @@
 class BookService
-  def initialize(params)
+  attr_reader :params
+
+  def initialize params
     @params = params
   end
 
-  def call
-    # public_send("filter_by_#{params[:filter]}")
-    send("filter_by_#{params[:filter]}")
+  def service
+    public_send("filter_by_#{params[:filter]}")
   end
-
-  private
-  attr_reader :params
 
   def filter_by_author
     pp 'filter by author'
@@ -21,5 +19,22 @@ class BookService
 end
 
 
-books = BookService.new({filter: 'author'}).call
-books
+
+first_param = { filter: 'author' }
+
+first = BookService.new first_param
+first.service
+
+
+
+second_param = { filter: 'editorial' }
+
+second = BookService.new second_param
+second.service
+
+
+
+third_param = { filter: 'something' }
+
+third = BookService.new third_param
+third.service

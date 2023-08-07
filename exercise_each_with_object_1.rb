@@ -1,4 +1,4 @@
-def words_by_letters(sentence)
+def words_by_letters sentence
   words = sentence.split
 
   words.each_with_object({}) do |word, acc|
@@ -9,4 +9,4 @@ end
 
 sentence = 'hexlet helps people to become developers'
 
-puts result = words_by_letters(sentence)
+pp words_by_letters(sentence)

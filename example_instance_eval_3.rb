@@ -40,7 +40,6 @@ puts
 puts
 
 previous_school = 'Sunny Shores Middle School-Middlesburg-MI'
-
 split_array = previous_school.split("-")
 
 previous_school_hash = {

@@ -1,8 +1,10 @@
 pp words = %w(the be to of and a in that have I it for not not not)
+
 puts
 
 
 word_counts = {}
+
 words.each do |word|
   if word_counts[word]
     word_counts[word] += 1
@@ -12,6 +14,7 @@ words.each do |word|
 end
 
 pp word_counts
+
 puts
 
 
@@ -21,6 +24,7 @@ word_counts = Hash.new(0)
 words.each { |word| word_counts[word] += 1 }
 
 pp word_counts
+
 puts
 
 

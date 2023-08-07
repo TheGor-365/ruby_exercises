@@ -9,7 +9,8 @@ pp two = MyClass.new(2)
 
 puts
 
-# a.num
+# one.num
+
 pp one.instance_eval { @num }
 pp two.instance_eval { @num }
 
@@ -29,7 +30,8 @@ one.instance_eval do
 end
 
 pp one.num
-# pp b.num
+
+# pp two.num
 
 puts
 

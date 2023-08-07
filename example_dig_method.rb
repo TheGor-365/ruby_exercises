@@ -4,14 +4,14 @@ users = [
   { first: 'Sam', last: 'Schwartzman' }
 ]
 
-# users.each do |user|
-#   puts user[:address][:city]
-# end
-
 users.each do |user|
-  puts user[:address][:city] if user[:address]
+  pp user[:address][:city] if user[:address]
 end
 
+puts
+puts
+
 users.each do |user|
-  puts user.dig(:address, :city)
+  pp user.dig(:address, :city)
+  pp user.dig(:address, :country)
 end

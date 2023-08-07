@@ -1,4 +1,4 @@
-hh = {
+hash = {
 	somename: 'Enter your name',
 	phone: 'Enter your phone',
 	date_time: 'Enter date and time',
@@ -6,6 +6,6 @@ hh = {
 	color: 'Choose color that you need'
 }
 
-error = hh.select { |key,_| params[key] == "" }.values.join(", ")
+error = hash.select { |key,_| params[key] == "" }.values.join(", ")
 
 puts error

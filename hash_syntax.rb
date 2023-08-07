@@ -1,29 +1,28 @@
 balls = {
   soccer_ball: { weight: 410, colors: [ :red, :blue ] },
   tennis_ball: { weight: 58, colors: [ :yellow, :white ] },
-  golf_ball: { weight: 45, colors: [ :white ] }
+  golf_ball:   { weight: 45, colors: [ :white ] }
 }
 
-puts balls
-puts
-
 soccer_balls_colors = balls[ :soccer_ball ][ :colors ]
-puts soccer_balls_colors.inspect
+pp soccer_balls_colors
 
 soccer_balls_weight = balls[ :soccer_ball ][ :weight ]
-puts soccer_balls_weight.inspect
-puts
+pp soccer_balls_weight
+
 balls[ :soccer_ball ][ :colors ].push(:green)
-puts soccer_balls_colors.inspect
+pp soccer_balls_colors
+
 puts
+puts
+
+
 
 balls = [
   { type: :soccer_ball, weight: 410, colors: [ :red, :blue ] },
   { type: :tennis_ball, weight: 58, colors: [ :yellow, :white ] },
   { type: :golf_ball, weight: 45, colors: [ :white ] }
 ]
-
-puts balls.inspect
 
 @cart = [
   { type: :soccer_ball, qty: 2 },
@@ -41,14 +40,17 @@ def qtys_array
   @cart.each { |hash| sum << hash[:qty] }
   sum
 end
-puts 'Qtys array'
-puts qtys_array.inspect
+
+pp qtys_array
+
+puts
+puts
+
 
 
 def total
   sum = 0
   qtys_array.each { |qty| sum += qty }
-  puts sum
 end
 
-total
+pp total

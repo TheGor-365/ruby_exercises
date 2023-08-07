@@ -41,3 +41,6 @@ def check_number(ary)
   end
   result.join(' ')
 end
+
+
+pp fizz_buzz(46, 56)

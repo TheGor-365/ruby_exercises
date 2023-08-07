@@ -1,29 +1,29 @@
-h = {
+hash = {
   chocolate: 10,
   icecream: 20,
   shugar: 30
 }
 
-pp h.each { |k, v| h[k] = v * 5 }
+pp hash.each { |name, value| hash[name] = value * 5 }
 puts
 
 
 
-h = {
+hash = {
   chocolate: 10,
   icecream: 20,
   shugar: 30
 }
 
-pp h.transform_values { |v| v * 5 }
+pp hash.transform_values { |value| value * 5 }
 puts
 
 
 
-h = {
+hash = {
   chocolate: 10,
   icecream: 20,
   shugar: 30
 }
 
-pp h.transform_keys { |k| k[0].to_sym }
+pp hash.transform_keys { |name| name[0].to_sym }

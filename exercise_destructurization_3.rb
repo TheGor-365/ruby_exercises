@@ -4,9 +4,8 @@ def convert(languages)
   languages.each do |name, _, typing_name|
     result << [name, typing_name]
   end
+
   result
-  # The Ruby Way
-  # languages.map { |(name, _, typing_name)| [name, typing_name] }
 end
 
 data = [
@@ -17,3 +16,12 @@ data = [
 ]
 
 pp convert(data)
+
+
+
+
+def convert(languages)
+  result = []
+  languages.map { |(name, _, typing_name)| [name, typing_name] }
+  result
+end

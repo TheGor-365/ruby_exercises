@@ -5,6 +5,7 @@ upcased_cars_hashes = cars.each_with_object({}) do |item, hash|
 end
 
 pp upcased_cars_hashes
+
 puts
 
 
@@ -16,6 +17,7 @@ multipled_numbers = numbers.each_with_object([]) do |item, array|
 end
 
 pp multipled_numbers
+
 puts
 
 
@@ -28,6 +30,7 @@ big_numbers.each do |item|
 end
 
 pp multipled_gig_nums
+
 puts
 
 
@@ -39,6 +42,7 @@ words_counts = words.each_with_object(Hash.new(0)) do |item, hash|
 end
 
 pp words_counts
+
 puts
 
 
@@ -59,6 +63,7 @@ pp another_truthy_ages_sum
 
 bes_way_sum = ages.sum
 pp bes_way_sum
+
 puts
 
 
@@ -70,6 +75,7 @@ multipled_ids = ids.inject([]) do |array, item|
 end
 
 pp multipled_ids
+
 puts
 
 
@@ -82,6 +88,7 @@ upcased_animals_values = animals.inject({}) do |hash, item|
 end
 
 pp upcased_animals_values
+
 puts
 
 
@@ -93,6 +100,7 @@ multipled_params = params.each_with_object({}) do |(key, value), hash|
 end
 
 pp multipled_params
+
 puts
 
 
@@ -104,4 +112,5 @@ converted_options = options.each_with_object([]) do |(key, value), array|
 end
 
 pp converted_options
+
 puts

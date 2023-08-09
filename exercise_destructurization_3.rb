@@ -1,4 +1,4 @@
-def convert(languages)
+def convert languages
   result = []
 
   languages.each do |name, _, typing_name|
@@ -20,7 +20,7 @@ pp convert(data)
 
 
 
-def convert(languages)
+def convert languages
   result = []
   languages.map { |(name, _, typing_name)| [name, typing_name] }
   result

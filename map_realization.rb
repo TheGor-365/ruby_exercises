@@ -1,9 +1,10 @@
-def my_map(coll)
+def my_map collection
   result = []
-  coll.each do |elem|
+
+  collection.each do |elem|
     result << yield(elem)
   end
   result
 end
 
-p my_map([1, 2, 3]) { |v| v * 2 }
+pp my_map([1, 2, 3]) { |v| v * 2 }

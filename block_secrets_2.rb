@@ -8,6 +8,7 @@ def my_method(message, callable, callable_2)
 end
 
 my_method "Calling block...", ->(message) { puts message }, ->(message) { puts message.upcase.inspect }
+
 puts
 
 

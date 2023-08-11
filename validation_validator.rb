@@ -30,14 +30,15 @@ def validator input
 		color: 'Choose color that you need'
 	}
 
-	input.each do |k, v|
-		if input[k] == ''
-			puts hh[k]
+	input.each do |name, value|
+		if input[name] == ''
+			puts hh[name]
 		end
 	end
 end
 
-input.each { |k, v| puts "#{k} #{v}" }
+input.each { |name, value| puts "#{name} #{value}" }
+
 puts
 
 validator input

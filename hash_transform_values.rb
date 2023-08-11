@@ -5,6 +5,7 @@ hash = {
 }
 
 pp hash.each { |name, value| hash[name] = value * 5 }
+
 puts
 
 
@@ -16,6 +17,7 @@ hash = {
 }
 
 pp hash.transform_values { |value| value * 5 }
+
 puts
 
 

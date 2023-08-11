@@ -1,6 +1,7 @@
 require 'sqlite3'
 
 @db = SQLite3::Database.new 'db/the_barbers.sqlite'
+
 @db.execute <<-SQL
   CREATE TABLE IF NOT EXISTS the_barbers (
     barbername varchar(50),

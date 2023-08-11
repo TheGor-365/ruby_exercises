@@ -5,10 +5,10 @@ class MyMiddleware
 
   def call(env)
     puts 'middleware_before'
-    # env содержит запрос
     status, headers, body = @app1.call(env)
     puts 'middleware_after'
     request = Rack::Request.new(env)
+
     if request.path == '/'
       case request.request_method
       when 'GET'
@@ -29,7 +29,5 @@ class App
   end
 end
 
-# Добавляется миддлвар
 use MyMiddleware
-# Запуск приложения
 run App.new

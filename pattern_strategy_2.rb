@@ -68,16 +68,22 @@ class Navigator
   end
 end
 
-p navigator = Navigator.new
+pp navigator = Navigator.new
+
+pp navigator.route_strategy = Walk
+pp navigator.build_route :a, :b
+
 puts
-p navigator.route_strategy = Walk
-p navigator.build_route :a, :b
+
+pp navigator.route_strategy = Car
+pp navigator.build_route :a, :b
+
 puts
-p navigator.route_strategy = Car
-p navigator.build_route :a, :b
+
+pp navigator.route_strategy = Bus
+pp navigator.build_route :a, :b
+
 puts
-p navigator.route_strategy = Bus
-p navigator.build_route :a, :b
-puts
-p navigator.route_strategy = Plane
-p navigator.build_route :a, :b
+
+pp navigator.route_strategy = Plane
+pp navigator.build_route :a, :b

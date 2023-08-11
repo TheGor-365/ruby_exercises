@@ -12,6 +12,7 @@ class RandomEngine
   end
 end
 
+
 module GameEngine
   def self.play
     a = RandomEngine.get_random_value
@@ -30,30 +31,24 @@ module GameEngine
   end
 end
 
-p random_engine = RandomEngine.get_random_value
-p random_engine = RandomEngine.to_string
-# p random_engine = RandomEngine.third
-# p random_engine.to_string
-puts '---------'
+
+pp random_engine = RandomEngine.get_random_value
+pp random_engine = RandomEngine.to_string
+
+puts
+
 pp random_engine_2 = RandomEngine.new
 pp random_engine_2.third
 pp random_engine_3 = RandomEngine.new.third
-# pp random_engine_3.third
-puts '---------'
-p GameEngine.play
-p GameEngine.show
-# p GameEngine.third
-# p GameEngine.get_random_value
-# p GameEngine.to_string
-# p GameEngine.third
-puts '---------'
-p game_engine = GameEngine.play
-p game_engine = GameEngine.show
-# p game_engine = GameEngine.third
-# p game_engine.play
-# p game_engine.show
-# p game_engine.three
-p game_engine
-# p game_engine.first
-puts '---------'
-# p game_engine_2 = GameEngine.new
+
+puts
+
+pp GameEngine.play
+pp GameEngine.show
+
+puts
+
+pp game_engine = GameEngine.play
+pp game_engine = GameEngine.show
+
+pp game_engine

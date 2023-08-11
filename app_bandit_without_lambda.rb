@@ -1,4 +1,4 @@
-hh = {
+scores = {
   111 => 100,
   222 => 200,
   333 => 300,
@@ -9,25 +9,25 @@ hh = {
   888 => 800,
   999 => 900
 }
+
 balance = 1000
 
 while true do
   puts "Press Enter to play..."
   gets
 
-  x = rand(100..999)
-  puts x
+  combination = rand(100..999)
+  puts combination
 
-  if hh[x]
-    balance = balance + hh[x]
-    puts "Plus $#{hh[x]} to your balance"
+  if scores[combination]
+    balance = balance + scores[combination]
+    puts "You win: plus $#{scores[combination]} to your balance"
   elsif balance <= 0
-    puts "Your lose all of your money"
+    puts "You lose"
     exit
   else
-    balance = balance - 10
-    puts "Minus $#{10} of your balance"
+    balance -= 10
+    puts "Minus $#{10}"
   end
-
   puts "Your balance $#{balance}"
 end

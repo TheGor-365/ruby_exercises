@@ -5,5 +5,6 @@ class Something
 end
 
 s = Something.new
+
 puts s.aaa
 puts s.sss

@@ -11,10 +11,12 @@ puts "-- Type 'display' to display all movies."
 puts "-- Type 'delete' to delete a movie."
 
 choice = gets.chomp.downcase
+
 case choice
 when 'add'
   puts "What movie do you want to add?"
   title = gets.chomp
+
   if movies[title.to_sym].nil?
     puts "What's the rating? (Type a number 0 to 4.)"
     rating = gets.chomp
@@ -26,6 +28,7 @@ when 'add'
 when 'update'
   puts "What movie do you want to update?"
   title = gets.chomp
+
   if movies[title.to_sym].nil?
     puts "Movie not found!"
   else
@@ -41,6 +44,7 @@ when 'display'
 when 'delete'
   puts "What movie do you want to delete?"
   title = gets.chomp
+  
   if movies[title.to_sym].nil?
     puts "Movie not found!"
   else

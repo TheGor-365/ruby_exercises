@@ -27,12 +27,16 @@ class Tiger
   R = 12
 end
 
-p tiger = Tiger.new('Boris', 5, '133_kg')
+pp tiger = Tiger.new('Boris', 5, '133_kg')
+
 puts
-puts tiger.name
-puts tiger.age
-puts tiger.weight
+
+pp tiger.name
+pp tiger.age
+pp tiger.weight
+
 puts
+
 tiger.attribute
 
 

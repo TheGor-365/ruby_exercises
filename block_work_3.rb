@@ -1,5 +1,6 @@
 def each
   number = 0
+
   while number < size
     yield at(number)
     number += 1
@@ -9,14 +10,15 @@ end
 [1, 2, 3].each do |number|
   puts number
 end
+
 puts
 
 
 
 def each
   return to_enum(:each) unless block_given?
-
   number = 0
+
   while number < size
     yield at(number)
     number += 1
@@ -26,6 +28,7 @@ end
 [1, 2, 3].each do |number|
   pp number.to_s
 end
+
 puts
 
 
@@ -34,13 +37,14 @@ puts
 
 def each_explicit(&block)
   return to_enum(:each) unless block
-
   number = 0
+  
   while number < size
     block.call at(number)
     number += 1
   end
 end
+
 puts
 
 
@@ -52,6 +56,7 @@ end
 my_proc = Proc.new { |number| pp "#{number}!" }
 
 run_proc_with_random_number(my_proc)
+
 puts
 
 
@@ -61,6 +66,7 @@ def run_proc_with_random_number(&proc)
 end
 
 run_proc_with_random_number { |number| pp number * 23.15 }
+
 puts
 
 
@@ -71,6 +77,7 @@ pp [1, 2, 3].map {|number| number.send(:to_s) }
 pp [1, 2, 3].map {|number| number.send :to_s }
 
 pp %w[ words upcased ].map {|number| number.send :upcase }
+
 puts
 
 
@@ -91,6 +98,7 @@ def return_from_proc
   puts "This #{ten} will never be printed."
 end
 return_from_proc
+
 puts
 
 

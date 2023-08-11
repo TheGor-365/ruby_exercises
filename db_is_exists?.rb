@@ -1,6 +1,7 @@
 require 'sqlite3'
 
 @db = SQLite3::Database.new 'db/leprosorium.sqlite'
+
 @db.execute <<-SQL
   CREATE TABLE IF NOT EXISTS Users (
     name varchar(50),

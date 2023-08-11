@@ -18,10 +18,13 @@ class C
   include M
   who_am_i
 end
+
 puts
 
-p c = C.new.speak_up('Sarah')
+pp c = C.new.speak_up('Sarah')
+
 puts
 
-p C.who_am_i
+pp C.who_am_i
+
 puts

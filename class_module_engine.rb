@@ -10,5 +10,5 @@ class GameEngine
   end
 end
 
-p GameEngine.play
-p RandomEngine.inspect
+pp GameEngine.play
+pp RandomEngine.inspect

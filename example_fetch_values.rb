@@ -3,13 +3,14 @@ hash = {
   "dog" => "canine",
   "cow" => "bovine"
 }
+
 pp hash
+
 puts
 
 pp hash.fetch_values("cow", "cat")
 pp hash.fetch_values("cow", "bird") { |key| key.upcase }
 
-# pp h.fetch_values("cow", "bird")                  # raises KeyError
 puts
 
 
@@ -20,7 +21,9 @@ hash = {
   bar: 1,
   baz: 2
 }
+
 pp hash
+
 puts
 
 values = hash.fetch_values( :bar, :foo, :bad, :bam, :baz, :mmm ) { |key| key.to_s }

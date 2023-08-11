@@ -38,20 +38,23 @@ class Cat < Animal
 end
 
 
-p Animal.singleton_class
+pp Animal.singleton_class
+
 puts
-p Animal.singleton_class.instance_methods.respond_to? :find
+
+pp Animal.singleton_class.instance_methods.respond_to? :find
 pp Animal.singleton_class.instance_methods.grep /fin/
+
 puts
-p Cat.singleton_class
-p Cat.singleton_class.superclass
+
+pp Cat.singleton_class
+pp Cat.singleton_class.superclass
+
 puts
-p Cat.singleton_class.instance_methods.respond_to? :find
+
+pp Cat.singleton_class.instance_methods.respond_to? :find
 pp Cat.singleton_class.instance_methods.grep /fin/
+
 puts
-# p c = Cat.new("Mr. Buttons")
-# c.hi
-# puts
-# p Cat.find 'serious'
-puts
-p Cat.avg_height = 20
+
+pp Cat.avg_height = 20

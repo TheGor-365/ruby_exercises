@@ -8,4 +8,4 @@ def compare_versions version1, version2
   major_compare.zero? ? minor_compare : major_compare
 end
 
-p compare_versions '2.3.4', '3.2.4'
+pp compare_versions '2.3.4', '3.2.4'

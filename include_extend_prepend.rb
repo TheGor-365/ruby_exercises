@@ -1,46 +1,49 @@
-# # include
-#
-# module Homable
-#   def has_home?
-#     true
-#   end
-# end
-#
-# class Cat
-#   include Homable
-#
-#   def has_home?
-#     false
-#   end
-# end
-#
-# pp "include: #{Cat.new.has_home?}"
-#
-# pp Cat.ancestors
-# puts
-#
-#
-# # prepend
-#
-# module Homable
-#   def has_home?
-#     true
-#   end
-# end
-#
-# class Cat
-#   prepend Homable
-#
-#   def has_home?
-#     false
-#   end
-# end
-#
-# pp "prepend: #{Cat.new.has_home?}"
-#
-# pp Cat.ancestors
-# puts '-' * 90
+# include
 
+module Homable
+  def has_home?
+    true
+  end
+end
+
+class Cat
+  include Homable
+
+  def has_home?
+    false
+  end
+end
+
+pp "include: #{Cat.new.has_home?}"
+
+pp Cat.ancestors
+
+puts
+puts
+
+
+# prepend
+
+module Homable
+  def has_home?
+    true
+  end
+end
+
+class Cat
+  prepend Homable
+
+  def has_home?
+    false
+  end
+end
+
+pp "prepend: #{Cat.new.has_home?}"
+
+pp Cat.ancestors
+
+puts
+puts
 
 # extend
 

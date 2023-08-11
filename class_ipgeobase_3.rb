@@ -41,14 +41,17 @@ module Ipgeobase
   end
 end
 
+
 ip_meta = Ipgeobase.lookup('83.169.216.199')
+
 puts
+
 puts ip_meta.country
-# puts
-# puts ip_meta.country_code
-# puts
-# puts ip_meta.city
-# puts
-# puts ip_meta.lat
-# puts
-# puts ip_meta.lon
+puts
+puts ip_meta.country_code
+puts
+puts ip_meta.city
+puts
+puts ip_meta.lat
+puts
+puts ip_meta.lon

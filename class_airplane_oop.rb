@@ -8,8 +8,7 @@ class Airplane
   end
 
   def fly
-    @speed = 800
-    @altitude = 10000
+    @speed, @altitude = 800, 10_000
   end
 
   def land

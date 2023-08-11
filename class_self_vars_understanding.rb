@@ -1,12 +1,9 @@
 class Manager
-
   @@all = []
   attr_accessor :name, :department, :age
 
   def initialize name, department, age
-    @name = name
-    @department = department
-    @age = age
+    @name, @department, @age = name, department, age
     @@all << self
   end
 

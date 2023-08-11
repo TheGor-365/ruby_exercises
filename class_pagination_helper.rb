@@ -29,18 +29,19 @@ class PaginationHelper
   end
 end
 
-p helper = PaginationHelper.new(%w[a b c d e f], 4)
 
-p helper.page_count()
-p helper.item_count() == 6
-p helper.page_item_count(0) == 4
-p helper.page_item_count(1) == 2
-p helper.page_item_count(2) == -1
+pp helper = PaginationHelper.new(%w[a b c d e f], 4)
 
-p helper.page_index(5) == 1
-p helper.page_index(2) == 0
-p helper.page_index(20) == -1
-p helper.page_index(-10) == -1
+pp helper.page_count()
+pp helper.item_count() == 6
+pp helper.page_item_count(0) == 4
+pp helper.page_item_count(1) == 2
+pp helper.page_item_count(2) == -1
+
+pp helper.page_index(5) == 1
+pp helper.page_index(2) == 0
+pp helper.page_index(20) == -1
+pp helper.page_index(-10) == -1
 
 # assert(helper.page_count() == 2)
 # assert(helper.item_count() == 6)

@@ -5,6 +5,6 @@ module MyNumber
   end
 end
 
-puts MyNumber::reverse_int(13)
-puts MyNumber::reverse_int(-123)
-puts MyNumber::reverse_int(8900)
+pp MyNumber::reverse_int(13)
+pp MyNumber::reverse_int(-123)
+pp MyNumber::reverse_int(8900)

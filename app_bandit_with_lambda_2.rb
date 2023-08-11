@@ -1,8 +1,8 @@
 add_10 = lambda { |x| x + 10 }
 add_20 = lambda { |x| x + 20 }
-sub_5 = lambda { |x| x - 5 }
+sub_5 = lambda  { |x| x - 5 }
 
-hh = {
+scores = {
   100 => add_10,
   222 => add_10,
   333 => add_10,
@@ -13,15 +13,16 @@ hh = {
   888 => sub_5,
   999 => sub_5
 }
+
 balance = 1000
 
 loop do
-  x = rand(100..999)
-  puts "Combination: #{x}"
+  combination = rand(100..999)
+  puts "Combination: #{combination}"
 
-  if hh[x]
-    f = hh[x]
-    balance = f.call balance
+  if scores[combination]
+    result = scores[combination]
+    balance = result.call balance
     puts "Lambda called"
   else
     balance = sub_5.call balance
@@ -30,4 +31,6 @@ loop do
   puts "Balance: $#{balance}"
   puts 'Press Enter...'
   gets
+
+  break if balance <= 0
 end

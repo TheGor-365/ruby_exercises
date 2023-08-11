@@ -1,13 +1,13 @@
-@hh = {}
+@hash = {}
 
 def add_person options
-  puts 'Already exists' if @hh[options[:name]]
-  @hh[options[:name]] = options[:age]
+  puts 'Already exists' if @hash[options[:name]]
+  @hash[options[:name]] = options[:age]
 end
 
 def show_hash
-  @hh.keys.each do |name|
-    age = @hh[name]
+  @hash.keys.each do |name|
+    age = @hash[name]
     puts "Name: #{name}, age: #{age}"
   end
 end

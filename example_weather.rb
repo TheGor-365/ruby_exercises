@@ -18,7 +18,7 @@ cloud_index = current_forecast.elements['PHENOMENA'].attributes['cloudiness'].to
 
 clouds = CLOUDINESS[cloud_index]
 
-puts city_name
-puts "Temperature: #{min_temp} / #{max_temp}"
-puts "Wind: #{max_wind} m/s"
-puts clouds
+pp city_name
+pp "Temperature: #{min_temp} / #{max_temp}"
+pp "Wind: #{max_wind} m/s"
+pp clouds

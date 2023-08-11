@@ -3,6 +3,8 @@
   pp hash
   pp item
 end
+
+puts
 puts
 
 
@@ -10,6 +12,8 @@ puts
 (1..10).each_with_object([]) do |item, array|
   pp array << item ** 2
 end
+
+puts
 puts
 
 
@@ -19,6 +23,8 @@ puts
   pp hash
   pp item
 end
+
+puts
 puts
 
 
@@ -27,47 +33,62 @@ puts
   sum += item
   pp sum
 end
+
+puts
 puts
 
 
 
 pp (1..10).reduce(:+)
+
+puts
 puts
 
 
 
 pp (1..10).inject(:+)
+
+puts
 puts
 
 
 
-ary = (1..10).inject([]) do |array, item|
+array = (1..10).inject([]) do |array, item|
   array << item ** 2
 end
-pp ary
+
+pp array
+
+puts
 puts
 
 
 
-h = [:foo, :bar, :jazz].inject({}) do |hash, item|
+hash = [:foo, :bar, :jazz].inject({}) do |hash, item|
   hash[item] = item.to_s.upcase
   hash
 end
-pp h
+
+pp hash
+
+puts
 puts
 
 
 
-h = { foo: 1, bar: 2, jazz: 3 }.each_with_object({}) do |(key, value), hash|
+hash = { foo: 1, bar: 2, jazz: 3 }.each_with_object({}) do |(key, value), hash|
   hash[key] = value**2
 end
-pp h
+
+pp hash
+
+puts
 puts
 
 
 
-ary = { foo: 1, bar: 2, jazz: 3 }.each_with_object([]) do |(key, value), array|
+array = { foo: 1, bar: 2, jazz: 3 }.each_with_object([]) do |(key, value), array|
   array << { id: value, name: key }
 end
-pp ary
-puts
+
+pp array

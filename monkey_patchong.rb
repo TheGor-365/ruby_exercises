@@ -4,4 +4,4 @@ class Array
   end
 end
 
-p %w(one two three).how_many?
+pp %w(one two three).how_many?

@@ -55,7 +55,7 @@ puts
 
 airports.each do |airport|
   puts "Airport #{airport.name}:"
-  
+
   airport.planes.each do |plane|
     puts "Plane: #{plane.model}"
   end

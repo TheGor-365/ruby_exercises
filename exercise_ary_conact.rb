@@ -13,4 +13,4 @@ if choice == nil || !choice.is_a?(Numeric)
   choice = STDIN.gets.to_i
 end
 
-puts select_item(choice, collection).inspect
+pp select_item(choice, collection)

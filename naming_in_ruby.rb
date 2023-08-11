@@ -11,4 +11,4 @@ end
 
 hash = {first: 'one', second: 'two'}
 
-p build_query_string hash
+pp build_query_string hash

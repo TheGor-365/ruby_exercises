@@ -6,5 +6,5 @@ end
 pangram = 'A quick brown fox jumps over the lazy dog'
 not_pangram = 'Something else'
 
-p pangram?(pangram)
-p pangram?(not_pangram)
+pp pangram?(pangram)
+pp pangram?(not_pangram)

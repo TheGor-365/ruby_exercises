@@ -1,6 +1,7 @@
 require 'sqlite3'
 
 db = SQLite3::Database.new 'db/barbershop.sqlite'
+
 db.results_as_hash = true
 
 db.execute <<-SQL

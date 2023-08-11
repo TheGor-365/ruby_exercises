@@ -1,7 +1,7 @@
-f = File.open "text_files/file.A1.txt"
+file = File.open "text_files/file.A1.txt"
 
-line = f.readline
-lines = f.readlines
+line = file.readline
+lines = file.readlines
 
 puts line[0]
 puts

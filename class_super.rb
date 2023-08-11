@@ -1,6 +1,6 @@
 class Message
   @@messages_sent = 0
-  
+
   def initialize(from, to)
     @from = from
     @to = to
@@ -15,3 +15,4 @@ class Email < Message
 end
 
 my_message = Message.new("Ian", "Alex")
+pp my_message

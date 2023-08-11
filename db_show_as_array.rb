@@ -17,18 +17,21 @@ db.execute 'SELECT * FROM Users' do |row|
 	puts row
 	puts '==='
 end
+
 puts
 
 db.execute 'SELECT * FROM Users' do |row|
 	puts row[1]
 	puts '==='
 end
+
 puts
 
 db.execute 'SELECT * FROM Users' do |row|
 	puts "Name: #{row[1]} visit: #{row[3]}"
 	puts '==='
 end
+
 puts
 
 db.execute 'SELECT * FROM Users' do |row|
@@ -37,4 +40,3 @@ db.execute 'SELECT * FROM Users' do |row|
 	puts row[3]
 	puts '==='
 end
-puts

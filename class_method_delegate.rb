@@ -32,8 +32,11 @@ class Memory
   end
 end
 
+
 pp computer = Computer.new
+
 puts
+
 pp computer.write 'Ruby'
 puts
 pp computer

@@ -9,8 +9,8 @@ class Albuquerque
   end
 end
 
-p (a = Albuquerque.new cook: 'Walt', take_a_ride: 'Jessie', die: 'Gus')
-puts
+a = Albuquerque.new cook: 'Walt', take_a_ride: 'Jessie', die: 'Gus')
+
 a.cook
 a.take_a_ride
 a.die

@@ -32,7 +32,7 @@ balls = [
 inventory = {
   soccer_ball: { available: 2, price_per_item: 100 },
   tennis_ball: { available: 1, price_per_item: 30 },
-  golf_ball: { available: 5, price_per_item: 5 }
+  golf_ball:   { available: 5, price_per_item: 5 }
 }
 
 def qtys_array

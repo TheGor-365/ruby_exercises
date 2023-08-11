@@ -6,5 +6,7 @@ class Cat
   end
 end
 
+
 cat = Cat.new("Kit")
-p cat.name
+
+pp cat.name

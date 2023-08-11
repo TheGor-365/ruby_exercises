@@ -6,4 +6,4 @@ def next_day
   Time.new tomorrow.year, tomorrow.month, tomorrow.day
 end
 
-puts next_day
+pp next_day

@@ -23,21 +23,23 @@ class Navigator
 end
 
 bus_nav = Navigator.new(:bus).build_route :a, :b
-
 pp bus_nav
+
 puts
 
 pp Navigator.new(:bus).type
+
 puts
 
 car_nav = Navigator.new
-
 pp car_nav
+
 puts
 
 pp car_nav.build_route :c, :d
 pp car_nav.build_route :c
 pp car_nav.build_route :a, :b, :c, :d, :e
+
 puts
 
 walk_nav = Navigator.new(:walk).build_route :a, :b

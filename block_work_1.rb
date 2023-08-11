@@ -17,6 +17,7 @@ whatsup do
 end
 
 whatsup { puts "hi_5" }
+
 puts
 
 
@@ -30,6 +31,7 @@ end
 reached do
   puts "the yield"
 end
+
 puts
 
 
@@ -41,6 +43,7 @@ end
 how_old do |name, age|
   puts "#{name} is #{age} years old"
 end
+
 puts
 
 
@@ -48,6 +51,7 @@ puts
 [1, 2, 3].each do |number|
   puts "Number #{number}"
 end
+
 puts
 
 
@@ -57,6 +61,7 @@ def two(&block)
 end
 
 two { 2 }
+
 puts
 
 
@@ -74,6 +79,7 @@ end
 my_map([1, 2, 3]) do |number|
   number * 2
 end
+
 puts
 
 
@@ -83,6 +89,7 @@ def method_with_block(&block)
 end
 
 method_with_block { pp "#{'calling block for'.upcase} method_with_block" }
+
 puts
 puts
 
@@ -112,6 +119,7 @@ bus = Bus.new(color: 'Green', doors: 3) do |c|
 end
 pp bus
 puts "color: #{bus.color} \ndoors: #{bus.doors}"
+
 puts
 puts
 
@@ -148,10 +156,13 @@ class Note
 end
 
 note = Note.create { "Hello" }
+
 puts
+
 note = Note.create do |s|
   pp s
 end
+
 puts
 
 

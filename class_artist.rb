@@ -2,9 +2,7 @@ class Artist
   attr_reader :name, :country, :albums
 
   def initialize name, country
-    @name = name
-    @country = country
-    @albums = []
+    @name, @country, @albums = name, country, []
   end
 
   def artist_albums album
@@ -20,12 +18,12 @@ class Artist
   end
 end
 
+
 class Album
   attr_reader :name, :date, :style
 
   def initialize name, date, style
-    @name, @date, @style = name, date, style
-    @a_songs = []
+    @name, @date, @style, @a_songs = name, date, style, []
   end
 
   def add_songs songs
@@ -41,18 +39,19 @@ class Album
   end
 end
 
+
 class Song
   attr_reader :name, :duration
 
   def initialize name, duration
-    @name, @duration = name, duration
-    @songs = {}
+    @name, @duration, @songs = name, duration, {}
   end
 
   def song_pair
-    @songs = {@name => @duration}
+    @songs = { @name => @duration }
   end
 end
+
 
 song1 = Song.new 'Nokie', '5 min'
 song2 = Song.new 'My way', '6 min'
@@ -63,7 +62,6 @@ album2 = Album.new 'Faith', 1995, 'rock, alternative'
 
 album1.add_songs song1
 album1.add_songs song2
-
 album2.add_songs song3
 
 artist1 = Artist.new 'Limp Bizkit', 'USA'

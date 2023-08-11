@@ -1,44 +1,45 @@
 # select
-puts 'Select:'
-puts "people_ages = #{(people_ages = [ [34, 1], [23, 0], [44, 0] ]).inspect}"
-puts
-puts 'people_ages.select { |element| element[0] == 23 && element[1] == 0 }'
-puts (people_ages.select { |element| element[0] == 23 && element[1] == 0 }).inspect
+people_ages = [[34, 1], [23, 0], [44, 0]]
 
-puts 'people_ages.select { |element| element[1] == 0 }'
-puts (people_ages.select { |element| element[1] == 0 }).inspect
-puts '-' * 50
+pp people_ages.select { |element| element[0] == 23 && element[1] == 0 }
+pp people_ages.select { |element| element[1] == 0 }
+
+
+puts
+puts
 
 
 # reject
-puts 'Reject:'
-puts "people_ages = #{(people_ages = [ [34, 1], [23, 0], [44, 0] ]).inspect}"
+people_ages = [[34, 1], [23, 0], [44, 0]]
+
+pp people_ages.reject { |element| element[0] >= 30 }
+
+
 puts
-puts 'people_ages.reject { |element| element[0] >= 30 }'
-puts (people_ages.reject { |element| element[0] >= 30 }).inspect
-puts '-' * 50
+puts
 
 
 # take
-puts 'Take:'
-puts "people_ages = #{(people_ages = [ [34, 1], [23, 0], [44, 0] ]).inspect}"
+people_ages = [[34, 1], [23, 0], [44, 0]]
+
+pp people_ages.take(2)
+
+
 puts
-puts 'people_ages.take(2).inspect'
-puts people_ages.take(2).inspect
-puts '-' * 50
+puts
+
 
 # any
-puts 'Any:'
-puts "people_ages = #{(people_ages = [ [34, 1], [23, 0], [44, 0] ]).inspect}"
+people_ages = [[34, 1], [23, 0], [44, 0]]
+
+pp people_ages.any? { |element| element[0] == 23 && element[1] == 0 }
+
+
 puts
-puts 'people_ages.any? { |element| element[0] == 23 && element[1] == 0 }'
-puts "people_ages = #{(people_ages.any? { |element| element[0] == 23 && element[1] == 0 }).inspect}"
-puts '-' * 50
+puts
+
 
 # all
-puts 'All'
-puts "people_ages = #{(people_ages = [ [34, 1], [23, 0], [44, 0] ]).inspect}"
-puts
-puts 'people_ages.all? { |element| element.size >=2 }'
-puts "people_ages = #{(people_ages.all? { |element| element.size >=2 }).inspect}"
-puts '-' * 50
+people_ages = [[34, 1], [23, 0], [44, 0]]
+
+pp people_ages.all? { |element| element.size >=2 }

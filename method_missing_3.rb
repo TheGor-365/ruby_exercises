@@ -13,8 +13,8 @@ class LA
   include Albuquerque
 end
 
-p la = LA.new(cook: 'Walt', take_a_ride: 'Jessie', die: 'Gus')
-puts
+la = LA.new(cook: 'Walt', take_a_ride: 'Jessie', die: 'Gus')
+
 la.cook
 la.take_a_ride
 la.die

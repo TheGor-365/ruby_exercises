@@ -34,10 +34,11 @@ class Url
   end
 end
 
+
 yandex_url = Url.new 'http://yandex.ru?key=value&key2=value2'
 google_url = Url.new 'https://google.com:80?a=b&c=d&lala=value'
 
-p yandex_url
-p yandex_url.query
-p yandex_url.query_params
-p yandex_url == google_url # false
+pp yandex_url
+pp yandex_url.query
+pp yandex_url.query_params
+pp yandex_url == google_url # false

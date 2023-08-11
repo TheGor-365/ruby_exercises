@@ -8,7 +8,7 @@ add_700 = lambda { |z| z + 700 }
 add_800 = lambda { |z| z + 800 }
 add_900 = lambda { |z| z + 900 }
 
-hh = {
+scores = {
   100 => add_100,
   222 => add_200,
   333 => add_300,
@@ -19,19 +19,20 @@ hh = {
   888 => add_800,
   999 => add_900
 }
+
 balance = 1000
 
 while true
   print 'Enter to play...'
   gets
 
-  x = rand(100..999)
-  puts "Game: ---#{x}---"
+  combination = rand(100..999)
+  puts "Game: ---#{combination}---"
 
-  if hh[x]
-    f = hh[x]
-    balance = f.call balance
-    puts "You win and got $#{win}"
+  if scores[combination]
+    result = scores[combination]
+    balance = result.call balance
+    puts "You win and got $#{result}"
   else
     balance -= 10
     puts 'Lose, minus $10'

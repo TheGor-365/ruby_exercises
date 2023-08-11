@@ -15,11 +15,9 @@ class Person
 end
 
 
-puts bob = Person.new('32')
-puts
-puts Person.species
-puts bob.say_hello
-puts bob.class.species
-puts bob.age
-# puts bob.species
-# puts Person.say_hello
+bob = Person.new('32')
+
+pp Person.species
+pp bob.say_hello
+pp bob.class.species
+pp bob.age

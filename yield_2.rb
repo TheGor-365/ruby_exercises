@@ -1,5 +1,5 @@
-def double(num)
-  yield(num)
+def double(number)
+  yield(number)
 end
 
-double(16) {|x| puts x * 2}
+double(16) {|number| puts number * 2}

@@ -10,27 +10,28 @@ class << z1
   end
 end
 
-z1.say_hello    # Output: Hello!
-# z2.say_hello    # falsey
-puts '-' * 90
+z1.say_hello
+
+puts
 
 
 class Hi
-  self #=> Hi
-  class << self #same as 'class << Hi'
-    self #=> #<Class:Hi>
-    self == Hi.singleton_class #=> true
+  self
+  class << self
+    self
+    self == Hi.singleton_class
   end
 end
 
 hi = String.new
+
 def hi.a
 end
 
-pp hi.class.instance_methods.include? :a #=> false
-pp hi.singleton_class.instance_methods.include? :a #=> true
-puts '-' * 90
+pp hi.class.instance_methods.include? :a
+pp hi.singleton_class.instance_methods.include? :a
 
+puts
 
 
 class SomeClass
@@ -54,4 +55,3 @@ pp "Singleton's methods of SomeClass"
 pp SomeClass.singleton_methods
 pp "Singleton's methods of test_obj"
 pp test_obj.singleton_methods
-puts '-' * 90

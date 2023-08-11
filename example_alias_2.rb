@@ -1,25 +1,23 @@
-# Scoping with alias
+class User
+  def full_name
+    puts "Johnnie Walker"
+  end
 
-# class User
-#
-#   def full_name
-#     puts "Johnnie Walker"
-#   end
-#
-#   def self.add_rename
-#     alias_method :name, :full_name
-#   end
-# end
-#
-# class Developer < User
-#   def full_name
-#     puts "Geeky geek"
-#   end
-#   add_rename
-# end
-#
-# pp Developer.new.name #=> 'Gekky geek'
-# puts
+  def self.add_rename
+    alias_method :name, :full_name
+  end
+end
+
+class Developer < User
+  def full_name
+    puts "Geeky geek"
+  end
+  add_rename
+end
+
+pp Developer.new.name
+
+puts
 
 
 
@@ -40,5 +38,4 @@ class Developer < User
   add_rename
 end
 
-pp Developer.new.name #=> 'Johnnie Walker'
-puts
+pp Developer.new.name

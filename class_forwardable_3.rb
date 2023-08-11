@@ -1,9 +1,8 @@
 require 'forwardable'
 
 class MyQueue
-  CONST = 1
-
   extend Forwardable
+  CONST = 1
 
   attr_reader :queue
 
@@ -11,14 +10,13 @@ class MyQueue
     @queue = []
   end
 
-  def_delegator :@queue, :push, :mypush
+  def_delegator :@queue, :push, :my_push
   def_delegator 'MyQueue::CONST', :to_i
 end
 
-q = MyQueue.new
 
-puts q.mypush 42
-puts q.push 42
-puts q.queue    #=> [42]
-# puts q.push 23  #=> NoMethodError
-puts q.to_i
+new_queue = MyQueue.new
+
+pp new_queue.my_push(42)
+pp new_queue.queue
+pp new_queue.to_i

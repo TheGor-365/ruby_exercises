@@ -12,6 +12,7 @@ class Animal
   end
 end
 
+
 class Cat < Animal
   def initialize
     super 'cat'
@@ -21,6 +22,7 @@ class Cat < Animal
     puts "Meow"
   end
 end
+
 
 class Dog < Animal
   def initialize
@@ -32,10 +34,14 @@ class Dog < Animal
   end
 end
 
+
 cat = Cat.new
+
 cat.run
 cat.say_meow
 
+
 dog = Dog.new
+
 dog.jump
 dog.say_woof

@@ -23,7 +23,7 @@ class Link < Post
     return super.merge(
       {
         'text': @text,
-        'url': @url
+        'url':  @url
       }
     )
   end

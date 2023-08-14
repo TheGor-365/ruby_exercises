@@ -3,8 +3,9 @@ file_name = ARGV[0]
 abort 'Input file name: ' if file_name == nil
 abort 'File is not found!' unless File.exist? file_name
 
-file = File.new file_name
+file  = File.new file_name
 lines = file.readlines
+
 file.close
 
 puts 'File opened: ' + file_name

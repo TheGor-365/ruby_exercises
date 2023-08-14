@@ -3,7 +3,7 @@ file = File.open 'text_files/trump.txt', 'r'
 @options = {}
 
 def add_to_hash word
-  if !word.empty?
+  unless word.empty?
     word.downcase!
 
     count = @options[word].to_i

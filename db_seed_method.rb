@@ -5,9 +5,9 @@ require 'sqlite3'
 @db.execute <<-SQL
   CREATE TABLE IF NOT EXISTS the_barbers (
     barbername varchar(50),
-    email varchar(50),
-    grade varchar(5),
-    blog varchar(50)
+    email      varchar(50),
+    grade      varchar(5),
+    blog       varchar(50)
   );
 SQL
 

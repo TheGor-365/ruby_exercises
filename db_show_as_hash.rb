@@ -6,10 +6,10 @@ db.results_as_hash = true
 
 db.execute <<-SQL
   CREATE TABLE IF NOT EXISTS Users (
-    name varchar(50),
+    name  varchar(50),
     email varchar(50),
     grade varchar(5),
-    blog varchar(50)
+    blog  varchar(50)
   );
 SQL
 

@@ -2,20 +2,13 @@ time = Time.now
 week_day = time.wday
 
 case week_day
-when 0
-  week_day = 'monday'
-when 1
-  week_day = 'tuesday'
-when 2
-  week_day = 'wetnesday'
-when 3
-  week_day = 'thursday'
-when 4
-  week_day = 'friday'
-when 5
-  week_day = 'saturday'
-when 6
-  week_day = 'sunday'
+when 0 then week_day = 'monday'
+when 1 then week_day = 'tuesday'
+when 2 then week_day = 'wetnesday'
+when 3 then week_day = 'thursday'
+when 4 then week_day = 'friday'
+when 5 then week_day = 'saturday'
+when 6 then week_day = 'sunday'
 end
 
 

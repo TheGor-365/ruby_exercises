@@ -1,7 +1,7 @@
-def intersection(coll1, coll2)
+def intersection collection_1, collection_2
   result = []
-  coll1.each do |item|
-    result << item if coll2.include? item
+  collection_1.each do |item|
+    result << item if collection_2.include? item
   end
   result
 end

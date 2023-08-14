@@ -5,7 +5,7 @@ class Memo < Post
     line = nil
     @text = []
 
-    while line != "end" do
+    while line != 'end' do
       line = STDIN.gets.chomp
       @text << line
     end

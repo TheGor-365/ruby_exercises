@@ -1,2 +1,2 @@
-hi = Proc.new { puts "Hello!" }
+hi = Proc.new { puts 'hey' }
 hi.call

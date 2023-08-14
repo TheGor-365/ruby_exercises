@@ -1,6 +1,6 @@
 file = File.open "text_files/file.A1.txt"
 
-line = file.readline
+line  = file.readline
 lines = file.readlines
 
 puts line[0]

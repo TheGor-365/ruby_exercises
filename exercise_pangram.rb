@@ -3,7 +3,7 @@ def pangram? text
   true
 end
 
-pangram = 'A quick brown fox jumps over the lazy dog'
+pangram     = 'A quick brown fox jumps over the lazy dog'
 not_pangram = 'Something else'
 
 pp pangram?(pangram)

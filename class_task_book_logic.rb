@@ -3,8 +3,8 @@ require_relative 'class_task_book_link.rb'
 require_relative 'class_task_book_memo.rb'
 require_relative 'class_task_book_task.rb'
 
-puts "Wellcome"
-puts "Add task"
+puts 'Wellcome'
+puts 'Add task'
 
 choices = Post.post_types.keys
 choice = -1

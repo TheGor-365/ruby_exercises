@@ -1,10 +1,9 @@
 require_relative 'text_files/file_2.txt'
 
-file = File.new 'text_files/file_2.txt'
+file  = File.new 'text_files/file_2.txt'
 lines = file.readlines
 
 empty_lines_counter = 0
-
 last_five_lines = []
 
 lines.each_with_index do |line, index|

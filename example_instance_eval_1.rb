@@ -1,6 +1,6 @@
 class MyClass
-  def initialize num
-    @num = num
+  def initialize number
+    @number = number
   end
 end
 
@@ -9,36 +9,36 @@ pp two = MyClass.new(2)
 
 puts
 
-# one.num
+# one.number
 
-pp one.instance_eval { @num }
-pp two.instance_eval { @num }
+pp one.instance_eval { @number }
+pp two.instance_eval { @number }
 
 puts
 
 array = []
-array << one.instance_eval { @num }
-array << two.instance_eval { @num }
+array << one.instance_eval { @number }
+array << two.instance_eval { @number }
 pp array
 
 puts
 
 one.instance_eval do
-  def num
-    @num
+  def number
+    @number
   end
 end
 
-pp one.num
+pp one.number
 
-# pp two.num
+# pp two.number
 
 puts
 
 MyClass.class_eval do
-  def num
-    @num
+  def number
+    @number
   end
 end
 
-pp two.num
+pp two.number

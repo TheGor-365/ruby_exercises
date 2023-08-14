@@ -39,58 +39,17 @@ puts
 
 tiger.attribute
 
-
-# print "\n" * 2 + 'tiger.methods' + "\n"  + '-' * 80 + "\n"
-# puts tiger.methods
-#
-# print "\n" * 2 + 'tiger.public_methods' + "\n"  + '-' * 80 + "\n"
-# puts tiger.public_methods
-#
-# print "\n" * 2 + 'tiger.private_methods' + "\n"  + '-' * 80 + "\n"
-# puts tiger.private_methods
-#
-# print "\n" * 2 + 'tiger.singleton_methods' + "\n"  + '-' * 80 + "\n"
-# p tiger.singleton_methods
-#
-# print "\n" * 2 + 'tiger.respond_to?(...)' + "\n"  + '-' * 80 + "\n"
-# p tiger.respond_to?(:instance_variables)
-# #
-# print "\n" * 2 + "tiger.class" + "\n" + "-" * 80 + "\n"
-# p tiger.class
-# #
-# print "\n" * 2 + "tiger.instance_of?(Tiger)" + "\n" + "-" * 80 + "\n"
-# p tiger.instance_of?(Tiger)
-# #
-# print "\n" * 2 + "tiger.instance_variables" + "\n" + "-" * 80 + "\n"
-# p tiger.instance_variables
-# #
-# print "\n" * 2 + "tiger.instance_variable_get(:@age)" + "\n" + "-" * 80 + "\n"
-# p tiger.instance_variable_get(:@age)
-# #
-# print "\n" * 2 + "tiger.instance_variable_set(:@age, 6)" + "\n" + "-" * 80 + "\n"
-# p tiger.instance_variable_set(:@age, 6)
-#
-# puts
-# puts tiger.age
-# puts
-#
-# print "\n" * 2 + "Tiger.methods" + "\n" + "-" * 80 + "\n"
-# pp Tiger.methods
-#
-# print "\n" * 2 + "Tiger.instance_methods" + "\n" + "-" * 80 + "\n"
-# pp Tiger.instance_methods
-#
 print "\n" * 2 + "Tiger.class_variables" + "\n" + "-" * 80 + "\n"
 pp Tiger.class_variables
-#
+
 print "\n" * 2 + "Tiger.ancestors" + "\n" + "-" * 80 + "\n"
 pp Tiger.ancestors
-#
+
 print "\n" * 2 + "Tiger.include?(::Cat)" + "\n" + "-" * 80 + "\n"
-p Tiger.include?(::Cat)
-#
+pp Tiger.include?(::Cat)
+
 print "\n" * 2 + "Tiger.included_modules" + "\n" + "-" * 80 + "\n"
-p Tiger.included_modules
-#
+pp Tiger.included_modules
+
 print "\n" * 2 + "Tiger.class_variable_defined?(:@@r)" + "\n" + "-" * 80 + "\n"
-p Tiger.class_variable_defined?(:@@r)
+pp Tiger.class_variable_defined?(:@@r)

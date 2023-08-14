@@ -1,9 +1,14 @@
 module Hi
   class Say_Hi
     def self.say_hi
-      puts "Hi"
+      puts "hi \t#{Time.now}"
+    end
+    def self.say_bye
+      puts "bye \t#{Time.now}"
     end
   end
 end
 
-pp Hi::Say_Hi.say_hi
+
+Hi::Say_Hi.say_hi
+Hi::Say_Hi.say_bye

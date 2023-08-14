@@ -23,7 +23,7 @@ end
 models = ['Airbus-320', 'Boeing-777', 'Il-86']
 planes = []
 
-1000.times do
+100.times do
   model = models[rand(0..2)]
   plane = Airplane.new(model)
 
@@ -37,20 +37,20 @@ planes.each do |plane|
   puts "Is moving: #{plane.moving?}"
 end
 
-plane1 = Airplane.new('Boeing-777')
-plane2 = Airplane.new('Airbus-320')
+plane_1 = Airplane.new('Boeing-777')
+plane_2 = Airplane.new('Airbus-320')
 
-puts "Model: #{plane1.model} Speed: #{plane1.speed} Altitude: #{plane1.altitude}"
-puts "Is moving: #{plane1.moving?}"
+puts "Model: #{plane_1.model} Speed: #{plane_1.speed} Altitude: #{plane_1.altitude}"
+puts "Is moving: #{plane_1.moving?}"
 
-plane1.fly
-puts "Model: #{plane1.model} Speed: #{plane1.speed} Altitude: #{plane1.altitude}"
-puts "Is moving: #{plane1.moving?}"
+plane_1.fly
+puts "Model: #{plane_1.model} Speed: #{plane_1.speed} Altitude: #{plane_1.altitude}"
+puts "Is moving: #{plane_1.moving?}"
 
-plane1.land
-puts "Model: #{plane1.model} Speed: #{plane1.speed} Altitude: #{plane1.altitude}"
-puts "Is moving: #{plane1.moving?}"
+plane_1.land
+puts "Model: #{plane_1.model} Speed: #{plane_1.speed} Altitude: #{plane_1.altitude}"
+puts "Is moving: #{plane_1.moving?}"
 
-plane2.fly
-puts "Model: #{plane2.model} Speed: #{plane2.speed} Altitude: #{plane2.altitude}"
-puts "Is moving: #{plane2.moving?}"
+plane_2.fly
+puts "Model: #{plane_2.model} Speed: #{plane_2.speed} Altitude: #{plane_2.altitude}"
+puts "Is moving: #{plane_2.moving?}"

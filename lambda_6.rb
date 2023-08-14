@@ -1,5 +1,6 @@
 odds_n_ends = [:weezard, 42, "Trady Blix", 3, true, 19, 12.345]
 
-int_store = lambda {|x| x.is_a? Integer}
+int_store = -> element { element.is_a? Integer }
 ints = odds_n_ends.select(&int_store)
-puts ints
+
+pp ints

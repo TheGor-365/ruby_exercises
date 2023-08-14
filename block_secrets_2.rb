@@ -2,8 +2,8 @@ def secondary_method
   yield "Hello here"
 end
 
-def my_method(message, callable, callable_2)
-  callable.call("Hello there")
+def my_method(message, callable_1, callable_2)
+  callable_1.call("Hello there")
   callable_2.call(message)
 end
 
@@ -17,8 +17,8 @@ def secondary_method
   yield "Hello bro"
 end
 
-def my_method(message, callable, callable_2)
-  callable.call("Hello man")
+def my_method(message, callable_1, callable_2)
+  callable_1.call("Hello man")
   callable_2.call(message)
 end
 

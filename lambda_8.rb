@@ -9,6 +9,7 @@ crew = {
   doctor:         "Crusher"
 }
 
-first_half = lambda {|k, v| v < "M"}
-a_to_m = crew.select(&first_half)
-puts a_to_m.values
+first_half = -> (name, value) { value < "M" }
+a_to_m = crew.select &first_half
+
+pp a_to_m.values

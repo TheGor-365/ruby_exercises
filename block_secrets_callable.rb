@@ -7,6 +7,8 @@ hi_proc.call 'hi'
 hi_lambda.call 'hi'
 i_proc.call 2
 i_lambda.call 2
+
+puts
 puts
 
 

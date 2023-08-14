@@ -15,10 +15,8 @@ class DollarRate
 
   def convert
     case @currency
-    when 1
-      @result = @sum / @@dollar_rate
-    when 2
-      @result = @sum * @@dollar_rate
+    when 1 then @result = @sum / @@dollar_rate
+    when 2 then @result = @sum * @@dollar_rate
     end
     @result
   end
@@ -30,20 +28,20 @@ class DollarRate
 end
 
 
-rate = DollarRate.menu
+menu = DollarRate.menu
 
 puts
 
 
-rate2 = DollarRate.new 2, 349
+rate_1 = DollarRate.new 2, 349
 
-rate2.convert
-rate2.show_result
+rate_1.convert
+rate_1.show_result
 
 puts
 
 
-rate3 = DollarRate.new 1, 65_678
+rate_2 = DollarRate.new 1, 65_678
 
-rate3.convert
-rate3.show_result
+rate_2.convert
+rate_2.show_result

@@ -6,5 +6,5 @@ end
 
 s = Something.new
 
-puts s.aaa
-puts s.sss
+pp s.aaa
+pp s.sss

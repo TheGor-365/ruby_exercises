@@ -1,9 +1,9 @@
 require 'prime'
 
-def first_n_primes(n)
-  return "n must be an integer." unless n.is_a? Integer
-  return "n must be greater than 0." if n <= 0
-  return Prime.first n
+def first_number_primes number
+  return "number must be an integer." unless number.is_a? Integer
+  return "number must be greater than 0." if number <= 0
+  return Prime.first number
 end
 
-puts first_n_primes(10)
+pp first_number_primes(10)

@@ -1,42 +1,38 @@
-arr = [:rock, :scissors, :paper]
+array = %i[rock scissors paper]
 
 loop do
-  c_choice = arr[rand(0..2)]
+  mashine = array[rand(0..2)]
 
-  print "Make choice... (S)cissors, (R)ock, (P)aper:  "
+  print 'Make choice... [S]cissors, [R]ock, [P]aper:  '
   choice = gets.strip.capitalize
 
-  if choice == "S"
-    u_choice = :scissors
-  elsif choice == "R"
-    u_choice = :rock
-  elsif choice == "P"
-    u_choice = :paper
+  case choice
+  when choice == 'S' then user_input = :scissors
+  when choice == 'R' then user_input = :rock
+  when choice == 'P' then user_input = :paper
   end
 
   matrix = [
-    [:rock, :scissors, :first],
-    [:rock, :paper, :second],
-    [:rock, :rock, :draw],
-    [:scissors, :rock, :second],
-    [:scissors, :paper, :first],
-    [:scissors, :scissors, :draw],
-    [:paper, :scissors, :second],
-    [:paper, :rock, :first],
-    [:paper, :paper, :draw]
+    %i[rock     scissors first],
+    %i[rock     paper    second],
+    %i[rock     rock     draw],
+    %i[scissors rock     second],
+    %i[scissors paper    first],
+    %i[scissors scissors draw],
+    %i[paper    scissors second],
+    %i[paper    rock     first],
+    %i[paper    paper    draw]
   ]
 
-  puts "Computer: \t#{c_choice}"
-  puts "User:     \t#{u_choice}"
+  puts "Mashine: \t#{mashine}"
+  puts "Player:  \t#{user_input}"
 
   matrix.each do |item|
-    if item[0] == u_choice && item[1] == c_choice
-      if item[2] == :draw
-        puts "The result:  \tDRAW"
-      elsif item[2] == :first
-        puts "The result:  \tYOU WIN"
-      elsif item[2] == :second
-        puts "The result  \tYOU LOSE"
+    if item[0] == user_input && item[1] == mashine
+      case matrix
+      when item[2] == :draw   then puts "The result:  \tDRAW"
+      when item[2] == :first  then puts "The result:  \tYOU WIN"
+      when item[2] == :second then puts "The result:  \tYOU LOSE"
       end
     end
   end

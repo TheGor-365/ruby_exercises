@@ -1,5 +1,5 @@
 movies = {
-  StarWars: 4.8,
+  StarWars:  4.8,
   Divergent: 4.7
 }
 
@@ -36,8 +36,8 @@ when "display"
 when "delete"
   puts "What movie would you like to delete? "
   title = gets.chomp
-  
-  if movies[title.to_sym].nil? ? (puts "That movie does not exist.") : movies.delete(title.to_sym)
+
+  movies[title.to_sym].nil? ? (puts "That movie does not exist.") : movies.delete(title.to_sym)
 else
   puts "Error!"
 end

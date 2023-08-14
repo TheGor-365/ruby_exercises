@@ -53,22 +53,22 @@ class Song
 end
 
 
-song1 = Song.new 'Nokie', '5 min'
-song2 = Song.new 'My way', '6 min'
-song3 = Song.new 'Faith', '3.5 min'
+song_1 = Song.new 'Nokie', '5 min'
+song_2 = Song.new 'My way', '6 min'
+song_3 = Song.new 'Faith', '3.5 min'
 
-album1 = Album.new 'My way', 1999, 'rock, alternative'
-album2 = Album.new 'Faith', 1995, 'rock, alternative'
+album_1 = Album.new 'My way', 1999, 'rock, alternative'
+album_2 = Album.new 'Faith', 1995, 'rock, alternative'
 
-album1.add_songs song1
-album1.add_songs song2
-album2.add_songs song3
+album_1.add_songs song_1
+album_1.add_songs song_2
+album_2.add_songs song_3
 
 artist1 = Artist.new 'Limp Bizkit', 'USA'
 
-artist1.artist_albums album1
-artist1.artist_albums album2
+artist1.artist_albums album_1
+artist1.artist_albums album_2
 
 artist1.albums
-album1.puts_songs
-album2.puts_songs
+album_1.puts_songs
+album_2.puts_songs

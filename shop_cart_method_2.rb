@@ -1,21 +1,21 @@
 orders = "product_1=4,product_2=1,product_3=1,"
 
 def parse_orders_line orders_line
-	s1 = orders_line.split(/\,/)
-	arr = []
+	split_1 = orders_line.split(/\,/)
+	array = []
 
-	s1.each do |x|
-		s2 = x.split(/\=/)
-		s3 = s2[0].split(/\_/)
+	split_1.each do |product|
+		split_2 = product.split(/\=/)
+		split_3 = split_2[0].split(/\_/)
 
-		id = s3[1]
-		cnt = s2[1]
+		id 		= split_3[1]
+		count = split_2[1]
 
-		arr2 = [id, cnt]
+		array_2 = [id, count]
 
-		arr.push arr2
+		array.push array_2
 	end
-	return arr
+	return array
 end
 
-puts (parse_orders_line orders).inspect
+pp parse_orders_line(orders)

@@ -1,7 +1,7 @@
 movies = {
   Memento: 3,
-  Primer: 4,
-  Ishtar: 1
+  Primer:  4,
+  Ishtar:  1
 }
 
 puts "What would you like to do?"
@@ -44,7 +44,7 @@ when 'display'
 when 'delete'
   puts "What movie do you want to delete?"
   title = gets.chomp
-  
+
   if movies[title.to_sym].nil?
     puts "Movie not found!"
   else

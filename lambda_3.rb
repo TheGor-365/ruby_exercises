@@ -1,5 +1,6 @@
-strings = ["leonardo", "donatello", "raphael", "michaelangelo"]
+strings = %w[ leonardo donatello raphael michaelangelo ]
 
-symbolize = lambda {|param| param.to_sym}
+symbolize = -> (param) { param.to_sym }
 symbols = strings.collect(&symbolize)
-print symbols
+
+pp symbols

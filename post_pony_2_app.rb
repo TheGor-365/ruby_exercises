@@ -14,19 +14,19 @@ body = STDIN.gets.chomp
 
 Pony.mail(
   {
-    :subject => "Hey from Ruby!",
-    :body => body,
-    :to => send_to,
-    :from => my_mail,
+    subject: "Hey from Ruby!",
+    body:    body,
+    to:      send_to,
+    from:    my_mail,
 
     via: :smtp,
     via_options: {
-      address: 'smtp.gmail.com',
-      port: '587',
+      address:              'smtp.gmail.com',
+      port:                 '587',
       enable_starttls_auto: true,
-      user_name: my_mail,
-      password: password,
-      authentication: :plain,
+      user_name:            my_mail,
+      password:             password,
+      authentication:       :plain,
     }
   }
 )

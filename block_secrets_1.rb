@@ -1,5 +1,5 @@
 def display_1
-  yield "whatsup_1"
+  yield 'whatsup_1'
 end
 
 display_1 do |message|
@@ -10,9 +10,9 @@ puts
 
 
 
-def display_2(&block)
-  puts block.inspect
-  block.call("whatsup_2")
+def display_2 &block
+  pp block
+  block.call('whatsup_2')
 end
 
 display_2 do |message|
@@ -24,7 +24,7 @@ puts
 
 
 def display_3
-  yield "whatsup_3"
+  yield 'whatsup_3'
 end
 
 my_lambda = ->(message) { puts "#{message.upcase} " * 6 }
@@ -43,4 +43,4 @@ def display_4(message, &block)
   secondary_method &block
 end
 
-display_4 "whatsup_4", &my_lambda
+display_4 'whatsup_4', &my_lambda

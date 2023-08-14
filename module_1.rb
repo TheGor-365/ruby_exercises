@@ -9,3 +9,12 @@ module Circle
     2 * PI * radius
   end
 end
+
+
+circle = 14
+
+circle_area = Circle.area circle
+pp circle_area.round 2
+
+circle_circumference = Circle.circumference circle
+pp circle_circumference.round 2

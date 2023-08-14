@@ -1,14 +1,13 @@
 books = [
-  "Charlie and the Chocolate Factory", 
-  "War and Peace",
-  "Utopia",
-  "A Brief History of Time",
-  "A Wrinkle in Time"
+  'Charlie and the Chocolate Factory',
+  'War and Peace',
+  'Utopia',
+  'A Brief History of Time',
+  'A Wrinkle in Time'
 ]
 
-# To sort our books in ascending order, in-place
-books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
+sort_by_asc  = books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
+sort_by_desc = books.sort! { |firstBook, secondBook| secondBook <=> firstBook }
 
-# Sort your books in descending order, in-place below
-
-books.sort! { |firstBook, secondBook| secondBook <=> firstBook }
+pp sort_by_asc
+pp sort_by_desc

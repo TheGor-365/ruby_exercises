@@ -1,5 +1,5 @@
-multiples_of_3 = Proc.new do |n|
-  n % 3 == 0
+multiples_of_3 = Proc.new do |number|
+  number % 3 == 0
 end
 
-print (1..100).to_a.select(&multiples_of_3)
+pp (1..25).to_a.select(&multiples_of_3)

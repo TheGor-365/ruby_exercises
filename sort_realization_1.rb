@@ -1,5 +1,5 @@
-def alphabetize(arr, rev=false)
-  rev ? arr.sort { |item1, item2| item2 <=> item1 } : arr.sort { |item1, item2| item1 <=> item2 }
+def alphabetize(array, rev=false)
+  rev ? array.sort { |item_1, item_2| item_2 <=> item_1 } : array.sort { |item_1, item_2| item_1 <=> item_2 }
 end
 
 books = %w[ Heart of Darkness Code Complete The Lorax The Prophet Absalom, Absalom! ]

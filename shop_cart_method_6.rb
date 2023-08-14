@@ -1,31 +1,34 @@
 orders = "product_1=4,product_2=1,product_3=1,"
 
-s1 = orders.split(/,/)
+split_1 = orders.split(/,/)
 
-puts s1.inspect
+pp split_1
+
 puts
 
-s1.each do |x|
-	s2 = x.split(/=/)
+split_1.each do |product|
+	split_2 = product.split(/=/)
 
-	puts s2.inspect
+	pp split_2
 end
+
 puts
 
-s1.each do |x|
-	s2 = x.split(/=/)
-	s3 = s2[0].split(/_/)
+split_1.each do |product|
+	split_2 = product.split(/=/)
+	split_3 = split_2[0].split(/_/)
 
-	puts s3.inspect
+	pp split_3
 end
+
 puts
 
-s1.each do |x|
-	s2 = x.split(/=/)
-	s3 = s2[0].split(/_/)
+split_1.each do |product|
+	split_2 = product.split(/=/)
+	split_3 = split_2[0].split(/_/)
 
-	key = s3[1]
-	value = s2[1]
+	name 	= split_3[1]
+	count = split_2[1]
 
-	puts "Product key: #{key} product count : #{value}"
+	pp "Product name: #{name} Product count : #{count}"
 end

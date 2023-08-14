@@ -1,7 +1,7 @@
-def invert_case(str)
+def invert_case string
   result = ''
 
-  str.each_char do |char|
+  string.each_char do |char|
     new_char = if char.upcase == char
       char.downcase
     else
@@ -13,5 +13,6 @@ def invert_case(str)
   result
 end
 
-puts invert_case('Hello, World!')
-puts invert_case('I loVe JS')
+
+pp invert_case('Hello, World!')
+pp invert_case('I loVe JS')

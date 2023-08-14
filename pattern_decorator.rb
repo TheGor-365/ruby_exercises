@@ -49,17 +49,17 @@ end
 
 
 user_settings = {
-  send_to_email: true,
+  send_to_email:    true,
   send_to_facebook: false,
-  send_to_slack: true,
-  send_to_VK: true
+  send_to_slack:    true,
+  send_to_VK:       true
 }
 
 chain = Notifier.new
 
-chain = EmailDecorator.new(chain) if user_settings[:send_to_email]
-chain = FacebookDecorator.new(chain) if user_settings[:send_to_facebook]
-chain = SlackDecorator.new(chain) if user_settings[:send_to_slack]
-chain = VKDecorator.new(chain) if user_settings[:send_to_VK]
+chain = EmailDecorator.new(chain)     if user_settings[:send_to_email]
+chain = FacebookDecorator.new(chain)  if user_settings[:send_to_facebook]
+chain = SlackDecorator.new(chain)     if user_settings[:send_to_slack]
+chain = VKDecorator.new(chain)        if user_settings[:send_to_VK]
 
 chain.notify('hello')

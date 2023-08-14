@@ -18,8 +18,10 @@ module Humans
   end
 end
 
+
 hipster = Humans::Hipster.new
 hipster.say_hi
+
 
 module Animals
   class Dog
@@ -27,5 +29,6 @@ module Animals
   class Cat
   end
 end
+
 
 cat = Animals::Cat.new

@@ -8,6 +8,6 @@ can_ride_1 = group_1.select(&over_4_feet)
 can_ride_2 = group_2.select(&over_4_feet)
 can_ride_3 = group_3.select(&over_4_feet)
 
-puts can_ride_1
-puts can_ride_2
-puts can_ride_3
+pp can_ride_1
+pp can_ride_2
+pp can_ride_3

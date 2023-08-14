@@ -19,6 +19,7 @@ end
 whatsup { puts "hi_5" }
 
 puts
+puts
 
 
 
@@ -33,6 +34,7 @@ reached do
 end
 
 puts
+puts
 
 
 
@@ -45,6 +47,7 @@ how_old do |name, age|
 end
 
 puts
+puts
 
 
 
@@ -52,6 +55,7 @@ puts
   puts "Number #{number}"
 end
 
+puts
 puts
 
 
@@ -62,6 +66,7 @@ end
 
 two { 2 }
 
+puts
 puts
 
 
@@ -80,6 +85,7 @@ my_map([1, 2, 3]) do |number|
   number * 2
 end
 
+puts
 puts
 
 
@@ -163,6 +169,7 @@ note = Note.create do |s|
   pp s
 end
 
+puts
 puts
 
 

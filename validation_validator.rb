@@ -14,25 +14,25 @@ print 'Enter you color: '
 color = gets.strip
 
 input = {
-	somename: username,
-	phone: phone,
-	date_time: date_time,
-	barber: barber,
-	color: color
+	somename: 	username,
+	phone: 			phone,
+	date_time: 	date_time,
+	barber: 		barber,
+	color: 			color
 }
 
 def validator input
-	hh = {
-		somename: 'Enter your name',
-		phone: 'Enter your phone',
-		date_time: 'Enter date and time',
-		barber: 'Choose your barber',
-		color: 'Choose color that you need'
+	params = {
+		somename: 	'Enter your name',
+		phone: 			'Enter your phone',
+		date_time: 	'Enter date and time',
+		barber: 		'Choose your barber',
+		color: 			'Choose color that you need'
 	}
 
 	input.each do |name, value|
 		if input[name] == ''
-			puts hh[name]
+			puts params[name]
 		end
 	end
 end

@@ -22,4 +22,5 @@ users = [
   { name: 'Edd',     gender: 'male',   birthday: '1973-11-03' }
 ]
 
-puts get_men_count_by_year(users)
+
+pp get_men_count_by_year(users)

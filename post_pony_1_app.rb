@@ -13,20 +13,20 @@ print "Enter message body: "
 body = STDIN.gets.chomp
 
 Pony.mail({
-    :subject => "hi from Ruby!",
-    :body => body,
-    :to => send_to,
-    :from => my_mail,
+    subject: "hi from Ruby!",
+    body:    body,
+    to:      send_to,
+    from:    my_mail,
 
-    :via => :smtp,
+    via: :smtp,
     via_options: {
-      address: 'smtp.yandex.ru',
-      port: '465',
+      address:              'smtp.yandex.ru',
+      port:                 '465',
       enable_starttls_auto: true,
-      tls: true,
-      user_name: my_mail,
-      password: password,
-      authentication: :plain,
+      tls:                  true,
+      user_name:            my_mail,
+      password:             password,
+      authentication:       :plain,
     }
   }
 )

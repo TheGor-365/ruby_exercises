@@ -1,9 +1,10 @@
-def reverse(str)
+def reverse string
   result = ''
-  str.each_char do |c|
-    result = "#{c}#{result}"
+  string.each_char do |char|
+    result = "#{char}#{result}"
   end
   result
 end
 
-print reverse('gor')
+
+pp reverse('gor')

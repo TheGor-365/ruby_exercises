@@ -1,12 +1,12 @@
-plus_10 = lambda { |x| x + 10 }
-plus_20 = lambda { |x| x + 20 }
-sub_5 = lambda { |x| x - 5 }
+plus_10 = lambda { |number| number + 10 }
+plus_20 = lambda { |number| number + 20 }
+subs_5 =  lambda { |number| number - 5 }
 
 a = plus_10.call 100
-puts a
+pp a
 
 b = plus_20.call 56
-puts b
+pp b
 
-c = sub_5.call 1
-puts c
+c = subs_5.call 1
+pp c

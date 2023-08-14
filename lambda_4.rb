@@ -1,5 +1,6 @@
 my_array = ["raindrops", :kettles, "whiskers", :mittens, :packages]
 
-symbol_filter = lambda {|x| x.is_a? Symbol}
-symbols = my_array.select(&symbol_filter)
-puts symbols
+symbol_filter = -> (element) { element.is_a? Symbol }
+symbols = my_array.select &symbol_filter
+
+pp symbols

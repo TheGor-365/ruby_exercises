@@ -32,13 +32,13 @@ end
 puts
 
 
-"foo bar baz".split { puts "block!" }
+'foo bar baz'.split { puts 'block' }
 
 
 def each_explicit(&block)
   return to_enum(:each) unless block
   number = 0
-  
+
   while number < size
     block.call at(number)
     number += 1

@@ -9,6 +9,6 @@ def build_query_string query_params
   query_parts.join('&')
 end
 
-hash = {first: 'one', second: 'two'}
+params = {first: 'one', second: 'two'}
 
-pp build_query_string hash
+pp build_query_string params

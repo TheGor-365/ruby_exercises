@@ -1,10 +1,10 @@
 module MyNumber
-  def self.reverse_int(num)
-    reversed_abs = num.abs.to_s.reverse.to_i
-    num.positive? ? reversed_abs : -reversed_abs
+  def self.reverse_integer(number)
+    reversed_abs = number.abs.to_s.reverse.to_i
+    number.positive? ? reversed_abs : -reversed_abs
   end
 end
 
-pp MyNumber::reverse_int(13)
-pp MyNumber::reverse_int(-123)
-pp MyNumber::reverse_int(8900)
+pp MyNumber::reverse_integer(13)
+pp MyNumber::reverse_integer(-123)
+pp MyNumber::reverse_integer(8900)

@@ -1,9 +1,9 @@
 def convert(strings)
-  strings.filter { |str| str.end_with?('?') }
+  strings.filter { |string| string.end_with?('?') }
   .map(&:downcase)
   .sort
 end
 
 strings = %w[ wow? One? tWo! THREE ]
 
-puts convert strings
+pp convert strings

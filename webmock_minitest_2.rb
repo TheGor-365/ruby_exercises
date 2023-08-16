@@ -1,4 +1,4 @@
-require "minitest/autorun"
+require 'minitest/autorun'
 
 def test_stale_eh
   obj_under_test = Something.new

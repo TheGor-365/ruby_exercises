@@ -1,5 +1,6 @@
 def sum_of_digits num_as_string
   sum = 0
+  
   num_as_string.each_char do |char|
     sum += char.to_i
   end

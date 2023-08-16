@@ -11,7 +11,7 @@ file.close
 puts 'File opened: ' + file_name
 
 empty_lines_counter = 0
-last_five_lines = []
+last_five_lines     = []
 
 lines.each_with_index do |line, index|
   empty_lines_counter += 1 if line == "\n"

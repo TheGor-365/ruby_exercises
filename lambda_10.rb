@@ -1,5 +1,5 @@
-say_hi =  lambda { puts "Hi" }
-say_bye = lambda { puts "Bye" }
+say_hi  = lambda { pp 'Hi' }
+say_bye = lambda { pp 'Bye' }
 
 say_hi.call
 say_bye.call
@@ -22,7 +22,7 @@ puts
 
 add_10 = -> number { pp number + 10 }
 add_20 = -> number { pp number + 20 }
-sub_5 =  -> number { pp number - 5 }
+sub_5  = -> number { pp number - 5 }
 
 number = 1000
 

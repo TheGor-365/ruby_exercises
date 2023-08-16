@@ -80,14 +80,14 @@ class Package
 end
 
 Package.new.can_sell_each
-Package.new.cannot_sell_each                  #=> private method `cannot_sell_each' called for #<Package:0x00007f28c2d7e348> (NoMethodError)
+Package.new.cannot_sell_each
 
 puts
 
 Package.new.send('can_sell_each')
-Package.new.send('cannot_sell_each')          #=> private method `cannot_sell_each' called for #<Package:0x00007f28c2d7e348> (NoMethodError)
+Package.new.send('cannot_sell_each')
 
 puts
 
 Package.new.public_send('can_sell_each')
-Package.new.public_send('cannot_sell_each')   #=> private method `cannot_sell_each' called for #<Package:0x00007f28c2d7e348> (NoMethodError)
+Package.new.public_send('cannot_sell_each')

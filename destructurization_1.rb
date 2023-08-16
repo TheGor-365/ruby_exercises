@@ -2,9 +2,9 @@ data = ['hexlet', 'online courses', topics: ['php', 'js']]
 
 name, description, topics = data
 
-puts name         # "hexlet"
-puts description  # "online courses"
-puts topics       # { topics: ["php", "js"] }
+pp name         # "hexlet"
+pp description  # "online courses"
+pp topics       # { topics: ["php", "js"] }
 
 
 

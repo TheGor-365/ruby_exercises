@@ -19,14 +19,12 @@ puts
 pp ip_meta
 
 puts
-puts
 
 ip_meta.country
+
 puts
-puts ip_meta.country_code
-puts
-puts ip_meta.city
-puts
-puts ip_meta.lat
-puts
-puts ip_meta.lon
+
+pp ip_meta.country_code
+pp ip_meta.city
+pp ip_meta.lat
+pp ip_meta.lon

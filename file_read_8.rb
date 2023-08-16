@@ -4,7 +4,7 @@ file  = File.new 'text_files/file_2.txt'
 lines = file.readlines
 
 empty_lines_counter = 0
-last_five_lines = []
+last_five_lines     = []
 
 lines.each_with_index do |line, index|
   if line == "\n"
@@ -18,7 +18,7 @@ end
 
 puts "All lines: #{lines.size.to_s}"
 puts "Empty lines: #{empty_lines_counter.size.to_s}"
-puts "Last 5 lines:"
+puts 'Last 5 lines:'
 
 for line in last_five_lines
   puts line

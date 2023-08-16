@@ -1,10 +1,11 @@
-p "dog".gsub(/\w+/) { |animal| animal == "dog" ? "cat" : "dog" }
+pp 'dog'.gsub(/\w+/) { |animal| animal == 'dog' ? 'cat' : 'dog' }
+
 puts
 
 colors = {
-  "B" => "blue",
-  "G" => "green",
-  "R" => "red"
+  'B': 'blue',
+  'G': 'green',
+  'R': 'red'
 }
 
-p "BBBGRR".gsub(/\w/, colors)
+pp 'BBBGRR'.gsub(/\w/, colors)

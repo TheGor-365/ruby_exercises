@@ -10,4 +10,6 @@ class GameEngine
   end
 end
 
-puts GameEngine.play
+
+
+pp GameEngine.play

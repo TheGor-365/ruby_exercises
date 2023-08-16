@@ -1,4 +1,4 @@
-require_relative "filesOutputClass.rb"
+require_relative 'filesOutputClass.rb'
 
 input = ARGV[0]
 file  = File.new input
@@ -10,5 +10,6 @@ file.close
 
 new_file = FileOutput.new
 
-puts new_file.file_read
-puts new_file.show_lines
+
+pp new_file.file_read
+pp new_file.show_lines

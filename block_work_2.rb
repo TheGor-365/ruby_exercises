@@ -18,10 +18,10 @@ end
 status_code = with_logging('Calculate seconds in a day') do
   puts 60 * 60 * 24
 end
-puts status_code
+pp status_code
 
 status_code = with_logging("Open a file I know doesn't exist") do
-  File.readlines("100_%_not_a_file.txt") { |line| puts line }
+  File.readlines('100_%_not_a_file.txt') { |line| puts line }
 end
 pp status_code
 
@@ -33,4 +33,4 @@ def say_with_time
   pp [yield, Time.now.to_s].join(', ')
 end
 
-say_with_time{'hello'}
+say_with_time {'hello'}

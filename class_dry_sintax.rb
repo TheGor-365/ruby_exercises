@@ -54,4 +54,7 @@ class Cat
   end
 end
 
-p cat = Cat.new('Kit') ; p cat.name
+
+
+pp cat = Cat.new('Kit')
+pp cat.name

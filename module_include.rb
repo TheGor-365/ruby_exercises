@@ -24,8 +24,8 @@ class Cricket
 end
 
 
-peter = Rabbit.new("Peter")
-jiminy = Cricket.new("Jiminy")
+peter = Rabbit.new('Peter')
+jiminy = Cricket.new('Jiminy')
 
 peter.jump
 jiminy.jump

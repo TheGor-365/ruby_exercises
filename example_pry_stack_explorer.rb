@@ -1,9 +1,9 @@
 require 'pry-stack_explorer'
 
 def alpha
-  x = "hello"
+  x = 'hello'
   beta
-  puts x
+  pp x
 end
 
 def beta

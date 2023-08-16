@@ -1,16 +1,16 @@
 class Zen
 end
 
-z1 = Zen.new
-z2 = Zen.new
+zen_1 = Zen.new
+zen_2 = Zen.new
 
-class << z1
+class << zen_1
   def say_hello
-    puts "Hello!"
+    pp 'hey'
   end
 end
 
-z1.say_hello
+zen_1.say_hello
 
 puts
 
@@ -25,33 +25,34 @@ end
 
 hi = String.new
 
-def hi.a
+def hi.methodd
 end
 
-pp hi.class.instance_methods.include? :a
-pp hi.singleton_class.instance_methods.include? :a
+pp hi.class.instance_methods.include? :methodd
+pp hi.singleton_class.instance_methods.include? :methodd
 
 puts
 
 
 class SomeClass
   class << self
-    def test
+    def test_1
     end
   end
 end
 
-test_obj = SomeClass.new
+test_object = SomeClass.new
 
-def test_obj.test_2
+def test_object.test_2
 end
 
-class << test_obj
+class << test_object
   def test_3
   end
 end
 
 pp "Singleton's methods of SomeClass"
 pp SomeClass.singleton_methods
-pp "Singleton's methods of test_obj"
-pp test_obj.singleton_methods
+
+pp "Singleton's methods of test_object"
+pp test_object.singleton_methods

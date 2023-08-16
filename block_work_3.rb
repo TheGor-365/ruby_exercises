@@ -8,7 +8,7 @@ def each
 end
 
 [1, 2, 3].each do |number|
-  puts number
+  pp number
 end
 
 puts
@@ -32,10 +32,10 @@ end
 puts
 
 
-'foo bar baz'.split { puts 'block' }
+'foo bar baz'.split { pp 'block' }
 
 
-def each_explicit(&block)
+def each_explicit &block
   return to_enum(:each) unless block
   number = 0
 
@@ -49,11 +49,11 @@ puts
 
 
 
-def run_proc_with_random_number(proc)
-  proc.call(rand(0..6))
+def run_proc_with_random_number proc
+  proc.call rand(0..6)
 end
 
-my_proc = Proc.new { |number| pp "#{number}!" }
+my_proc = Proc.new { |number| pp "|#{number}|" }
 
 run_proc_with_random_number(my_proc)
 
@@ -61,8 +61,8 @@ puts
 
 
 
-def run_proc_with_random_number(&proc)
-  proc.call(rand(700...1600))
+def run_proc_with_random_number &proc
+  proc.call rand(700...1600)
 end
 
 run_proc_with_random_number { |number| pp number * 23.15 }
@@ -95,8 +95,10 @@ pp symbol.to_proc
 
 def return_from_proc
   ten = Proc.new { return 10 }.call
+
   puts "This #{ten} will never be printed."
 end
+
 return_from_proc
 
 puts
@@ -105,6 +107,8 @@ puts
 
 def return_from_lambda
   ten = lambda { return 10 }.call
+
   puts "The lambda returned #{ten}, and this will be printed."
 end
+
 return_from_lambda

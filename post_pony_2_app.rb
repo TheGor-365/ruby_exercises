@@ -1,12 +1,12 @@
-require "pony"
-require "io/console"
+require 'pony'
+require 'io/console'
 
-my_mail = "7495500@gmail.com"
+my_mail = '7495500@gmail.com'
 
 puts "Enter email #{my_mail} password for send: "
 password = STDIN.noecho(&:gets).chomp
 
-puts "Whom send messege?"
+puts 'Whom send messege?'
 send_to = STDIN.gets.chomp
 
 puts "Input text: "
@@ -14,7 +14,7 @@ body = STDIN.gets.chomp
 
 Pony.mail(
   {
-    subject: "Hey from Ruby!",
+    subject: 'Hey from Ruby',
     body:    body,
     to:      send_to,
     from:    my_mail,
@@ -31,4 +31,4 @@ Pony.mail(
   }
 )
 
-puts "Mail sended!"
+puts 'Mail sended'

@@ -23,17 +23,17 @@ class Album
   attr_reader :name, :date, :style
 
   def initialize name, date, style
-    @name, @date, @style, @a_songs = name, date, style, []
+    @name, @date, @style, @album_songs = name, date, style, []
   end
 
   def add_songs songs
-    @a_songs << songs
+    @album_songs << songs
   end
 
   def puts_songs
     puts "The album #{name} #{date}, #{style}:"
 
-    @a_songs.each_with_index do |song_pare, index|
+    @album_songs.each_with_index do |song_pare, index|
       puts "\tTrack #{index + 1}. #{song_pare.name} #{song_pare.duration}"
     end
   end
@@ -53,6 +53,7 @@ class Song
 end
 
 
+
 song_1 = Song.new 'Nokie', '5 min'
 song_2 = Song.new 'My way', '6 min'
 song_3 = Song.new 'Faith', '3.5 min'
@@ -70,5 +71,6 @@ artist1.artist_albums album_1
 artist1.artist_albums album_2
 
 artist1.albums
+
 album_1.puts_songs
 album_2.puts_songs

@@ -9,6 +9,7 @@ class Albuquerque
   end
 end
 
+
 a = Albuquerque.new cook: 'Walt', take_a_ride: 'Jessie', die: 'Gus')
 
 a.cook

@@ -1,19 +1,19 @@
 module Humans
   class Manager
     def say_hi
-      puts "Hi"
+      pp 'Hi'
     end
   end
 
   class Hipster
     def say_hi
-      puts "Hey yo"
+      pp 'Hey yo'
     end
   end
 
   class Jessie_Pinckman
     def say_hi
-      puts "Hi, bitch"
+      pp 'Hi, bitch'
     end
   end
 end

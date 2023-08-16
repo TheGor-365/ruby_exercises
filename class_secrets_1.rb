@@ -1,21 +1,21 @@
 module Kernel
   def kernel_method
-    puts "hi from kernel"
+    pp 'hi from kernel'
   end
 end
 
-TEST = "main namespace"
+TEST = 'main namespace'
 
 module NameSpace
   class Animal
-    TEST = "my constant"
+    TEST = 'my constant'
 
     def initialize name
       @name = name
     end
 
     def hello
-      puts "Hello my name is #{@name}"
+      pp "Hello my name is #{@name}"
       kernel_method
     end
 
@@ -24,26 +24,39 @@ module NameSpace
 end
 
 
-p klass = NameSpace::Animal
-puts
-p obj = klass.new("test")
-puts
-p NameSpace::Animal::TEST
-p klass::TEST
-puts
-p TEST
-puts
-p obj.hello
-p obj.hey
+klass = NameSpace::Animal
+pp klass
+
 puts
 
-p klass.class
-p klass.class.superclass
-p klass.class.superclass.superclass
-p klass.class.superclass.superclass.superclass
-p klass.class.superclass.superclass.superclass.superclass
+object = klass.new('test')
+pp object
+
 puts
-p obj.class
-p obj.class.superclass
-p obj.class.superclass.superclass
-p obj.class.superclass.superclass.superclass
+
+pp NameSpace::Animal::TEST
+pp klass::TEST
+
+puts
+
+pp TEST
+
+puts
+
+pp object.hello
+pp object.hey
+
+puts
+
+pp klass.class
+pp klass.class.superclass
+pp klass.class.superclass.superclass
+pp klass.class.superclass.superclass.superclass
+pp klass.class.superclass.superclass.superclass.superclass
+
+puts
+
+pp object.class
+pp object.class.superclass
+pp object.class.superclass.superclass
+pp object.class.superclass.superclass.superclass

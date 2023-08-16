@@ -2,5 +2,5 @@ def greeter
   yield
 end
 
-phrase = Proc.new { puts 'hey there' }
+phrase = Proc.new { pp 'hey there' }
 greeter(&phrase)

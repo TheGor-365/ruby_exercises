@@ -6,7 +6,7 @@ class Link < Post
   end
 
   def read_from_console
-    puts "Link address: "
+    puts 'Link address: '
     @url = STDIN.gets.chomp
 
     puts "Add '#{@url}' overview: "
@@ -16,7 +16,7 @@ class Link < Post
   def to_strings
     time_string = "Created #{@created_at.strftime("%Y-%m-%d %H:%M:%S")} \n\r \n\r"
 
-    return [@url, @text, time_string]
+    return [ @url, @text, time_string ]
   end
 
   def to_db_hash

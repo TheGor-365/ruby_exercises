@@ -1,10 +1,10 @@
 hash = {}
 
 loop do
-  print "Enter product id: "
+  print 'Enter product id: '
   id = gets.chomp
 
-  print "Enter amount (how much items you want to order): "
+  print 'Enter amount (how much items you want to order): '
   amount = gets.chomp.to_i
 
   product_id = hash[id].to_i

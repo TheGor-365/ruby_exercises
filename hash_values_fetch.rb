@@ -1,4 +1,4 @@
-@options = { "key": "value", "key_2": "value_2" }
+@options = { 'key': 'value', 'key_2': 'value_2' }
 
 def returner(key, value = nil)
   pp @options.fetch(key.to_s, value)

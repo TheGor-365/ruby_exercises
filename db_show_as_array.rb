@@ -15,21 +15,21 @@ db.execute 'INSERT INTO Users (name) VALUES("user");'
 
 db.execute 'SELECT * FROM Users' do |row|
 	puts row
-	puts '==='
+	puts
 end
 
 puts
 
 db.execute 'SELECT * FROM Users' do |row|
 	puts row[1]
-	puts '==='
+	puts
 end
 
 puts
 
 db.execute 'SELECT * FROM Users' do |row|
 	puts "Name: #{row[1]} visit: #{row[3]}"
-	puts '==='
+	puts
 end
 
 puts
@@ -38,5 +38,5 @@ db.execute 'SELECT * FROM Users' do |row|
 	print row[1]
 	print "\t\t"
 	puts row[3]
-	puts '==='
+	puts
 end

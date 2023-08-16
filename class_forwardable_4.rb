@@ -7,7 +7,7 @@ class UserDecorator
 
   def_delegators :@user, :first_name, :last_name
 
-  def initialize(user)
+  def initialize user
     @user = user
   end
 
@@ -17,12 +17,12 @@ class UserDecorator
 end
 
 
-decorated_user = UserDecorator.new(User.new("John", "Doe"))
+decorated_user_1 = UserDecorator.new(User.new('John', 'Doe'))
 decorated_user_2 = UserDecorator.new(User.new('Gor', 'Khachatryan'))
 
-pp decorated_user.first_name
-pp decorated_user.last_name
-pp decorated_user.full_name
+pp decorated_user_1.first_name
+pp decorated_user_1.last_name
+pp decorated_user_1.full_name
 
 puts
 

@@ -1,7 +1,7 @@
 hash = {
-  "cat" => "feline",
-  "dog" => "canine",
-  "cow" => "bovine"
+  'cat': 'feline',
+  'dog': 'canine',
+  'cow': 'bovine'
 }
 
 pp hash

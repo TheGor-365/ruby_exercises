@@ -6,5 +6,5 @@ data = {
 
 name, description = data.values_at(:name, :description)
 
-puts name
-puts description
+pp name
+pp description

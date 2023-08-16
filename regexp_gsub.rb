@@ -1,4 +1,4 @@
-print "Thtring, pleathe: "
+print 'Thtring, pleathe: '
 input = gets.chomp.downcase!
 
 if user_input.include? 's'

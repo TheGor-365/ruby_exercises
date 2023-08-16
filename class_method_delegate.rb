@@ -12,7 +12,7 @@ class Computer
   # def write data
   #   @memory.write data
   # end
-  #
+
   # def read index
   #   @memory.read index
   # end
@@ -38,7 +38,5 @@ pp computer = Computer.new
 puts
 
 pp computer.write 'Ruby'
-puts
 pp computer
-puts
 pp computer.read 0

@@ -18,6 +18,8 @@ class Machine
   end
 end
 
+
+
 my_machine = Machine.new("eric", 01234)
 your_machine = Machine.new("you", 56789)
 

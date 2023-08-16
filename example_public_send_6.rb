@@ -37,7 +37,7 @@ end
 
 
 
-device = Device.new("Moto G8 Plus", "cellphone", "350", "G8")
+device = Device.new('Moto G8 Plus', 'cellphone', '350', 'G8')
 pp device
 
 puts

@@ -1,60 +1,84 @@
-# !! Hash.new, Hash puts
-# rating = Hash.new
-# rating[:Gor] = 32
-# puts rating
-# puts
-# puts [:Gor]
-# puts
-# puts "#{rating[:Gor]}"
-# puts
-# puts "#{:Gor} #{rating[:Gor]}"
+puts 'Hash.new, Hash puts'
+rating = Hash.new
+rating[:Gor] = 32
 
-# !! New Hash
-# h = {}
-# h[:Gor] = "cool man", "realy"
-#
-# puts "#{:Gor} #{h[:Gor][0]}, #{h[:Gor][1]}"
+pp rating
+pp [:Gor]
+pp rating[:Gor]
+pp "#{:Gor} #{rating[:Gor]}"
 
-# ! New Hahs
-# h = Hash.new
-# x = 0
-# h = {'a' => 32, 'b' => 33, 'c' => x}
-# h['a'] = 32
-# h['b'] = 33
-# h['c'] = x
-# puts h.keys
-# puts
-# puts h.values
-# puts
-# h.each do |key, value|
-#   puts "#{key} #{value}"
-# end
-# puts
-# h.each_key do |key|
-#   puts "#{key} #{h[key]}"
-# end
+puts
+puts
 
-# ???Hash x
-# h = Hash.new("Gor")
-# puts h
 
-# !!! delete key
-# h = { "a" => 100, "b" => 200 }
-# h.delete("a")
-# h.each do |k, v|
-#   puts "#{k} #{v}"
-# end
+puts 'New Hash'
+hash = {}
+hash[:Gor] = 'cool man', 'realy'
 
-# !delete value
-# h = { "a" => 100, "b" => 200 }
-# h.delete(100)
-# h.each do |k, v|
-#   puts "#{k} #{v}"
-# end
+pp "#{:Gor} #{hash[:Gor][0]}, #{hash[:Gor][1]}"
 
-# ?! delete faund
-# h = { "a" => 100, "b" => 200 }
-# h.delete("e") {|el| "#{el} not found!"}
-# puts h["e"]
+puts
+puts
 
-#
+
+puts 'New Hash'
+hash = Hash.new
+target = 0
+hash = { 'a': 32, 'b': 33, 'c': target }
+hash['a'] = 32
+hash['b'] = 33
+hash['c'] = target
+
+pp hash.keys
+pp hash.values
+
+hash.each do |name, value|
+  pp "#{name} #{value}"
+end
+
+hash.each_key do |name|
+  pp "#{name} #{hash[name]}"
+end
+
+puts
+puts
+
+
+puts 'Hash x'
+hash = Hash.new('Gor')
+
+pp hash
+
+puts
+puts
+
+
+puts 'delete key'
+hash = { 'a': 100, 'b': 200 }
+hash.delete('a')
+
+hash.each do |name, value|
+  pp "#{name} #{value}"
+end
+
+puts
+puts
+
+
+puts 'delete value'
+hash = { 'a': 100, 'b': 200 }
+hash.delete(100)
+
+hash.each do |name, value|
+  pp "#{name} #{value}"
+end
+
+puts
+puts
+
+
+puts 'delete found'
+hash = { 'a': 100, 'b': 200 }
+
+hash.delete('element') { |element| "#{element} not found!" }
+pp hash['element']

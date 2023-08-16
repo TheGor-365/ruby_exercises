@@ -34,7 +34,7 @@ questions = [
   "20. How would you react if your partner expressed a desire to communicate with their exes?"
 ]
 
-results =[
+results = [
   "Are you jealous",
   "You're not jealous",
   "You asshole"

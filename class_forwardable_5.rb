@@ -8,7 +8,7 @@ class UserDecorator
   def_delegator :@user, :first_name, :personal_name
   def_delegator :@user, :last_name, :family_name
 
-  def initialize(user)
+  def initialize user
     @user = user
   end
 

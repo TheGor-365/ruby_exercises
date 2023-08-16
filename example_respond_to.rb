@@ -1,4 +1,4 @@
-object = [1, '2', :b]
+object = [ 1, '2', :b ]
 age = 26
 
 pp object.respond_to?(:sort)

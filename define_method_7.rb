@@ -1,6 +1,6 @@
-define_method("first_example") do |fixed, default = {}|
-  puts fixed
-  puts default
+define_method('first_example') do |fixed, default = {}|
+  pp fixed
+  pp default
 end
 
 first_example('Hello', key: :value)
@@ -12,8 +12,8 @@ puts
 
 define_method(:second_example) do |foo, bar|
   bar ||= {}
-  puts foo
-  puts bar
+  pp foo
+  pp bar
 end
 
 second_example('Hello', key: :value)

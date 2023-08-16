@@ -3,7 +3,7 @@ class PaginationHelper
 
   def initialize(collection, items_per_page)
     @collection = collection
-    @size = items_per_page
+    @size       = items_per_page
   end
 
   def item_count

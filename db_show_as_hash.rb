@@ -19,5 +19,5 @@ db.execute 'SELECT * FROM Users' do |row|
 	print row['username']
 	print "\t\t"
 	puts row['datestamp']
-	puts '==='
+	puts
 end

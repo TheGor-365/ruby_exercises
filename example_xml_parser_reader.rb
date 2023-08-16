@@ -4,8 +4,8 @@ require 'date'
 data_path = 'xml_files/expenses.xml'
 abort "File don't found" unless File.exists?(data_path)
 
-data_file = File.new(data_path)
-doc = REXML::Document.new(data_file)
+data_file     = File.new(data_path)
+doc           = REXML::Document.new(data_file)
 amount_by_day = Hash.new
 
 doc.elements.each("expenses/expense") do |item|
@@ -18,7 +18,7 @@ end
 
 data_file.close
 
-sum_by_month = Hash.new
+sum_by_month  = Hash.new
 current_month = amount_by_day.keys.sort[0].strftime("%B %Y")
 
 amount_by_day.keys.sort.each do |key|

@@ -4,25 +4,26 @@ class Post
   @@SQLITE_DB_FILE = 'sqlite/task_book.sqlite'
 
   def self.post_types
-    {'Memo': Memo, 'Link': Link, 'Task': Task}
+    { 'Memo': Memo, 'Link': Link, 'Task': Task }
   end
 
-  def self.create(type)
+  def self.create type
     return post_types[type].new
   end
 
   def self.find(limit, type, id)
     db = SQLite3::Database.open(@@SQLITE_DB_FILE)
 
-    if !id.nil?
+    unless id.nil?
       db.results_as_hash = true
 
-      result = db.execute("SELECT * FROM Posts WHERE id = ?", id)
+      result = db.execute('SELECT * FROM Posts WHERE id = ?', id)
       result = result[0] if result.is_a? Array
+
       db.close
 
       if result.empty?
-        puts "Id #{id} not exists"
+        pp "Id #{id} not exists"
         return nil
       else
         # post = create(result['type'])
@@ -42,7 +43,7 @@ class Post
   def to_strings; end
 
   def save
-    file = File.new(file_path, "w:UTF-8")
+    file = File.new(file_path, 'w:UTF-8')
 
     for item in to_strings do
       file.puts(item)
@@ -72,7 +73,6 @@ class Post
       )")
 
     db.execute(
-
       "INSERT INTO Posts (" +
       to_db_hash.keys.join(', ') +
       ")" +
@@ -89,7 +89,7 @@ class Post
 
   def to_db_hash
     {
-      'type': self.class.name,
+      'type':       self.class.name,
       'created_at': @created_at.to_s
     }
   end

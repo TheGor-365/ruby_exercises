@@ -13,7 +13,9 @@ end
 
 
 pp ip_meta = Ipgeobase.lookup('83.169.216.199')
+
 puts
+
 p ip_meta.country
 p ip_meta.country_code
 p ip_meta.city

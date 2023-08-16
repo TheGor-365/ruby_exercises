@@ -4,7 +4,7 @@ def time
   Time.now - start
 end
 
-pp time { "a" * 10_000_000 }
+pp time { 'a' * 10_000_000 }
 
 puts
 
@@ -18,9 +18,9 @@ puts
 
 
 
-def request_http(&on_complete)
-  pp on_complete.inspect
+def request_http &on_complete
+  pp on_complete
   on_complete.call
 end
 
-request_http { puts "Done" }
+request_http { pp 'Operation done' }

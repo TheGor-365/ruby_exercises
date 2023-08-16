@@ -18,6 +18,7 @@ post = Post.new(
   created_at: '01/03/2021',
   published:  'true'
 )
+
 puts
 
 
@@ -26,9 +27,11 @@ pp post.title
 pp post.body
 pp post.created_at
 pp post.published
+
 puts
 
 pp post
+
 puts
 
 pp post.id = '2'
@@ -36,14 +39,16 @@ pp post.title = 'Second Post'
 pp post.body = 'Goodbye, World!'
 pp post.created_at = '10/05/2020'
 pp post.published = 'false'
+
 puts
 
 pp post.attributes
+
 puts
 
 pp post_2 = Post.new(id: '2')
+
 puts
 
 pp post_2.id = '3'
 pp post_2
-puts

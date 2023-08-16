@@ -1,19 +1,19 @@
 hh = {
-  "dog"  => ["sobaka", "pyos"],
-  "cat"  => ["koshka", "kot"],
-  "girl" => ["devushka"]
+  'dog':  ['sobaka', 'pyos'],
+  'cat':  ['koshka', 'kot'],
+  'girl': ['devushka']
 }
 
 loop do
-  print "Enter word: "
+  print 'Enter word: '
   word = gets.strip
   translate = hh[word]
 
-  puts "Translates: #{translate.size}"
+  pp "Translates: #{translate.size}"
   puts
-  puts "It is:"
+  pp 'It is:'
 
   translate.each.with_index do |item, index|
-    puts "#{index + 1}. #{item.capitalize}"
+    pp "#{index + 1}. #{item.capitalize}"
   end
 end

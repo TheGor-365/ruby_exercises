@@ -13,6 +13,7 @@ class LA
   include Albuquerque
 end
 
+
 la = LA.new(cook: 'Walt', take_a_ride: 'Jessie', die: 'Gus')
 
 la.cook

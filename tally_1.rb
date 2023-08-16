@@ -7,7 +7,7 @@ puts
 
 
 
-hashes = [{name: "Meagan" }, { name: "Meagan" }, { name: "Lauren" }]
+hashes = [{name: 'Meagan' }, { name: 'Meagan' }, { name: 'Lauren' }]
 
 pp hashes.group_by(&:itself).map { |name, value| name.merge(count: value.length)}
 
@@ -22,7 +22,7 @@ puts
 
 
 
-the_hashes = [{name: "Meagan" }, { name: "Meagan" }, { name: "Lauren" }]
+the_hashes = [{name: 'Meagan' }, { name: 'Meagan' }, { name: 'Lauren' }]
 
 pp the_hashes.tally
 pp the_hashes.tally.map { |name, value| name.merge({count: value}) }

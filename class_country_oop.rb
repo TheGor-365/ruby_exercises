@@ -2,8 +2,7 @@ class Country
   attr_reader :name, :airports
 
   def initialize name
-    @name = name
-    @airports = []
+    @name, @airports = name, []
   end
 
   def add_airports airport
@@ -11,18 +10,19 @@ class Country
   end
 end
 
+
 class Airport
   attr_reader :name, :planes
 
   def initialize name
-    @name = name
-    @planes = []
+    @name, @planes = name, []
   end
 
   def add_planes plane
     @planes << plane
   end
 end
+
 
 class Plane
   attr_reader :model
@@ -33,64 +33,74 @@ class Plane
 end
 
 
+
 airports = []
 
-airport1 = Airport.new 'SVO'
-airport2 = Airport.new 'DME'
+airport_1 = Airport.new 'SVO'
+airport_2 = Airport.new 'DME'
 
-airports << airport1
-airports << airport2
+airports << airport_1
+airports << airport_2
 
 countries = []
 
-country1 = Country.new 'Mehico'
-country2 = Country.new 'Moscow'
-country3 = Country.new 'NY'
+country_1 = Country.new 'Mehico'
+country_2 = Country.new 'Moscow'
+country_3 = Country.new 'NY'
 
-country1.add_airports 'MehocoAir'
-country1.add_airports 'MehocoAir2'
+country_1.add_airports 'MehocoAir'
+country_1.add_airports 'MehocoAir2'
 
-country2.add_airports airport1
-country2.add_airports airport2
+country_2.add_airports airport_1
+country_2.add_airports airport_2
 
-country3.add_airports 'NY airport'
+country_3.add_airports 'NY airport'
 
-countries << country1
-countries << country2
-countries << country3
+countries << country_1
+countries << country_2
+countries << country_3
 
-plane1 = Plane.new 'Boeing-777'
-plane2 = Plane.new 'Airbus-320'
-plane3 = Plane.new 'Il-80'
+plane_1 = Plane.new 'Boeing-777'
+plane_2 = Plane.new 'Airbus-320'
+plane_3 = Plane.new 'Il-80'
 
-plane4 = Plane.new 'Boeing-111'
-plane5 = Plane.new 'Airbus-222'
-plane6 = Plane.new 'SU-333'
+plane_4 = Plane.new 'Boeing-111'
+plane_5 = Plane.new 'Airbus-222'
+plane_6 = Plane.new 'SU-333'
 
-airport1.add_planes plane1
-airport1.add_planes plane2
-airport1.add_planes plane3
+airport_1.add_planes plane_1
+airport_1.add_planes plane_2
+airport_1.add_planes plane_3
 
-airport2.add_planes plane4
-airport2.add_planes plane5
-airport2.add_planes plane6
+airport_2.add_planes plane_4
+airport_2.add_planes plane_5
+airport_2.add_planes plane_6
 
-puts airport1.name
-puts airport2.name
+pp airport_1.name
+pp airport_2.name
+
 puts
-puts airport1.planes
-puts airport2.planes
+
+pp airport_1.planes
+pp airport_2.planes
+
 puts
+puts
+
 
 countries.each do |country|
   puts "Country: #{country.name}"
+
   country.airports.each do |airport|
     puts "Airport #{airport}"
   end
 end
 
+puts
+
 airports.each do |airport|
-  puts "Airport #{airport.name}:"
+  puts "Airport #{airport.name}"
+  
   airport.planes.each do |plane|
     puts "Plane: #{plane.model}"
   end

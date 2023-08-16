@@ -1,4 +1,4 @@
-pp ["a", "b", "c", "b"].tally
+pp ['a', 'b', 'c', 'b'].tally
 
 puts
 
@@ -7,8 +7,8 @@ puts
 order_one = %i{ pen pencil eraser sharpener pen pen }
 order_two = %i{ sharpener eraser eraser eraser eraser sharpener sharpener sharpener sharpener }
 
-pp tally_one = order_one.tally
-pp tally_two = order_two.tally
+pp tally_one    = order_one.tally
+pp tally_two    = order_two.tally
 pp weekly_tally = (order_one + order_two).tally
 
 puts

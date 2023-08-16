@@ -9,4 +9,5 @@ file.each_line do |line|
   end
 end
 
-puts @array.reverse.join(' ')
+
+pp @array.reverse.join(' ')

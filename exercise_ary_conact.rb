@@ -9,7 +9,7 @@ choice = ARGV[0]
 puts "\nWe have #{collection.inspect}, take a piece..."
 
 if choice == nil || !choice.is_a?(Numeric)
-  print "\nEnter number: "
+  print '\nEnter number: '
   choice = STDIN.gets.to_i
 end
 

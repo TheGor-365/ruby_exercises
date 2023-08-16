@@ -4,7 +4,8 @@ def batman_ironman_proc
   'IRON MAN win'
 end
 
-puts batman_ironman_proc
+pp batman_ironman_proc
+
 
 def batman_ironman_lambda
   victor = lambda { return 'BATMAN win' }
@@ -12,4 +13,4 @@ def batman_ironman_lambda
   'IRON MAN win'
 end
 
-puts batman_ironman_lambda
+pp batman_ironman_lambda

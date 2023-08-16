@@ -6,6 +6,7 @@ require_relative 'class_task_book_task.rb'
 require 'optparse'
 
 options = {}
+
 OptionParser.new do |opt|
   opt.banner = 'Usage: read.rb [options]'
 
@@ -41,5 +42,3 @@ else
     end
   end
 end
-
-puts

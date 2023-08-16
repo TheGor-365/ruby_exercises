@@ -21,7 +21,7 @@ loop do
     exit
   end
 
-  print "Enter age: "
+  print 'Enter age: '
   age = gets.to_i
 
   options = {:name => name, :age => age}

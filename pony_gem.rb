@@ -14,7 +14,7 @@ body = STDIN.gets.chomp
 
 Pony.mail(
   {
-    subject: "hi from Ruby!",
+    subject: 'hi from Ruby',
     body:    body,
     to:      send_to,
     from:    my_mail,
@@ -32,4 +32,4 @@ Pony.mail(
   }
 )
 
-puts "The message successfully sended!"
+puts 'The message successfully sended!'

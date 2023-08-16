@@ -1,5 +1,4 @@
 word = 'Hello'
 
 binding.irb
-
-puts word
+pp word

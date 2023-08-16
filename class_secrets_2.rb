@@ -2,10 +2,11 @@ require 'selenium-webdriver'
 require 'cgi'
 
 module UrlGenerator
-  def prepare_uri str
-    CGI.escape str
+  def prepare_uri string
+    CGI.escape string
   end
 end
+
 
 class Animal
   # include UrlGenerator - prepare_uri() don't work for class (only: Animal.new.prepare_uri) !!!
@@ -20,22 +21,25 @@ class Animal
     include UrlGenerator # will work
 
     def find(term = '')
-      driver = Selenium::WebDriver.for :firefox
+      driver    = Selenium::WebDriver.for :firefox
       full_term = self.prepare_uri term + " " + self.name.downcase
+
       driver.get "https://ddg.gg/?q=#{full_term}"
     end
   end
 
   def hi
-    puts "Hi, my name is #{@name}"
+    pp "Hi, my name is #{@name}"
   end
 end
+
 
 class Cat < Animal
   class << self
     attr_accessor :avg_height
   end
 end
+
 
 
 pp Animal.singleton_class

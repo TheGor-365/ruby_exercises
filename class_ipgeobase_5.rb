@@ -20,14 +20,19 @@ end
 
 # ip_meta = Ipgeobase.lookup('83.169.216.199')
 ip_meta = Ipgeobase.lookup('81.200.23.8')
+
 puts
-puts ip_meta
+
+pp ip_meta
+
 puts
-puts ip_meta.country
-puts ip_meta.city
-puts ip_meta.country_code
-puts ip_meta.lat
-p ip_meta.lon
+
+pp ip_meta.country
+pp ip_meta.city
+pp ip_meta.country_code
+pp ip_meta.lat
+pp ip_meta.lon
+
 puts
 
 # p ip_meta.instance_variable_get '@country'

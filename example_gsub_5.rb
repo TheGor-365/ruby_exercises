@@ -1,36 +1,40 @@
-p sentence = "This is a sample sentence."
+pp sentence = 'This is a sample sentence.'
 
-p sentence.gsub(/a/, "")
-p sentence.gsub(/This/, "*")
-p sentence.gsub(/[^a]/, "*")
+pp sentence.gsub(/a/, '')
+pp sentence.gsub(/This/, '*')
+pp sentence.gsub(/[^a]/, '*')
+
 puts
 
-p sentence = "Th1s 1s a sampl3 s3nt3nc3."
+pp sentence = 'Th1s 1s a sampl3 s3nt3nc3.'
 
-p sentence.gsub(/[0123456789]/, "!")
-p sentence.gsub(/[0-9]/, "!")
-p sentence.gsub(/[A-Za-z]/, "🔥")
+pp sentence.gsub(/[0123456789]/, '!')
+pp sentence.gsub(/[0-9]/, '!')
+pp sentence.gsub(/[A-Za-z]/, '🔥')
+
 puts
 
-p lorem = "Lorem ipsum."
+pp lorem = 'Lorem ipsum.'
 
-p lorem.gsub(/[\w]/, "wow")
-p lorem.gsub(/[\W]/, "wow")
+pp lorem.gsub(/[\w]/, 'wow')
+pp lorem.gsub(/[\W]/, 'wow')
 
-p lorem = "L0r3m 1psum"
-p lorem.gsub(/[\d]/, "-")
-p lorem.gsub(/[\D]/, "-")
+pp lorem = 'L0r3m 1psum'
+pp lorem.gsub(/[\d]/, '-')
+pp lorem.gsub(/[\D]/, '-')
+
 puts
 
-p cool_phrase = "slow lorises are cool"
-p cool_phrase.gsub(/\w+/) {|word| word.capitalize}
+pp cool_phrase = 'slow lorises are cool'
+pp cool_phrase.gsub(/\w+/) {|word| word.capitalize}
 
-p year = "The year is 3100"
-p year.gsub(/\d+/) {|num| num.to_i + 1}
+pp year = 'The year is 3100'
+pp year.gsub(/\d+/) { |number| number.to_i + 1 }
+
 puts
 
-p phone_number = "(123)456-7890"
-p phone_number.gsub(/[()-], ""/)
+pp phone_number = '(123)456-7890'
+pp phone_number.gsub(/[()-], ''/)
 
-p steve = "St97eve Brul()*)e "
-p steve.gsub(/[\W\d]/, "").split(/(?=[A-Z])/).join(" ")
+pp steve = 'St97eve Brul()*)e '
+pp steve.gsub(/[\W\d]/, '').split(/(?=[A-Z])/).join(' ')

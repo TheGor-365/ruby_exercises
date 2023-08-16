@@ -10,7 +10,7 @@ end
 
 record = RecordCollection.new
 
-pp record.records = [1, 2, 3]
+pp record.records = [ 1, 2, 3 ]
 pp record.size
 pp record << 4
-pp record.map { |x| x * 2 }
+pp record.map { |element| element * 2 }

@@ -1,19 +1,19 @@
 module Humans
   class Manager
     def say_hi
-      puts "Hi"
+      pp 'Hi'
     end
   end
 
   class Hipster
     def say_hi
-      puts "Hiiiii, yo!"
+      pp 'Hiiiii, yo'
     end
   end
 
   class Jessie_Pincman
     def say_hi
-      puts "Hi, bitch!"
+      pp 'Hi, bitch'
     end
   end
 end
@@ -24,10 +24,11 @@ module Animals
 
   class Cat
     def run
-      puts "Run"
+      pp 'Run'
     end
   end
 end
+
 
 hipster = Humans::Hipster.new
 hipster.say_hi

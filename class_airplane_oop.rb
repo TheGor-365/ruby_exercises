@@ -20,6 +20,8 @@ class Airplane
   end
 end
 
+
+
 models = ['Airbus-320', 'Boeing-777', 'Il-86']
 planes = []
 
@@ -43,14 +45,20 @@ plane_2 = Airplane.new('Airbus-320')
 puts "Model: #{plane_1.model} Speed: #{plane_1.speed} Altitude: #{plane_1.altitude}"
 puts "Is moving: #{plane_1.moving?}"
 
+
 plane_1.fly
+
 puts "Model: #{plane_1.model} Speed: #{plane_1.speed} Altitude: #{plane_1.altitude}"
 puts "Is moving: #{plane_1.moving?}"
+
 
 plane_1.land
+
 puts "Model: #{plane_1.model} Speed: #{plane_1.speed} Altitude: #{plane_1.altitude}"
 puts "Is moving: #{plane_1.moving?}"
 
+
 plane_2.fly
+
 puts "Model: #{plane_2.model} Speed: #{plane_2.speed} Altitude: #{plane_2.altitude}"
 puts "Is moving: #{plane_2.moving?}"

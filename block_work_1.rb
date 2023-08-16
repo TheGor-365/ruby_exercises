@@ -1,22 +1,22 @@
 def whatsup
-  puts "hi_1"
+  pp 'hi_1'
 end
 
 whatsup do
-  puts "hi_2"
+  pp 'hi_2'
 end
 
-whatsup { puts "hi_3" }
+whatsup { pp 'hi_3' }
 
 def whatsup
   yield
 end
 
 whatsup do
-  puts "hi_4"
+  pp 'hi_4'
 end
 
-whatsup { puts "hi_5" }
+whatsup { pp 'hi_5' }
 
 puts
 puts
@@ -24,13 +24,13 @@ puts
 
 
 def reached
-  puts "the top"
+  pp 'the top'
   yield
-  puts "the bottom"
+  pp 'the bottom'
 end
 
 reached do
-  puts "the yield"
+  pp 'the yield'
 end
 
 puts
@@ -39,11 +39,11 @@ puts
 
 
 def how_old
-  yield "John", 2
+  yield 'John', 2
 end
 
 how_old do |name, age|
-  puts "#{name} is #{age} years old"
+  pp "#{name} is #{age} years old"
 end
 
 puts
@@ -60,7 +60,7 @@ puts
 
 
 
-def two(&block)
+def two &block
   puts "two is: #{yield}"
 end
 
@@ -71,7 +71,7 @@ puts
 
 
 
-def my_map(array)
+def my_map array
   new_array = []
 
   for element in array
@@ -90,7 +90,7 @@ puts
 
 
 
-def method_with_block(&block)
+def method_with_block &block
   block.call
 end
 

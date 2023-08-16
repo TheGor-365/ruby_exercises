@@ -1,4 +1,4 @@
-cat = String.new("cat")
+cat = String.new 'cat'
 
 def cat.speak
   'miaow'
@@ -10,57 +10,58 @@ pp cat.singleton_methods
 puts
 
 
-A = Class.new
+One = Class.new
 
-def A.speak
-  "I'm class A"
+def One.speak
+  "I'm class One"
 end
 
-pp A.speak
-pp A.singleton_methods
+pp One.speak
+pp One.singleton_methods
 
 puts
 
 
-class A
-  def self.c_method
-    'in A#c_method'
-  end
-end
-
-pp A.singleton_methods
-pp A.c_method
-pp A.speak
-
-puts
-puts
-
-
-class B
-  def self.c_method
-    true
-  end
-
-  def i_method
-    true
+class One
+  def self.classs_method
+    'in One#classs_method'
   end
 end
 
-pp B.c_method
-pp B.new.i_method
+pp One.singleton_methods
+pp One.classs_method
+pp One.speak
 
 puts
 puts
 
 
-module M
-  def self.c_method
+class Two
+  def self.classs_method
     true
   end
 
-  def i_method
+  def instancce_method
     true
   end
 end
 
-pp M.c_method
+pp Two.classs_method
+pp Two.new.instancce_method
+
+puts
+puts
+
+
+module Modulle
+  def self.classs_method
+    true
+  end
+
+  def iinstancce_method
+    true
+  end
+end
+
+
+pp Modulle.classs_method

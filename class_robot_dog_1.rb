@@ -10,7 +10,7 @@ class Robot
   def left;  self.x -= 1; end
   def up;    self.y += 1; end
   def down;  self.y -= 1; end
-  def label; ' * '; end
+  def label; ' * ';       end
 end
 
 
@@ -27,7 +27,7 @@ class Dog
   def left;  self.x -= 1; end
   def up;    self.y += 1; end
   def down;  self.y -= 1; end
-  def label; ' @ '; end
+  def label; ' @ ';       end
 end
 
 
@@ -42,12 +42,12 @@ end
 
 
 commander = Commander.new
-array = Array.new(10) { Robot.new }
+array     = Array.new(10) { Robot.new }
 
 array.push(Dog.new x: -12, y: 12)
 
 10.times do
-  puts "\e[H\e[2J"
+  pp "\e[H\e[2J"
 
   12.downto(-12) do |y|
     -12.upto(12) do |x|
@@ -63,7 +63,7 @@ array.push(Dog.new x: -12, y: 12)
   end
 
   if game_over
-    puts 'Game over'
+    pp 'Game over'
     exit
   end
 

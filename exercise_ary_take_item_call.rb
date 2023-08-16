@@ -1,8 +1,8 @@
-require_relative "exercise_ary_take_item_method.rb"
+require_relative 'exercise_ary_take_item_method.rb'
 
-collection = [:Gor, :John, 12, 44, "aaa", "bbb", [cool: "deal"]]
+collection = [:Gor, :John, 12, 44, 'aaa', 'bbb', [cool: 'deal']]
 
-puts collection.inspect
+pp collection
 choice = ''
 
 if choice != nil || !choice.is_a(Numeric)
@@ -10,5 +10,5 @@ if choice != nil || !choice.is_a(Numeric)
   choice = STDIN.gets.to_i
 end
 
-puts "Your choice:"
+puts 'Your choice:'
 select_item choice, collection

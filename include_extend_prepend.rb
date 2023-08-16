@@ -68,13 +68,7 @@ class Cat
   attribute :name
 end
 
-# pp "extend: #{Cat.has_home?}"
-# pp Cat.ancestors
-puts
-p cat = Cat.new
-# p cat.name
-p cat.attribute 'Eric'
-puts
-# pp Cat.attribute 'John'
 
-### define_method, instance_variable_get, instance_variable_set
+cat = Cat.new 'Ivan'
+
+pp cat.attribute 'Eric'

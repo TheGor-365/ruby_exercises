@@ -2,7 +2,6 @@ require "addressable/template"
 require 'happymapper'
 require 'net/http'
 
-
 module Ipgeobase
   class << self
     def lookup(ip)
@@ -17,14 +16,12 @@ end
 pp ip_meta = Ipgeobase.lookup('83.169.216.199')
 
 puts
+
+pp ip_meta.country
+pp ip_meta.country_code
+pp ip_meta.city
+
 puts
 
-puts ip_meta.country
-puts
-puts ip_meta.country_code
-puts
-puts ip_meta.city
-puts
 ip_meta.lat
-puts
 ip_meta.lon

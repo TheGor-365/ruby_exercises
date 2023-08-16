@@ -9,8 +9,8 @@ class DollarRate
   end
 
   def self.menu
-    puts "1 = Convert rubles"
-    puts "2 = Convert dollars"
+    puts '1 = Convert rubles'
+    puts '2 = Convert dollars'
   end
 
   def convert

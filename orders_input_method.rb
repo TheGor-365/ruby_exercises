@@ -1,6 +1,6 @@
 def parse_orders_input orders_input
   split_1 = orders_input.split(/,/)
-  array = []
+  array   = []
 
   split_1.each do |element|
     split_2 = element.split(/\=/)

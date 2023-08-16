@@ -4,7 +4,7 @@ class Something
   end
 end
 
-s = Something.new
+something = Something.new
 
-pp s.aaa
-pp s.sss
+pp something.aaa
+pp something.sss

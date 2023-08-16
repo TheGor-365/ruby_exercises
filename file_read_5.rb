@@ -11,4 +11,4 @@ puts lines[0]
 puts
 puts lines
 
-f.close
+file.close

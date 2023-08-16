@@ -6,6 +6,6 @@ hash = {
 	color: 		 'Choose color that you need'
 }
 
-error = hash.select { |key, value| value == "" }.values.join(", ")
+error = hash.select { |key, value| value == '' }.values.join(', ')
 
 pp error

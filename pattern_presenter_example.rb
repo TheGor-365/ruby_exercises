@@ -5,11 +5,11 @@ class ArticleDecorator < Draper::Decorator
     if published?
       "Published at #{published_at}"
     else
-      "Unpublished"
+      'Unpublished'
     end
   end
 
   def published_at
-    object.published_at.strftime("%A, %B, %e")
+    object.published_at.strftime('%A, %B, %e')
   end
 end

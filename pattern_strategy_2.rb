@@ -1,12 +1,9 @@
 class Strategy
-  def call a, b
-
-  end
+  def call a, b; end
 end
 
 class Car < Strategy
-  def initialize
-  end
+  def initialize; end
 
   def call a, b
     points = []
@@ -17,8 +14,7 @@ class Car < Strategy
 end
 
 class Walk
-  def initialize
-  end
+  def initialize; end
 
   def call a, b
     points = []
@@ -29,8 +25,7 @@ class Walk
 end
 
 class Bus
-  def initialize
-  end
+  def initialize; end
 
   def call a, b
     points = []
@@ -41,8 +36,7 @@ class Bus
 end
 
 class Plane
-  def initialize
-  end
+  def initialize; end
 
   def call a, b
     points = []
@@ -61,7 +55,7 @@ class Navigator
     @type = type
   end
 
-  def build_route(a, b)
+  def build_route a, b
     points = []
     points = route_strategy.new.call a, b
     points

@@ -1,6 +1,7 @@
-my_array = ["raindrops", :kettles, "whiskers", :mittens, :packages]
+my_array = ['raindrops', :kettles, 'whiskers', :mittens, :packages]
 
 symbol_filter = -> (element) { element.is_a? Symbol }
-symbols = my_array.select &symbol_filter
+symbols       = my_array.select &symbol_filter
+
 
 pp symbols

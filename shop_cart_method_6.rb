@@ -1,4 +1,4 @@
-orders = "product_1=4,product_2=1,product_3=1,"
+orders = 'product_1=4,product_2=1,product_3=1,'
 
 split_1 = orders.split(/,/)
 

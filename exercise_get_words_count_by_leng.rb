@@ -1,6 +1,6 @@
-def get_words_count_by_lang(data)
+def get_words_count_by_lang data
   # simple solution: data.split.tally
-  words = data.split
+  words  = data.split
   result = {}
   words.each do |word|
     result[word] ||= 0
@@ -10,6 +10,7 @@ def get_words_count_by_lang(data)
 end
 
 text = 'php ruby php java javascript go go go'
+
 
 pp get_words_count_by_lang text
 

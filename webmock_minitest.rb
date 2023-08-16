@@ -1,5 +1,5 @@
-require "minitest/autorun"
-require "webmock/minitest"
+require 'minitest/autorun'
+require 'webmock/minitest'
 
 class Book
   attr_accessor :title

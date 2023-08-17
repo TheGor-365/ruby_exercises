@@ -116,13 +116,17 @@ end
 
 pp car
 puts "color: #{car.color} \ndoors: #{car.doors}"
+
 puts
 
+
 Bus = Struct.new(:color, :doors, keyword_init: true)
+
 bus = Bus.new(color: 'Green', doors: 3) do |c|
   c.color
   c.doors
 end
+
 pp bus
 puts "color: #{bus.color} \ndoors: #{bus.doors}"
 

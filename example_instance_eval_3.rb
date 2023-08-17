@@ -15,12 +15,13 @@ class Student
 end
 
 
-steve = Student.new("Steve")
+steve = Student.new('Steve')
 
 steve.grade = 11
-steve.dob = 20010501
-steve.allergies << "penicillin"
-steve.allergies << "tree nuts"
+steve.dob   = 20010501
+
+steve.allergies << 'penicillin'
+steve.allergies << 'tree nuts'
 
 pp steve
 
@@ -55,7 +56,7 @@ pp steve.previous_school[:name]
 
 puts
 
-steve.previous_school = previous_school.split("-").tap do |array|
+steve.previous_school = previous_school.split('-').tap do |array|
   {
     name:  array[0],
     city:  array[1],
@@ -68,7 +69,7 @@ pp steve.previous_school
 puts
 puts
 
-steve.previous_school = previous_school.split("-").instance_eval do |array|
+steve.previous_school = previous_school.split('-').instance_eval do |array|
   {
     name:  array[0],
     city:  array[1],

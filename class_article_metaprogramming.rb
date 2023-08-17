@@ -26,6 +26,7 @@ puts
 puts
 
 pp article.title = 'article_2'
+
 pp article.attributes
 pp article.attributes.to_a
 

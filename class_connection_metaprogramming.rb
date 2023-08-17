@@ -1,8 +1,10 @@
 class Connection
   def self.add_connection_variable name
+
     define_method name do
       instance_variable_get "@#{name}"
     end
+
     define_method "#{name}=" do |value|
       instance_variable_set "@#{name}", value
     end

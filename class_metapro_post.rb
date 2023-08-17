@@ -34,11 +34,11 @@ pp post
 
 puts
 
-pp post.id = '2'
-pp post.title = 'Second Post'
-pp post.body = 'Goodbye, World!'
+pp post.id         = '2'
+pp post.title      = 'Second Post'
+pp post.body       = 'Goodbye, World!'
 pp post.created_at = '10/05/2020'
-pp post.published = 'false'
+pp post.published  = 'false'
 
 puts
 

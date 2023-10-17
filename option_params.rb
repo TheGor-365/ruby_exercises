@@ -17,8 +17,7 @@ loop do
   name = gets.strip.capitalize
 
   if name == ''
-    show_hash
-    exit
+    show_hash; exit
   end
 
   print 'Enter age: '

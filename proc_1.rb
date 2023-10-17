@@ -3,6 +3,6 @@ def apply_blocks(data, blocks)
 end
 
 plus_one = proc { |number| number + 1 }
-doble =    proc { |number| number * 2 }
+doble    = proc { |number| number * 2 }
 
 pp apply_blocks(5, [plus_one, doble])

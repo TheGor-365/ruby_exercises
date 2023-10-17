@@ -41,13 +41,10 @@ end
   puts 'First team attack...'
   attack @array_2
   exit if victory?
-  stats
-  sleep 1
-  puts
+  stats; sleep 1; puts
 
   puts 'Second team attack...'
   attack @array_1
   exit if victory?
-  stats
-  sleep 1
+  stats; sleep 1
 end

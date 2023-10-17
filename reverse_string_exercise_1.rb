@@ -7,10 +7,8 @@ def invert_case string
     else
       char.upcase
     end
-
     result = "#{result}#{new_char}"
-  end
-  result
+  end; result
 end
 
 

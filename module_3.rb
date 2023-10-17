@@ -19,8 +19,7 @@ module Humans
 end
 
 module Animals
-  class Dog
-  end
+  class Dog; end
 
   class Cat
     def run

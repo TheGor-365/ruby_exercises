@@ -24,10 +24,8 @@ hipster.say_hi
 
 
 module Animals
-  class Dog
-  end
-  class Cat
-  end
+  class Dog; end
+  class Cat; end
 end
 
 

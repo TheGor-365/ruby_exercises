@@ -1,6 +1,6 @@
-add_10 = lambda { |x| x + 10 }
-add_20 = lambda { |x| x + 20 }
-sub_5  = lambda { |x| x - 5 }
+add_10 = lambda { |score| score + 10 }
+add_20 = lambda { |score| score + 20 }
+sub_5  = lambda { |score| score - 5  }
 
 scores = {
   100 => add_10,

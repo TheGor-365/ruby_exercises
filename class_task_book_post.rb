@@ -74,11 +74,9 @@ class Post
 
     db.execute(
       "INSERT INTO Posts (" +
-      to_db_hash.keys.join(', ') +
-      ")" +
+      to_db_hash.keys.join(', ') + ")" +
       " VALUES (" +
-      ('?,' * to_db_hash.size).chomp(',') +
-      ")",
+      ('?,' * to_db_hash.size).chomp(',') + ")",
       to_db_hash.values
     )
 

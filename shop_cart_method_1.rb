@@ -11,15 +11,11 @@ loop do
   product_id += amount
   hash[id] = product_id
 
-  pp hash
-
-  puts
+  pp hash; puts
 
   total = 0
   hash.each do |name, value|
     total = total + value
   end
-
-  puts "Total items in cart: #{total}"
-  puts
+  puts "Total items in cart: #{total}"; puts
 end

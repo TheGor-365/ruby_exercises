@@ -1,12 +1,12 @@
-add_100 = lambda { |z| z + 100 }
-add_200 = lambda { |z| z + 200 }
-add_300 = lambda { |z| z + 300 }
-add_400 = lambda { |z| z + 400 }
-add_500 = lambda { |z| z + 500 }
-add_600 = lambda { |z| z + 600 }
-add_700 = lambda { |z| z + 700 }
-add_800 = lambda { |z| z + 800 }
-add_900 = lambda { |z| z + 900 }
+add_100 = lambda { |score| score + 100 }
+add_200 = lambda { |score| score + 200 }
+add_300 = lambda { |score| score + 300 }
+add_400 = lambda { |score| score + 400 }
+add_500 = lambda { |score| score + 500 }
+add_600 = lambda { |score| score + 600 }
+add_700 = lambda { |score| score + 700 }
+add_800 = lambda { |score| score + 800 }
+add_900 = lambda { |score| score + 900 }
 
 scores = {
   100 => add_100,

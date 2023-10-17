@@ -8,7 +8,7 @@ module HexletCode
       result << "#{attributes.join}"
       result << ">" if !unpaired?(name)
       result << "#{yield}" if block_given?
-      unpaired?(name) ? result << ">" : result << "</#{name}>"
+      result << (unpaired?(name) ? ">" : "</#{name}>")
       result.join
     end
 

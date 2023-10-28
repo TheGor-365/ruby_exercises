@@ -1,5 +1,5 @@
 module Modulle
-  def speak_up input
+  def speak_up(input)
     pp input.upcase
   end
 
@@ -22,11 +22,7 @@ class Klass
 end
 
 puts
-puts
 
 pp klass = Klass.new.speak_up('Sarah')
-
-puts
-puts
 
 pp Klass.who_am_i

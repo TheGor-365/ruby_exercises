@@ -5,7 +5,7 @@ class Person
     pp '35'
   end
 
-  def initialize age
+  def initialize(age)
     @age = age
   end
 

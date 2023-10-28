@@ -12,6 +12,7 @@ end
 
 zen_1.say_hello
 
+
 puts
 
 
@@ -30,6 +31,7 @@ end
 
 pp hi.class.instance_methods.include? :methodd
 pp hi.singleton_class.instance_methods.include? :methodd
+
 
 puts
 

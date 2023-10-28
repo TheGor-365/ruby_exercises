@@ -6,7 +6,6 @@ def plainify data
       result << { band: band_name, song: song_name }
     end
   end
-
   result
 end
 

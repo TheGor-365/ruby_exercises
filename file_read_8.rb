@@ -18,7 +18,7 @@ end
 
 puts "All lines: #{lines.size.to_s}"
 puts "Empty lines: #{empty_lines_counter.size.to_s}"
-puts 'Last 5 lines:'
+puts 'Last 5 lines: '
 
 for line in last_five_lines
   puts line

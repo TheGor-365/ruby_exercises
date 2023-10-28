@@ -1,5 +1,5 @@
 module Model
-  def self.included base
+  def self.included(base)
     base.extend ClassMethods
   end
 
@@ -8,7 +8,7 @@ module Model
   module ClassMethods
     attr_reader :upcased
 
-    def upcase attribute_name
+    def upcase(attribute_name)
       @upcased ||= []
 
       define_method "#{attribute_name}" do
@@ -22,7 +22,7 @@ module Model
     end
   end
 
-  def initialize params
+  def initialize(params)
     @attributes = {}
 
     params.each do |name, value|

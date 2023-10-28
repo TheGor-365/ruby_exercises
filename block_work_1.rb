@@ -18,7 +18,8 @@ end
 
 whatsup { pp 'hi_5' }
 
-puts
+
+
 puts
 
 
@@ -33,7 +34,8 @@ reached do
   pp 'the yield'
 end
 
-puts
+
+
 puts
 
 
@@ -46,7 +48,8 @@ how_old do |name, age|
   pp "#{name} is #{age} years old"
 end
 
-puts
+
+
 puts
 
 
@@ -55,7 +58,8 @@ puts
   puts "Number #{number}"
 end
 
-puts
+
+
 puts
 
 
@@ -66,7 +70,8 @@ end
 
 two { 2 }
 
-puts
+
+
 puts
 
 
@@ -85,7 +90,8 @@ my_map([1, 2, 3]) do |number|
   number * 2
 end
 
-puts
+
+
 puts
 
 
@@ -96,7 +102,8 @@ end
 
 method_with_block { pp "#{'calling block for'.upcase} method_with_block" }
 
-puts
+
+
 puts
 
 
@@ -115,10 +122,7 @@ car = Car.new do |c|
 end
 
 pp car
-puts "color: #{car.color} \ndoors: #{car.doors}"
-
-puts
-
+puts "color: #{car.color} \ndoors: #{car.doors}"; puts
 
 Bus = Struct.new(:color, :doors, keyword_init: true)
 
@@ -130,7 +134,8 @@ end
 pp bus
 puts "color: #{bus.color} \ndoors: #{bus.doors}"
 
-puts
+
+
 puts
 
 
@@ -165,33 +170,8 @@ class Note
   end
 end
 
-note = Note.create { "Hello" }
-
-puts
+note = Note.create { "Hello" }; puts
 
 note = Note.create do |s|
-  pp s
+  s.inspect
 end
-
-puts
-puts
-
-
-
-class Fixnum
-  def to_proc
-    Proc.new do |object, *arguments|
-      object % self == 0
-    end
-  end
-end
-
-number_3 = [1,2,3,4,5,6,7,8,9,10].select(&3)
-number_5 = [1,2,3,4,5,6,7,8,9,10].select(&5)
-number_1 = [1,2,3,4,5,6,7,8,9,10].select(&1)
-number_2 = [1,2,3,4,5,6,7,8,9,10].select(&2)
-
-pp "3: #{number_3}"
-pp "5: #{number_5}"
-pp "1: #{number_1}"
-pp "2: #{number_2}"

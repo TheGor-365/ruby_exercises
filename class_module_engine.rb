@@ -6,7 +6,7 @@ end
 
 class GameEngine
   def self.play
-    a = RandomEngine.get_random_value
+    engine = RandomEngine.get_random_value
   end
 end
 

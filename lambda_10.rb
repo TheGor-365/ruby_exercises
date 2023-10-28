@@ -4,6 +4,7 @@ say_bye = lambda { pp 'Bye' }
 say_hi.call
 say_bye.call
 
+
 puts
 
 
@@ -13,11 +14,10 @@ sub_10 = lambda do |number|
   number - 10
 end
 
-a = sub_10.call 1000
+result = sub_10.call 1000
 
-pp a
+pp result; puts
 
-puts
 
 
 add_10 = -> number { pp number + 10 }

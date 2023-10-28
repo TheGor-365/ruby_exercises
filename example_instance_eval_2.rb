@@ -8,7 +8,9 @@ mail do |f|
   f.name    name
 end
 
+
 puts
+
 
 def mail &block
   builder = MailBuilder.new

@@ -1,7 +1,7 @@
 class Robot
   attr_accessor :x, :y
 
-  def initialize options = {}
+  def initialize(options = {})
     @x = options[:x] || 0
     @y = options[:y] || 0
   end
@@ -18,7 +18,7 @@ end
 class Dog
   attr_accessor :x, :y
 
-  def initialize options = {}
+  def initialize(options = {})
     @x = options[:x] || 0
     @y = options[:y] || 0
   end
@@ -33,7 +33,7 @@ end
 
 
 class Commander
-  def move who
+  def move(who)
     move = %i[right left up down].sample
     who.send move
   end
@@ -62,13 +62,9 @@ array.push(Dog.new x: -12, y: 12)
     a.label != b.label
   end
 
-  if game_over
-    pp 'Game over'
-    exit
-  end
+  pp 'Game over'; exit if game_over
 
   array.each do |somebody|
     commander.move somebody
-  end
-  sleep 0.1
+  end; sleep 0.05
 end

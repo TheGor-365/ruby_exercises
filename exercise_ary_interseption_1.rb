@@ -1,4 +1,4 @@
-def intersection array_1, array_2
+def intersection(array_1, array_2)
   result = []
 
   array_1.sort.each do |item|

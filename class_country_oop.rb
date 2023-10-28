@@ -1,11 +1,11 @@
 class Country
   attr_reader :name, :airports
 
-  def initialize name
+  def initialize(name)
     @name, @airports = name, []
   end
 
-  def add_airports airport
+  def add_airports(airport)
     @airports << airport
   end
 end
@@ -14,11 +14,11 @@ end
 class Airport
   attr_reader :name, :planes
 
-  def initialize name
+  def initialize(name)
     @name, @planes = name, []
   end
 
-  def add_planes plane
+  def add_planes(plane)
     @planes << plane
   end
 end
@@ -27,7 +27,7 @@ end
 class Plane
   attr_reader :model
 
-  def initialize model
+  def initialize(model)
     @model = model
   end
 end
@@ -41,6 +41,7 @@ airport_2 = Airport.new 'DME'
 
 airports << airport_1
 airports << airport_2
+
 
 countries = []
 
@@ -79,12 +80,10 @@ airport_2.add_planes plane_6
 pp airport_1.name
 pp airport_2.name
 
-puts
-
 pp airport_1.planes
 pp airport_2.planes
 
-puts
+
 puts
 
 
@@ -96,11 +95,13 @@ countries.each do |country|
   end
 end
 
+
 puts
+
 
 airports.each do |airport|
   puts "Airport #{airport.name}"
-  
+
   airport.planes.each do |plane|
     puts "Plane: #{plane.model}"
   end

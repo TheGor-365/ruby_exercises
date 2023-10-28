@@ -1,10 +1,10 @@
 name = ARGV[0]
 
-print "Enter your name: "
+print 'Enter your name: '
 name = STDIN.gets.strip.capitalize
 
 while name == ""
-  print "Enter your name: "
+  print 'Enter your name: '
   name = STDIN.gets.strip.capitalize
 end
 
@@ -35,9 +35,9 @@ questions = [
 ]
 
 results = [
-  "Are you jealous",
-  "You're not jealous",
-  "You asshole"
+  'Are you jealous',
+  'You are not jealous',
+  'You asshole'
 ]
 
 yes_answers = 0
@@ -46,11 +46,11 @@ questions.each do |item|
   puts "\n#{item}"
   user_input = nil
 
-  while user_input != "Y" && user_input != "N" && user_input != "W"
-    print "Enter your choice (Y)es, (N)o or (W)hatever: "
+  while user_input != 'Y' && user_input != 'N' && user_input != 'W'
+    print 'Enter your choice (Y)es, (N)o or (W)hatever: '
     user_input = STDIN.gets.strip.capitalize
   end
-  yes_answers += 1 if user_input == "Y"
+  yes_answers += 1 if user_input == 'Y'
 end
 
 puts "\n#{name}"

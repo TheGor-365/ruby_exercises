@@ -7,6 +7,7 @@ end
 pp cat.speak
 pp cat.singleton_methods
 
+
 puts
 
 
@@ -18,6 +19,7 @@ end
 
 pp One.speak
 pp One.singleton_methods
+
 
 puts
 
@@ -32,7 +34,7 @@ pp One.singleton_methods
 pp One.classs_method
 pp One.speak
 
-puts
+
 puts
 
 
@@ -49,7 +51,7 @@ end
 pp Two.classs_method
 pp Two.new.instancce_method
 
-puts
+
 puts
 
 
@@ -62,6 +64,5 @@ module Modulle
     true
   end
 end
-
 
 pp Modulle.classs_method

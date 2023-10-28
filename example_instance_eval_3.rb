@@ -3,7 +3,7 @@ class Student
 
   @@all_students = []
 
-  def initialize name
+  def initialize(name)
     @name = name
     @allergies = []
     self.class.all_students << self
@@ -13,7 +13,6 @@ class Student
     @@all_students
   end
 end
-
 
 steve = Student.new('Steve')
 
@@ -25,8 +24,9 @@ steve.allergies << 'tree nuts'
 
 pp steve
 
+
 puts
-puts
+
 
 sam = Student.new("Sam").tap do |s|
   s.grade = 10
@@ -35,10 +35,8 @@ sam = Student.new("Sam").tap do |s|
   s.allergies << "pollen"
 end
 
-pp sam
+pp sam; puts
 
-puts
-puts
 
 previous_school = 'Sunny Shores Middle School-Middlesburg-MI'
 split_array     = previous_school.split("-")
@@ -54,7 +52,9 @@ steve.previous_school = previous_school_hash
 pp steve.previous_school
 pp steve.previous_school[:name]
 
+
 puts
+
 
 steve.previous_school = previous_school.split('-').tap do |array|
   {
@@ -66,8 +66,9 @@ end
 
 pp steve.previous_school
 
+
 puts
-puts
+
 
 steve.previous_school = previous_school.split('-').instance_eval do |array|
   {
@@ -79,7 +80,8 @@ end
 
 pp steve.previous_school
 
+
 puts
-puts
+
 
 pp Student.all_students

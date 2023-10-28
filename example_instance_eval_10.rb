@@ -19,7 +19,8 @@ end
 
 pp str / '.'
 
-puts
+
+
 puts
 
 
@@ -35,7 +36,8 @@ user = User.new('ruby@devscoop.fr')
 pp user.instance_eval('@email')
 pp user.instance_eval { @email }
 
-puts
+
+
 puts
 
 
@@ -57,7 +59,8 @@ user = User.new('ruby@devscoop.fr')
 pp user.instance_eval('secret_key')
 pp user.instance_eval { secret_key }
 
-puts
+
+
 puts
 
 

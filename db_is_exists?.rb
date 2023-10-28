@@ -13,7 +13,7 @@ SQL
 
 @db.execute 'INSERT INTO Users (name) VALUES("user");'
 
-def as_hash db
+def as_hash(db)
   @db.results_as_hash = true
 end
 

@@ -1,4 +1,4 @@
-def pangram? text
+def pangram?(text)
   ('a'..'z').each { |char| return false unless text[char] }
   true
 end

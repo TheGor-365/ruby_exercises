@@ -1,4 +1,4 @@
-def get_men_count_by_year users
+def get_men_count_by_year(users)
   men = users.filter { |user| user[:gender] == 'male' }
   years = men.map { |user| user[:birthday][0, 4] }
 

@@ -1,10 +1,8 @@
 def sort_cases(data)
   sorted_cases = data.sort_by do |row|
-    # destructuring example
-    day, month, year = row.first.split('-')
+    day, month, year = row.first.split('-') # destructuring example
     Time.new(year, month, day)
   end
-
   sorted_cases.reverse
 end
 
@@ -16,6 +14,7 @@ data = [
   ['12-12-2020', 'usa',    22_000],
   ['11-12-2020', 'india',  54_000],
 ]
+
 
 pp sort_cases data
 

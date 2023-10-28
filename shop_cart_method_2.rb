@@ -1,6 +1,6 @@
 orders = 'product_1=4,product_2=1,product_3=1,'
 
-def parse_orders_line orders_line
+def parse_orders_line(orders_line)
 	split_1 = orders_line.split(/\,/)
 	array 	= []
 
@@ -17,5 +17,6 @@ def parse_orders_line orders_line
 	end
 	return array
 end
+
 
 pp parse_orders_line(orders)

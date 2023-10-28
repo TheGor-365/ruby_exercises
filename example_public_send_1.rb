@@ -3,11 +3,13 @@ class MagicBox
   def say_bye; puts'"Bye'; end
 
   private
+
   def say_secret
     puts 'Secret leaked, OMG'
   end
 
   protected
+  
   def method_missing(method_name)
     puts "I didn't learn that word yet"
   end

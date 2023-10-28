@@ -1,4 +1,4 @@
-def sum_of_digits num_as_string
+def sum_of_digits(num_as_string)
   sum = 0
 
   num_as_string.each_char do |char|
@@ -6,7 +6,7 @@ def sum_of_digits num_as_string
   end; sum
 end
 
-def happy? number
+def happy?(number)
   num_as_string = number.to_s
   half_count    = num_as_string.length / 2
   left_sum      = sum_of_digits num_as_string[0, half_count]

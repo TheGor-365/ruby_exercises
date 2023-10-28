@@ -16,7 +16,8 @@ my_collection.each do |element|
   pp element.even?
 end
 
-puts
+
+
 puts
 
 
@@ -25,7 +26,8 @@ collection_filter my_collection do |c|
   pp c.inspect
 end
 
-puts
+
+
 puts
 
 
@@ -36,7 +38,8 @@ my_collection.each do |element|
   pp element.odd?
 end
 
-puts
+
+
 puts
 
 

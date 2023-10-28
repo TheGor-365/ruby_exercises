@@ -5,9 +5,9 @@ def build_query_string query_params
     name, value = query_part
     query_parts << "#{name}=#{value}"
   end
-
   query_parts.join('&')
 end
+
 
 params = {first: 'one', second: 'two'}
 

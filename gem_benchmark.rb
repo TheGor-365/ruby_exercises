@@ -12,5 +12,5 @@ symbol_time = Benchmark.realtime do
 end
 
 
-pp "String time: #{string_time} seconds."
-pp "Symbol time: #{symbol_time} seconds."
+pp "String time: #{string_time} seconds"
+pp "Symbol time: #{symbol_time} seconds"

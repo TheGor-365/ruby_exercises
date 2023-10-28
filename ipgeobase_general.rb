@@ -2,7 +2,6 @@ require_relative "ipgeobase_general_happymapper"
 require "addressable/template"
 require "net/http"
 
-# Service to get location info by ip
 module Ipgeobase
   class << self
     API_URL = 'http://ip-api.com'

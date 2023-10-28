@@ -3,6 +3,7 @@ temp_string = string.gsub(/\W/, '').downcase
 
 temp_string.reverse.equal? string.gsub(/\W/, '').downcase ? (pp 'yes') : (pp 'no')
 
+
 puts
 
 
@@ -14,6 +15,7 @@ end
 
 string.palindrome? ? (pp 'yes') : (pp 'no')
 
+
 puts
 
 
@@ -24,12 +26,9 @@ end
 
 string.palindrome? ? (pp 'yes') : (pp 'no')
 
+
 puts
 
 
 pp string.singleton_class
-
-puts
-
-
 pp string.singleton_class.instance_methods[0..5]

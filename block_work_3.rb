@@ -11,6 +11,8 @@ end
   pp number
 end
 
+
+
 puts
 
 
@@ -29,13 +31,15 @@ end
   pp number.to_s
 end
 
+
+
 puts
 
 
-'foo bar baz'.split { pp 'block' }
 
+'foo bar baz'.split { pp 'show this block' }
 
-def each_explicit &block
+def each_explicit(&block)
   return to_enum(:each) unless block
   number = 0
 
@@ -45,17 +49,23 @@ def each_explicit &block
   end
 end
 
+# pp each_explicit {'2'}
+
+
+
 puts
 
 
 
-def run_proc_with_random_number proc
+def run_proc_with_random_number(proc)
   proc.call rand(0..6)
 end
 
 my_proc = Proc.new { |number| pp "|#{number}|" }
 
 run_proc_with_random_number(my_proc)
+
+
 
 puts
 
@@ -67,18 +77,26 @@ end
 
 run_proc_with_random_number { |number| pp number * 23.15 }
 
+
+
 puts
 
 
 
 pp [1, 2, 3].map(&:to_s)
-pp [1, 2, 3].map {|number| number.to_s }
-pp [1, 2, 3].map {|number| number.send(:to_s) }
-pp [1, 2, 3].map {|number| number.send :to_s }
+pp [1, 2, 3].map(&:to_i)
+pp [1, 2, 3].map(&:to_f)
+pp [1, 2, 3].map { |number| number }
+pp [1, 2, 3].map { |number| number.to_s }
+pp [1, 2, 3].map { |number| number.send(:to_s) }
+pp [1, 2, 3].map { |number| number.send :to_s }
 
-pp %w[ words upcased ].map {|number| number.send :upcase }
+pp %w[ words upcased ].map { |number| number.send :upcase }
+
+
 
 puts
+
 
 
 class Symbol
@@ -88,7 +106,6 @@ class Symbol
 end
 
 pp symbol = :symbol
-
 pp symbol.to_proc
 
 
@@ -100,6 +117,8 @@ def return_from_proc
 end
 
 return_from_proc
+
+
 
 puts
 

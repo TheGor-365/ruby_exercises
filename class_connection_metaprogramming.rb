@@ -1,5 +1,5 @@
 class Connection
-  def self.add_connection_variable name
+  def self.add_connection_variable(name)
 
     define_method name do
       instance_variable_get "@#{name}"
@@ -17,11 +17,9 @@ end
 
 pp connection = Connection.new
 
-puts
-
-
 pp connection.timeout = 4
 pp connection.instance_variables
+
 
 puts
 
@@ -30,12 +28,14 @@ pp connection.protocol
 pp connection.protocol = 'qnq'
 pp connection.instance_variables
 
+
 puts
 
 
 pp connection
 pp connection.protocol = 'ssh'
 pp connection
+
 
 puts
 
@@ -45,14 +45,4 @@ connection.something = 'something else'
 pp connection.something
 
 pp connection.instance_variables
-
-puts
-
-
 pp connection
-
-puts
-
-connection.something do |c|
-  pp c.upcase
-end

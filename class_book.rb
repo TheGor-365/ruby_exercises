@@ -1,11 +1,11 @@
 class Book
   attr_reader :last_person, :persons
 
-  def initialize name
+  def initialize(name)
     @last_person, @name, @persons = '', name, {}
   end
 
-  def add_person options
+  def add_person(options)
     @last_person = [options[:name]]
 
     puts "Already exists!" if @persons[options[:name]]
@@ -36,7 +36,4 @@ puts
 
 puts book_1.persons
 puts book_2.persons
-
-puts
-
 puts book_2.last_person

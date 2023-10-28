@@ -31,4 +31,5 @@ Pony.mail(
   }
 )
 
+
 puts 'Mail sended'

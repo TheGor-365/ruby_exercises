@@ -2,7 +2,7 @@ file = File.open 'trump.txt', 'r'
 
 @hash = {}
 
-def add_to_hash word
+def add_to_hash(word)
   unless word.empty?
     word.downcase!
 
@@ -18,9 +18,7 @@ file.each_line do |line|
   array.each { |word| add_to_hash(word) }
 end
 
-pp @hash
-
-puts
+pp @hash; puts
 
 @hash.each do |name, value|
   puts "#{value} #{name}"

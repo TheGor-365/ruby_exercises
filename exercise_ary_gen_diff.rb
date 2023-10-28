@@ -1,4 +1,4 @@
-def gen_diff data_1, data_2
+def gen_diff(data_1, data_2)
   keys = data_1.keys | data_2.keys
 
   keys.each_with_object({}) do |key, hash|

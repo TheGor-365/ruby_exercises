@@ -2,10 +2,8 @@ result = %w[ / * - ** + ].map do |method|
   4.send method, 2
 end
 
-pp result
+pp result; puts
 
-puts
-puts
 
 
 
@@ -13,15 +11,13 @@ result = %w[ / * - ** + wow ].map do |method|
   4.send :respond_to?, method
 end
 
-pp result
+pp result; puts
 
-puts
-puts
 
 
 
 class Song
-  def song_title *arguments
+  def song_title(*arguments)
     pp arguments.join(' ')
   end
 end
@@ -30,7 +26,8 @@ song = Song.new
 
 song.send :song_title, 'Send', 'me', 'a', 'River'
 
-puts
+
+
 puts
 
 
@@ -38,10 +35,11 @@ puts
 class Person
   attr_accessor :name, :age, :sex, :height, :race
 
-  def initialize arguments
+  def initialize(arguments)
     arguments.each { |name, value| self.send("#{name}=", value) }
   end
 end
+
 
 person_1 = {
   name:   'James Jones',
@@ -60,10 +58,8 @@ james = Person.new person_1
 paul = Person.new person_2
 
 pp james
-pp paul
+pp paul; puts
 
-puts
-puts
 
 
 
@@ -82,12 +78,16 @@ end
 Package.new.can_sell_each
 Package.new.cannot_sell_each
 
+
 puts
+
 
 Package.new.send('can_sell_each')
 Package.new.send('cannot_sell_each')
 
+
 puts
+
 
 Package.new.public_send('can_sell_each')
 Package.new.public_send('cannot_sell_each')

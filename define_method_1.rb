@@ -1,5 +1,5 @@
 module Cat
-  def self.my_attr_accessor *attributes
+  def self.my_attr_accessor(*attributes)
     attributes.each do |attribute|
       define_method "#{attribute}" do
         self.instance_variable_get "@#{attribute}"
@@ -12,7 +12,7 @@ module Cat
 
   my_attr_accessor :name, :age, :weight
 
-  def initialize name, age, weight
+  def initialize(name, age, weight)
     @name, @age, @weight = name, age, weight
   end
 
@@ -27,17 +27,21 @@ class Tiger
   R = 12
 end
 
+
 pp tiger = Tiger.new('Boris', 5, '133_kg')
 
+
 puts
+
 
 pp tiger.name
 pp tiger.age
 pp tiger.weight
+tiger.attribute
+
 
 puts
 
-tiger.attribute
 
 print "\n" * 2 + "Tiger.class_variables" + "\n" + "-" * 80 + "\n"
 pp Tiger.class_variables

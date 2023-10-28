@@ -1,6 +1,7 @@
 array = [ 0, 1, 2 ]
 pp array.size
 
+
 puts
 
 

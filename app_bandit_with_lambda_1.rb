@@ -38,9 +38,7 @@ while true
     puts 'Lose, minus $10'
   end
 
-  puts "Balance: $#{balance}"
-  puts
-
+  puts "Balance: $#{balance}"; puts
   break if balance <= 0
 end
 

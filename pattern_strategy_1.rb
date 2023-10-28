@@ -1,11 +1,11 @@
 class Navigator
   attr_reader :type
 
-  def initialize type=:car
+  def initialize(type = :car)
     @type = type
   end
 
-  def build_route *attributes
+  def build_route(*attributes)
     points = []
 
     if @type == :car
@@ -23,25 +23,26 @@ class Navigator
 end
 
 bus_nav = Navigator.new(:bus).build_route :a, :b
-pp bus_nav
+pp bus_nav; puts
 
-puts
 
 pp Navigator.new(:bus).type
 
+
 puts
+
 
 car_nav = Navigator.new
-pp car_nav
+pp car_nav; puts
 
-puts
 
 pp car_nav.build_route :c, :d
 pp car_nav.build_route :c
 pp car_nav.build_route :a, :b, :c, :d, :e
 
+
 puts
 
-walk_nav = Navigator.new(:walk).build_route :a, :b
 
+walk_nav = Navigator.new(:walk).build_route :a, :b
 pp walk_nav

@@ -9,33 +9,28 @@ class Article
 end
 
 article = Article.new(
-  title:    'article',
-  author:   'John',
-  chapter:  'first'
+  title:   'article',
+  author:  'John',
+  chapter: 'first'
 )
 
 pp article
-
-puts
-
 pp article.attributes
 pp article.title
 pp article.instance_variables
 
+
 puts
-puts
+
 
 pp article.title = 'article_2'
-
 pp article.attributes
 pp article.attributes.to_a
-
-puts
-
 pp article
 
+
 puts
-puts
+
 
 article.attributes.each_pair do |attribute|
   pp attribute.first
@@ -64,5 +59,3 @@ puts
 pp article.attributes[:chapter]
 pp article.attributes[:author]
 pp article.attributes[:title]
-
-puts

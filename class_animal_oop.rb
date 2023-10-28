@@ -1,5 +1,5 @@
 class Animal
-  def initialize name
+  def initialize(name)
     @name = name
   end
 
@@ -19,7 +19,7 @@ class Cat < Animal
   end
 
   def say_meow
-    puts "Meow"
+    puts 'Meow'
   end
 end
 
@@ -30,7 +30,7 @@ class Dog < Animal
   end
 
   def say_woof
-    puts "Woof"
+    puts 'Woof'
   end
 end
 

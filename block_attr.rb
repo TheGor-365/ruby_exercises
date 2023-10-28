@@ -1,5 +1,5 @@
 class ShowName
-  def self.show_attrs **attributes
+  def self.show_attrs(**attributes)
     pp attributes
   end
 end

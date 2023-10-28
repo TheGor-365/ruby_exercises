@@ -1,9 +1,9 @@
 class Albuquerque
-  def initialize actions
+  def initialize(actions)
     @actions = actions
   end
 
-  def method_missing name
+  def method_missing(name)
     value = @actions[name]
     puts "If you want to #{name}, you must call #{value}"
   end

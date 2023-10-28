@@ -1,5 +1,5 @@
 class DeviceReporter
-  def initialize device
+  def initialize(device)
     @device = device
   end
 
@@ -8,6 +8,7 @@ class DeviceReporter
   end
 
   private
+  
   attr_reader :device
 end
 
@@ -28,6 +29,7 @@ class Device
   end
 
   private
+
   attr_reader :name, :type, :price, :model
 
   def total_price
@@ -38,10 +40,8 @@ end
 
 
 device = Device.new('Moto G8 Plus', 'cellphone', '350', 'G8')
-pp device
+pp device; puts
 
-puts
-puts
 
 deviceReporter = DeviceReporter.new(device).call
 deviceReporter

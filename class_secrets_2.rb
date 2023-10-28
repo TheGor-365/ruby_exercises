@@ -2,7 +2,7 @@ require 'selenium-webdriver'
 require 'cgi'
 
 module UrlGenerator
-  def prepare_uri string
+  def prepare_uri(string)
     CGI.escape string
   end
 end
@@ -13,7 +13,7 @@ class Animal
   # exitend UrlGenerator - prepare_uri() will work for class
   attr_accessor :name
 
-  def initialize name
+  def initialize(name)
     @name = name
   end
 

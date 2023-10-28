@@ -1,7 +1,9 @@
 pp 3 + 4
 pp 3.send :+, 4
 
+
 puts
+
 
 class Book
   def show_cover?
@@ -15,7 +17,6 @@ class Book
     end
   end
 end
-
 
 book = Book.new.show_cover?
 

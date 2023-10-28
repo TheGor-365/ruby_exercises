@@ -1,4 +1,4 @@
-cars = %i[bmw toyota gmc]
+cars = %i[ bmw toyota gmc ]
 
 upcased_cars_hashes = cars.each_with_object({}) do |item, hash|
   hash[item] = item.to_s.upcase
@@ -9,9 +9,8 @@ cars_hashes = cars.each_with_object({}) do |(name, value), hash|
 end
 
 pp upcased_cars_hashes
-pp cars_hashes
+pp cars_hashes; puts
 
-puts
 
 
 
@@ -21,9 +20,8 @@ multipled_numbers = numbers.each_with_object([]) do |item, array|
   array << item ** 2
 end
 
-pp multipled_numbers
+pp multipled_numbers; puts
 
-puts
 
 
 
@@ -34,9 +32,8 @@ big_numbers.each do |item|
   multipled_gig_nums << item ** 2
 end
 
-pp multipled_gig_nums
+pp multipled_gig_nums; puts
 
-puts
 
 
 
@@ -46,9 +43,8 @@ words_counts = words.each_with_object(Hash.new(0)) do |item, hash|
   hash[item] += 1
 end
 
-pp words_counts
+pp words_counts; puts
 
-puts
 
 
 
@@ -67,9 +63,8 @@ another_truthy_ages_sum = ages.inject(:+)
 pp another_truthy_ages_sum
 
 bes_way_sum = ages.sum
-pp bes_way_sum
+pp bes_way_sum; puts
 
-puts
 
 
 
@@ -79,22 +74,20 @@ multipled_ids = ids.inject([]) do |array, item|
   array << item ** 2
 end
 
-pp multipled_ids
-
-puts
+pp multipled_ids; puts
 
 
 
-animals = %i[cat dog horse]
+
+animals = %i[ cat dog horse ]
 
 upcased_animals_values = animals.inject({}) do |hash, item|
   hash[item] = item.to_s.upcase
   hash
 end
 
-pp upcased_animals_values
+pp upcased_animals_values; puts
 
-puts
 
 
 
@@ -109,9 +102,8 @@ params = params.each_with_object({}) do |(key, value), hash|
 end
 
 pp multipled_params
-pp params
+pp params; puts
 
-puts
 
 
 
@@ -122,5 +114,3 @@ converted_options = options.each_with_object([]) do |(key, value), array|
 end
 
 pp converted_options
-
-puts

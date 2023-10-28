@@ -2,7 +2,7 @@ class Cage
   attr_accessor :creature
 
   def initialize(creature = nil)
-    self.creature = creature # We forget to set a default!
+    self.creature = creature
   end
 
   def rawr
@@ -10,46 +10,53 @@ class Cage
   end
 end
 
-pp cage = Cage.new
-pp cage.rawr # => NoMethodError: undefined method `rawr' for nil:NilClass
+cage = Cage.new
+# pp cage.raw
 
 
 
 class Creature
 end
 
-pp creature = Creature.new
-pp creature.rawr # => NoMethodError: undefined method `rawr' for #<Creature:0x0055e6fb99e390>
+creature = Creature.new
+# pp creature.rawr
 
+
+puts
 
 
 class Creature
   def rawr
-    'rawr!'
+    'rawr - 1'
   end
 end
 
-pp creature = Creature.new
+creature = Creature.new
 
 def creature.rawr
-  'raaaaawr!'
+  'raaaaawr - 1'
 end
 
 pp creature.rawr # => 'raaaaawr!'
 
+
+puts
 
 
 module LoudCreature
   def rawr
-    'raaaaawr!'
+    'raaaaawr - 2'
   end
 end
 
 
-pp creature = Creature.new
-pp creature.extend(LoudCreature)
+creature = Creature.new
+creature.extend(LoudCreature)
+
 pp creature.rawr # => 'raaaaawr!'
 
+
+puts
 
 
 module QuietCreature
@@ -58,17 +65,21 @@ module QuietCreature
   end
 end
 
-pp creature = Creature.new
+creature = Creature.new
+creature.extend(LoudCreature)
+creature.extend(QuietCreature)
 
-pp creature.extend(LoudCreature)
-pp creature.extend(QuietCreature)
-pp creature.rawr # => 'purrrrr :3'
+pp creature.rawr
 
 
+puts
 
-pp creature = Creature.new
-pp creature.rawr # => 'rawr!'
 
+creature = Creature.new
+pp creature.rawr
+
+
+puts
 
 
 class Creature
@@ -76,37 +87,26 @@ class Creature
   include QuietCreature
 end
 
-pp creature = Creature.new
-pp creature.rawr # => 'purrrrr :3'
+creature = Creature.new
+pp creature.rawr
 
+
+puts
 
 
 class Creature
   prepend LoudCreature
 
   def rawr
-    'rawr!'
+    'rawr - 2'
   end
 end
 
-pp creature = Creature.new
-pp creature.rawr # => 'raaaaawr!'
+creature = Creature.new
+pp creature.rawr
 
 
-
-class Beast
-  def rawr
-    'hurrrrrrrr!'
-  end
-end
-
-class Creature < Beast
-  # Method defined on superclass
-end
-
-pp creature = Creature.new
-pp creature.rawr # => 'hurrrrrrrr!'
-
+puts
 
 
 class Creature
@@ -115,11 +115,13 @@ class Creature
   end
 end
 
-pp creature = Creature.new
+creature = Creature.new
 
-pp creature.rawr # => "I haven't learned to rawr yet :("
-pp creature.rawor # => "I haven't learned to rawor yet :("
+pp creature.rawr
+pp creature.rawor
 
+
+puts
 
 
 module Beast
@@ -132,5 +134,5 @@ class Creature
   include Beast
 end
 
-pp creature = Creature.new
-pp creature.rawr # => "I haven't learned to rawr yet :("
+creature = Creature.new
+pp creature.rawr

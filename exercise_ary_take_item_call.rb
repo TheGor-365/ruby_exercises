@@ -10,5 +10,6 @@ if choice != nil || !choice.is_a(Numeric)
   choice = STDIN.gets.to_i
 end
 
-puts 'Your choice:'
-select_item choice, collection
+puts 'Your choice: '
+
+select_item(choice, collection)

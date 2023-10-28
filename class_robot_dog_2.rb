@@ -1,7 +1,7 @@
 class Robot
   attr_accessor :x, :y
 
-  def initialize options = {}
+  def initialize(options = {})
     @x = options[:x] || 0
     @y = options[:y] || 0
   end
@@ -14,7 +14,7 @@ end
 
 
 class Commander
-  def move who
+  def move(who)
     move = %i[right left up down].sample
   end
 end
@@ -34,6 +34,5 @@ array     = Array.new(10) { Robot.new }
 
   array.each do |robot|
     commander.move robot
-  end
-  sleep 0.1
+  end; sleep 0.05
 end

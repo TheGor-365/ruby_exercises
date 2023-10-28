@@ -1,5 +1,5 @@
 class Cat
-  def initialize name, age, weight
+  def initialize(name, age, weight)
     @name, @age, @weight = name, age, weight
   end
 
@@ -25,7 +25,7 @@ end
 class Cat
   attr_writer :name, :age, :weight
 
-  def initialize name, age, weight
+  def initialize(name, age, weight)
     @name, @age, @weight = name, age, weight
   end
 
@@ -39,7 +39,7 @@ end
 class Cat
   attr_accessor :name, :age, :weight
 
-  def initialize name, age, weight
+  def initialize(name, age, weight)
     @name, @age, @weight = name, age, weight
   end
 end

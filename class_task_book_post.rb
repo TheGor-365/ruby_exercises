@@ -7,7 +7,7 @@ class Post
     { 'Memo': Memo, 'Link': Link, 'Task': Task }
   end
 
-  def self.create type
+  def self.create(type)
     return post_types[type].new
   end
 
@@ -80,8 +80,7 @@ class Post
       to_db_hash.values
     )
 
-    insert_row_id = db.last_insert_row_id
-    db.close
+    insert_row_id = db.last_insert_row_id; db.close
     return insert_row_id
   end
 

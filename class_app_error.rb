@@ -1,6 +1,6 @@
 class ApplicationError
   def display_error
-    puts "Error! Error!"
+    puts 'Error! Error!'
   end
 end
 

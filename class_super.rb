@@ -1,7 +1,7 @@
 class Message
   @@messages_sent = 0
 
-  def initialize from, to
+  def initialize(from, to)
     @from, @to = from, to
     @@messages_sent += 1
   end

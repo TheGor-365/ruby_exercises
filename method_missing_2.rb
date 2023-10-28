@@ -1,5 +1,5 @@
 class Something
-  def method_missing name
+  def method_missing(name)
     puts "Calling umknown method #{name}"
   end
 end

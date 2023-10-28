@@ -1,4 +1,4 @@
-def my_map collection
+def my_map(collection)
   result = []
 
   collection.each do |element|

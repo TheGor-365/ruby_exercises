@@ -1,5 +1,5 @@
 class Cat
-  def self.my_attr_accessor *attributes
+  def self.my_attr_accessor(*attributes)
     attributes.each do |attribute|
       define_method "#{attribute}" do
         self.instance_variable_get "@#{attribute}"
@@ -16,6 +16,8 @@ class Cat
     @name, @age, @weight = name, age, weight
   end
 end
+
+
 
 cat = Cat.new 'Kitty', 4, 23
 

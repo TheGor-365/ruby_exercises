@@ -1,9 +1,9 @@
 module Albuquerque
-  def initialize actions
+  def initialize(actions)
     @actions = actions
   end
 
-  def method_missing name
+  def method_missing(name)
     value = @actions[name]
     puts "if you want to |#{name.upcase}| - you must call |#{value.upcase}|"
   end

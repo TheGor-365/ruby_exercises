@@ -1,5 +1,5 @@
 class Sender
-  def initialize struct
+  def initialize(struct)
     @struct = struct
   end
 
@@ -7,8 +7,8 @@ class Sender
     pp @struct
   end
 
-  def mem method_name, param_name
-    public_send :display, @struct[param_name]
+  def mem(method_name, param_name)
+    public_send(:display, @struct[param_name])
   end
 end
 
@@ -19,8 +19,6 @@ user = User.new(name: 'rob', job: 'hexlet', gender: 'm')
 
 sender = Sender.new user
 
-user.display
-
-puts
+user.display; puts
 
 sender.mem :display, :name

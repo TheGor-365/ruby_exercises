@@ -6,4 +6,5 @@ def first_number_primes number
   return Prime.first number
 end
 
+
 pp first_number_primes(10)

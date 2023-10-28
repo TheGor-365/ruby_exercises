@@ -2,11 +2,7 @@ class ArticleDecorator < Draper::Decorator
   deleagate_all
 
   def publication_status
-    if published?
-      "Published at #{published_at}"
-    else
-      'Unpublished'
-    end
+    published? ? "Published at #{published_at}" : 'Unpublished'
   end
 
   def published_at

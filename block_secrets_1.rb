@@ -6,6 +6,7 @@ display_1 do |message|
   puts "#{message.upcase} " * 3
 end
 
+
 puts
 
 
@@ -19,6 +20,7 @@ display_2 do |message|
   puts "#{message} " * 2
 end
 
+
 puts
 
 
@@ -29,6 +31,7 @@ end
 
 my_lambda = ->(message) { puts "#{message.upcase} " * 6 }
 display_3 &my_lambda
+
 
 puts
 

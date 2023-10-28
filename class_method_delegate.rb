@@ -9,11 +9,11 @@ class Computer
     @memory = Memory.new
   end
 
-  # def write data
+  # def write(data)
   #   @memory.write data
   # end
 
-  # def read index
+  # def read(index)
   #   @memory.read index
   # end
 end
@@ -23,11 +23,11 @@ class Memory
     @data = []
   end
 
-  def write data
+  def write(data)
     @data << data
   end
 
-  def read index
+  def read(index)
     @data[index]
   end
 end

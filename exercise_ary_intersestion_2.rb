@@ -1,4 +1,4 @@
-def intersection collection_1, collection_2
+def intersection(collection_1, collection_2)
   result = []
   collection_1.each do |item|
     result << item if collection_2.include? item

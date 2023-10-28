@@ -4,10 +4,8 @@ hash = array.each_with_object(Hash.new(0)) do |element, hash|
   hash[element] += 1
 end
 
-pp hash
+pp hash; puts
 
-puts
-puts
 
 
 
@@ -17,10 +15,8 @@ hash = array.each_with_object({}).with_index do |(element, hash), index|
   hash[element] = element.split("'")[0]
 end
 
-pp hash
+pp hash; puts
 
-puts
-puts
 
 
 

@@ -3,7 +3,7 @@ class DollarRate
 
   @@dollar_rate = 87.15
 
-  def initialize currency, sum
+  def initialize(currency, sum)
     @currency, @sum = currency, sum
     @result = 0
   end
@@ -28,15 +28,13 @@ class DollarRate
 end
 
 
-menu = DollarRate.menu
-
-puts
-
+menu = DollarRate.menu; puts
 
 rate_1 = DollarRate.new 2, 349
 
 rate_1.convert
 rate_1.show_result
+
 
 puts
 

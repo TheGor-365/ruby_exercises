@@ -15,11 +15,12 @@ class Cat
 end
 
 pp "include: #{Cat.new.has_home?}"
-
 pp Cat.ancestors
 
+
+
 puts
-puts
+
 
 
 # prepend
@@ -39,18 +40,20 @@ class Cat
 end
 
 pp "prepend: #{Cat.new.has_home?}"
-
 pp Cat.ancestors
 
+
+
 puts
-puts
+
+
 
 # extend
 
 module Homable
   attr_accessor :name
 
-  def initialize name
+  def initialize(name)
     @name = name
   end
 
@@ -58,7 +61,7 @@ module Homable
     true
   end
 
-  def attribute name
+  def attribute(name)
     name.upcase
   end
 end
@@ -70,5 +73,4 @@ end
 
 
 cat = Cat.new 'Ivan'
-
 pp cat.attribute 'Eric'

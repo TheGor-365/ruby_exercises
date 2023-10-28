@@ -41,4 +41,4 @@ google_url = Url.new 'https://google.com:80?a=b&c=d&lala=value'
 pp yandex_url
 pp yandex_url.query
 pp yandex_url.query_params
-pp yandex_url == google_url # false
+pp yandex_url == google_url

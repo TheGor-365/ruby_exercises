@@ -1,4 +1,4 @@
-def compare_versions version_1, version_2
+def compare_versions(version_1, version_2)
   major_1, minor_1 = version_1.split('.')
   major_2, minor_2 = version_2.split('.')
 
@@ -7,5 +7,6 @@ def compare_versions version_1, version_2
 
   major_compare.zero? ? minor_compare : major_compare
 end
+
 
 pp compare_versions '2.3.4', '3.2.4'

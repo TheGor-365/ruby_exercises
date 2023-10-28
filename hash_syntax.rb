@@ -13,7 +13,8 @@ pp soccer_balls_weight
 balls[ :soccer_ball ][ :colors ].push(:green)
 pp soccer_balls_colors
 
-puts
+
+
 puts
 
 
@@ -43,7 +44,8 @@ end
 
 pp qtys_array
 
-puts
+
+
 puts
 
 

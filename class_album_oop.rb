@@ -1,11 +1,11 @@
 class Album
   attr_reader :name, :songs
 
-  def initialize name
+  def initialize(name)
     @name, @songs = name, []
   end
 
-  def add_songs song
+  def add_songs(song)
     @songs << song
   end
 end
@@ -13,7 +13,7 @@ end
 class Song
   attr_reader :name, :duration
 
-  def initialize name, duration
+  def initialize(name, duration)
     @name, @duration = name, duration
   end
 end
@@ -33,7 +33,5 @@ puts album_1.name
 album_1.songs.each do |song, duration|
   puts "Album: #{song.name} #{song.duration}"
 end
-
-puts
 
 puts album_1.songs[1].name

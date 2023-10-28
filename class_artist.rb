@@ -1,11 +1,11 @@
 class Artist
   attr_reader :name, :country, :albums
 
-  def initialize name, country
+  def initialize(name, country)
     @name, @country, @albums = name, country, []
   end
 
-  def artist_albums album
+  def artist_albums(album)
     @albums << album
   end
 
@@ -22,11 +22,11 @@ end
 class Album
   attr_reader :name, :date, :style
 
-  def initialize name, date, style
+  def initialize(name, date, style)
     @name, @date, @style, @album_songs = name, date, style, []
   end
 
-  def add_songs songs
+  def add_songs(songs)
     @album_songs << songs
   end
 
@@ -43,7 +43,7 @@ end
 class Song
   attr_reader :name, :duration
 
-  def initialize name, duration
+  def initialize(name, duration)
     @name, @duration, @songs = name, duration, {}
   end
 

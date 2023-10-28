@@ -1,13 +1,13 @@
 class Machine
   @@users = {}
 
-  def initialize username, password
+  def initialize(username, password)
     @username, @password = username, password
     @@users[username] = password
     @files = {}
   end
 
-  def create filename
+  def create(filename)
     time = Time.now
     @files[filename] = time
     puts "#{filename} was created by #{@username} at #{time}."

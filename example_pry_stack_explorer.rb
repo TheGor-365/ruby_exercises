@@ -2,8 +2,7 @@ require 'pry-stack_explorer'
 
 def alpha
   x = 'hello'
-  beta
-  pp x
+  beta; pp x
 end
 
 def beta

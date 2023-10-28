@@ -4,15 +4,12 @@ hash = {
   'cow': 'bovine'
 }
 
-pp hash
+
+pp hash.fetch_values(:cow, :cat)
+pp hash.fetch_values(:cow, :bird) { |value| value.upcase }
+
 
 puts
-
-pp hash.fetch_values("cow", "cat")
-pp hash.fetch_values("cow", "bird") { |key| key.upcase }
-
-puts
-
 
 
 
@@ -22,9 +19,5 @@ hash = {
   baz: 2
 }
 
-pp hash
-
-puts
-
-values = hash.fetch_values( :bar, :foo, :bad, :bam, :baz, :mmm ) { |key| key.to_s }
-pp values
+symbols_array = %i[ bar foo bad bam baz mmm ]
+values = hash.fetch_values(symbols_array) { |value| pp value.to_s }

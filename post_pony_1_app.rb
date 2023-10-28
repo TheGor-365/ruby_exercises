@@ -31,4 +31,5 @@ Pony.mail({
   }
 )
 
+
 puts 'The message successfully sended'

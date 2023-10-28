@@ -1,6 +1,6 @@
 @hash = {}
 
-def add_person options
+def add_person(options)
   puts 'Already exists' if @hash[options[:name]]
   @hash[options[:name]] = options[:age]
 end
@@ -13,7 +13,7 @@ def show_hash
 end
 
 loop do
-  print "Enter name: "
+  print 'Enter name: '
   name = gets.strip.capitalize
 
   if name == ''

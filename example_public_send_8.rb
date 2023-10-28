@@ -11,6 +11,7 @@ class NotifierService
   end
 
   private
+
   attr_accessor :notifier_type, :user, :message
 
   def notify_by_email;    end
@@ -37,6 +38,7 @@ class User
   attr_accessor :name, :last_name
 
   private
+
   attr_reader :age
 
   def greet
@@ -45,9 +47,8 @@ class User
 end
 
 
-
 user = User.new('carl', 'smith', 29)
-pp user
+pp user; puts
 
 notifier_service = NotifierService.new('sms', 'Hello there!!', user).notify
 pp notifier_service

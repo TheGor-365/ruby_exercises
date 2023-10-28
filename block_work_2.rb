@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 def with_logging(description = '', &block)
   @log.puts "Starting '#{description}'"
@@ -18,12 +18,17 @@ end
 status_code = with_logging('Calculate seconds in a day') do
   puts 60 * 60 * 24
 end
+
 pp status_code
+
 
 status_code = with_logging("Open a file I know doesn't exist") do
   File.readlines('100_%_not_a_file.txt') { |line| puts line }
 end
+
 pp status_code
+
+
 
 puts
 

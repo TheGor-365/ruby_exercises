@@ -23,14 +23,14 @@ end
 first_param = { filter: 'author' }
 
 first = BookService.new first_param
-first.service
+first.service; puts
 
 
 
 second_param = { filter: 'editorial' }
 
 second = BookService.new second_param
-second.service
+second.service; puts
 
 
 

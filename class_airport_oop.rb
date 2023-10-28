@@ -1,11 +1,11 @@
 class Airport
   attr_reader :name, :planes
 
-  def initialize name
+  def initialize(name)
     @name,  @planes = name, []
   end
 
-  def add_planes plane
+  def add_planes(plane)
     @planes << plane
   end
 end
@@ -14,7 +14,7 @@ end
 class Plane
   attr_reader :model
 
-  def initialize model
+  def initialize(model)
     @model = model
   end
 end
@@ -48,16 +48,12 @@ airport_2.add_planes plane6
 puts airport_1.name
 puts airport_2.name
 
-puts
-puts
-
-
-
 puts airport_1.planes
 puts airport_2.planes
 
+
 puts
-puts
+
 
 airports.each do |airport|
   puts "Airport #{airport.name}\n\n"

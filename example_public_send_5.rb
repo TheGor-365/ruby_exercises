@@ -1,6 +1,6 @@
 full_name = 'Mia Smith Jr.'
 
-def display string
+def display(string)
   pp string
 end
 
@@ -9,7 +9,7 @@ pp full_name.send('size')
 pp full_name.send(:upcase)
 pp full_name.send(:downcase).split
 
-puts
+
 puts
 
 
@@ -18,7 +18,7 @@ pp full_name.public_send('size')
 pp full_name.public_send(:upcase)
 pp full_name.public_send(:downcase).split
 
-puts
+
 puts
 
 

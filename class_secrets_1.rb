@@ -10,7 +10,7 @@ module NameSpace
   class Animal
     TEST = 'my constant'
 
-    def initialize name
+    def initialize(name)
       @name = name
     end
 
@@ -27,26 +27,36 @@ end
 klass = NameSpace::Animal
 pp klass
 
+
 puts
+
 
 object = klass.new('test')
 pp object
 
+
 puts
+
 
 pp NameSpace::Animal::TEST
 pp klass::TEST
 
+
 puts
+
 
 pp TEST
 
+
 puts
+
 
 pp object.hello
 pp object.hey
 
+
 puts
+
 
 pp klass.class
 pp klass.class.superclass
@@ -54,7 +64,9 @@ pp klass.class.superclass.superclass
 pp klass.class.superclass.superclass.superclass
 pp klass.class.superclass.superclass.superclass.superclass
 
+
 puts
+
 
 pp object.class
 pp object.class.superclass

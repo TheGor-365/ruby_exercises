@@ -24,9 +24,6 @@ module HexletCode
     def input(struct, *attributes)
       input_tag = []
 
-      # struct.each_pair do |name, value|
-      #   attributes << "#{name}='#{value}'"
-      # end
       attributes = struct.to_h
       p attributes
 

@@ -21,13 +21,13 @@ input = {
 	color: 			color
 }
 
-def validator input
+def validator(input)
 	params = {
-		somename: 	'Enter your name',
-		phone: 			'Enter your phone',
-		date_time: 	'Enter date and time',
-		barber: 		'Choose your barber',
-		color: 			'Choose color that you need'
+		somename:  'Enter your name',
+		phone: 		 'Enter your phone',
+		date_time: 'Enter date and time',
+		barber: 	 'Choose your barber',
+		color: 		 'Choose color that you need'
 	}
 
 	input.each do |name, value|
@@ -37,8 +37,6 @@ def validator input
 	end
 end
 
+
 input.each { |name, value| puts "#{name} #{value}" }
-
-puts
-
 validator input

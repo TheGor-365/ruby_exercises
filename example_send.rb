@@ -1,5 +1,5 @@
 class Klass
-  def hello *arguments
+  def hello(*arguments)
     puts 'Hello ' +  arguments.join(' ')
   end
 end

@@ -8,6 +8,8 @@ class Article
   # upcase :chapter
 end
 
+
+
 article = Article.new(
   title:   'article',
   author:  'John',
@@ -27,6 +29,16 @@ pp article.title = 'article_2'
 pp article.attributes
 pp article.attributes.to_a
 pp article
+
+
+puts
+
+
+article_3 = Article.new(title: 'Proper', author: 'Eric') do |param|
+  param.title = 'www'
+end
+
+pp article_3
 
 
 puts

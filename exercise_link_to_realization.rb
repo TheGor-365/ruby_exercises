@@ -5,8 +5,11 @@ def link_to(name, link, attributes = {})
     attr_pairs << "#{name}='#{value}'"
   end
 
-  html_attr = attr_pairs.join(' ')
-  puts "<a href='#{link}'#{html_attr}>#{name}</a>"
+  link_attrs = attr_pairs.join(' ')
+  "<a href='#{link}'#{link_attrs}>#{name}</a>"
 end
 
-link_to 'link_name', '/url', class: 'link'
+
+link = link_to 'link_name', '/url', class: 'link'
+
+puts link

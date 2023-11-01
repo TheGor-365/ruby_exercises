@@ -7,7 +7,7 @@ class UserDecorator
 
   def_delegators :@user, :first_name, :last_name
 
-  def initialize user
+  def initialize(user)
     @user = user
   end
 
@@ -24,7 +24,9 @@ pp decorated_user_1.first_name
 pp decorated_user_1.last_name
 pp decorated_user_1.full_name
 
+
 puts
+
 
 pp decorated_user_2.first_name
 pp decorated_user_2.last_name

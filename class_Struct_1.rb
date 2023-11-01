@@ -12,3 +12,4 @@ pp dave.name
 pp dave.address
 pp dave.greeting
 pp dave.members
+pp dave.to_h

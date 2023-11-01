@@ -13,12 +13,12 @@ end
 
 
 butter_robot = Robot.new(
-  colour    = "grey",
-  ai_type   = "too smart for own good",
-  body_type = "small rover",
-  movement  = "medium",
-  name      = "butter robot",
-  function  = "pass the butter"
+  colour    = 'grey',
+  ai_type   = 'too smart for own good',
+  body_type = 'small rover',
+  movement  = 'medium',
+  name      = 'butter robot',
+  function  = 'pass the butter'
 )
 
 pp butter_robot; puts
@@ -63,7 +63,7 @@ class RobotBuilder
     @robot.movement  = 'medium'
     @robot.body_type = 'rover'
     @robot.colour    = 'rusty yellow'
-    @robot.name      = "WALL-E"
+    @robot.name      = 'WALL-E'
   end
 
   def robot
@@ -83,11 +83,14 @@ end
 pp builder = RobotBuilder.new; puts
 
 pp builder.set_default_parameters(
-  "Red", "Robot", "Slow", "Large"
+  'Red',
+  'Robot',
+  'Slow',
+  'Large'
 )
 
 pp builder.set_as_dumb
-pp builder.set_function((0..100).each { |item| puts item * 100 })
+builder.set_function((1...5).each { |item| pp item.to_s })
 
 builder = RobotBuilder.new
 pp builder.set_as_walee

@@ -45,7 +45,7 @@ def how_old
 end
 
 how_old do |name, age|
-  pp "#{name} is #{age} years old"
+  pp "#{name} #{age}"
 end
 
 
@@ -64,8 +64,8 @@ puts
 
 
 
-def two &block
-  puts "two is: #{yield}"
+def two(&block)
+  pp "two is: #{block.call}"
 end
 
 two { 2 }
@@ -76,18 +76,17 @@ puts
 
 
 
-def my_map array
+def my_map(array)
   new_array = []
 
   for element in array
-    pp new_array.push yield element
+    new_array.push yield element
   end
-
-  new_array
+  pp new_array
 end
 
 my_map([1, 2, 3]) do |number|
-  number * 2
+  number ** 2
 end
 
 
@@ -96,7 +95,7 @@ puts
 
 
 
-def method_with_block &block
+def method_with_block(&block)
   block.call
 end
 
@@ -156,22 +155,23 @@ class Note
   end
 
   def write
-    puts "Writing \"#{@note}\" to the database."
+    puts "Writing \"#{@note}\" to the database"
   end
 
   private
 
   def self.connect
-    puts "Connecting to the database..."
+    puts 'Connecting to the db'
   end
 
   def self.disconnect
-    puts "Disconnecting from the database..."
+    puts 'Disconnecting from the db'
   end
 end
 
-note = Note.create { "Hello" }; puts
 
+
+note = Note.create { 'Hello' }; puts
 note = Note.create do |s|
   s.inspect
 end

@@ -1,6 +1,5 @@
 class Connection
   def self.add_connection_variable(name)
-
     define_method name do
       instance_variable_get "@#{name}"
     end

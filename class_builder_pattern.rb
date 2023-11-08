@@ -90,7 +90,12 @@ pp builder.set_default_parameters(
 )
 
 pp builder.set_as_dumb
-builder.set_function((1...5).each { |item| pp item.to_s })
+s = builder.set_function(1...5).each do |item|
+  item
+  item.to_s
+end
+puts s
+
 
 builder = RobotBuilder.new
 pp builder.set_as_walee

@@ -9,7 +9,7 @@ module Modulle
     end
   end
 
-  def self.included base
+  def self.included(base)
     base.extend(ClassMethods)
   end
 end

@@ -14,15 +14,9 @@ end
 
 ip_meta = lookup '83.169.216.199'
 
-puts
+pp ip_meta; puts
 
-pp ip_meta
-
-puts
-
-ip_meta.country
-
-puts
+ip_meta.country; puts
 
 pp ip_meta.country_code
 pp ip_meta.city

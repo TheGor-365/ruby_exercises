@@ -11,6 +11,8 @@ class Post
   attribute :published,  type: :boolean
 end
 
+
+
 post = Post.new(
   id:         '1',
   title:      'First Post',
@@ -19,36 +21,35 @@ post = Post.new(
   published:  'true'
 )
 
-puts
-
-
 pp post.id
 pp post.title
 pp post.body
 pp post.created_at
-pp post.published
+pp post.published; puts
 
-puts
+pp post; puts
 
-pp post
 
-puts
+
 
 pp post.id         = '2'
 pp post.title      = 'Second Post'
 pp post.body       = 'Goodbye, World!'
 pp post.created_at = '10/05/2020'
-pp post.published  = 'false'
+pp post.published  = 'false'; puts
+pp post.attributes; puts
 
-puts
 
-pp post.attributes
 
-puts
-
-pp post_2 = Post.new(id: '2')
-
-puts
+post_2 = Post.new(id: '2')
 
 pp post_2.id = '3'
-pp post_2
+pp post_2; puts
+
+
+
+post_3 = Post.new do |p|
+  puts p
+end
+
+pp post_3

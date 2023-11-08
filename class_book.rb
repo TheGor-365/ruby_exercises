@@ -15,7 +15,7 @@ class Book
   def show_all
     @persons.keys.each do |name|
       age = @persons[name]
-      pp "#{@name}\t Name: #{name}\t Age: #{@persons[name]}"
+      pp "#{@name} Name: #{name} Age: #{@persons[name]}"
     end
   end
 end

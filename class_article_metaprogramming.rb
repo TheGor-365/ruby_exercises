@@ -16,26 +16,30 @@ article = Article.new(
   chapter: 'first'
 )
 
-pp article
+pp article; puts
+
 pp article.attributes
 pp article.title
-pp article.instance_variables
+pp article.author
 
 
 puts
 
 
-pp article.title = 'article_2'
+article.title = 'article_2'
+
+pp article; puts
+
 pp article.attributes
-pp article.attributes.to_a
-pp article
+pp article.title
+pp article.author
 
 
 puts
 
 
 article_3 = Article.new(title: 'Proper', author: 'Eric') do |param|
-  param.title = 'www'
+  param.title
 end
 
 pp article_3
@@ -44,29 +48,29 @@ pp article_3
 puts
 
 
-article.attributes.each_pair do |attribute|
-  pp attribute.first
-end
-
-puts
-
-article.attributes.each_pair do |attribute|
-  pp attribute.last
-end
-
-puts
-
-article.attributes.each_pair do |attribute|
-  pp attribute
-end
-
-puts
-
-article.attributes.to_h.each_pair do |name, value|
-  pp name
-end
-
-puts
+# article.attributes.each_pair do |attribute|
+#   pp attribute.first
+# end
+#
+# puts
+#
+# article.attributes.each_pair do |attribute|
+#   pp attribute.last
+# end
+#
+# puts
+#
+# article.attributes.each_pair do |attribute|
+#   pp attribute
+# end
+#
+# puts
+#
+# article.attributes.to_h.each_pair do |name, value|
+#   pp name
+# end
+#
+# puts
 
 pp article.attributes[:chapter]
 pp article.attributes[:author]

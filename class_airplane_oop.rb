@@ -2,7 +2,7 @@ class Airplane
   attr_reader :model, :altitude
   attr_accessor :speed
 
-  def initialize model
+  def initialize(model)
     @model = model
     @speed, @altitude = 0
   end

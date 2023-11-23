@@ -29,13 +29,13 @@ pp cat_1.weight; puts
 
 
 cat_2 = Cat.new 'PETTY', 3, 11 do |c|
-  c
-  c.name
-  c.age
-  c.weight
+  pp c
+  pp c.name
+  pp c.age
+  pp c.weight
 end
 
-pp cat_2
-pp cat_2.name
-pp cat_2.age
-pp cat_2.weight
+# pp cat_2
+# pp cat_2.name
+# pp cat_2.age
+# pp cat_2.weight

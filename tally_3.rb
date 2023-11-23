@@ -46,7 +46,7 @@ puts
 
 order = %i{ pen pencil eraser sharpener pen pen }
 
-pp tally = order.tally { puts "Proc called" }
+pp tally = order.tally { puts 'Proc called' }
 pp tally[:ruler]
 
 

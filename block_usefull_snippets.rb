@@ -22,9 +22,11 @@ puts
 
 
 
-def request_http &on_complete
+def request_http(&on_complete)
   pp on_complete
   on_complete.call
 end
 
-request_http { pp 'Operation done' }
+request_http do
+  pp 'Operation done'
+end

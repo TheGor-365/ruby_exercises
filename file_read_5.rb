@@ -1,4 +1,4 @@
-file = File.open "text_files/file.A1.txt"
+file = File.open 'text_files/file.A1.txt'
 
 line  = file.readline
 lines = file.readlines

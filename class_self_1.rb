@@ -16,6 +16,8 @@ class Jessie_Pinckman
   end
 end
 
+
+
 Manager.say_hi
 Hipster.say_hi
 Jessie_Pinckman.say_hi

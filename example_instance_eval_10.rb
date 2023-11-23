@@ -9,7 +9,7 @@ array = [ 1, 2, 3 ]
 pp array.instance_eval(array_second)
 pp array.second
 
-str = "ruby.devscoop.fr"
+str = 'ruby.devscoop.fr'
 
 str.instance_eval do
   def /(delimiter)
@@ -17,11 +17,8 @@ str.instance_eval do
   end
 end
 
-pp str / '.'
+pp str / '.'; puts
 
-
-
-puts
 
 
 
@@ -34,11 +31,8 @@ end
 user = User.new('ruby@devscoop.fr')
 
 pp user.instance_eval('@email')
-pp user.instance_eval { @email }
+pp user.instance_eval { @email }; puts
 
-
-
-puts
 
 
 
@@ -57,11 +51,8 @@ end
 user = User.new('ruby@devscoop.fr')
 
 pp user.instance_eval('secret_key')
-pp user.instance_eval { secret_key }
+pp user.instance_eval { secret_key }; puts
 
-
-
-puts
 
 
 

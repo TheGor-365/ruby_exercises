@@ -7,8 +7,7 @@ class Cat
 end
 
 
-cat = Cat.new("Kit")
-
+cat = Cat.new('Kit')
 pp cat.name
 
 
@@ -22,6 +21,5 @@ class Dog
 end
 
 
-dog = Dog.new("Kit")
-
+dog = Dog.new('Kit')
 pp dog.name

@@ -1,6 +1,6 @@
 require 'mechanize'
 
-agent = Mechanize.new
+agent  = Mechanize.new
 chosen = false
 
 until chosen

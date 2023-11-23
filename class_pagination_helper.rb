@@ -30,6 +30,7 @@ class PaginationHelper
 end
 
 
+
 pp helper = PaginationHelper.new(%w[a b c d e f], 4)
 
 pp helper.page_count()

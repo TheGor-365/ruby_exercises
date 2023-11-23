@@ -71,7 +71,7 @@ puts
 
 
 
-def run_proc_with_random_number &proc
+def run_proc_with_random_number(&proc)
   proc.call rand(700...1600)
 end
 

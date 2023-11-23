@@ -30,7 +30,7 @@ while true
   puts "Game: ---#{combination}---"
 
   if scores[combination]
-    result = scores[combination]
+    result  = scores[combination]
     balance = result.call balance
     puts "You win and got $#{result}"
   else

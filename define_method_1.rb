@@ -28,19 +28,17 @@ class Tiger
 end
 
 
-pp tiger = Tiger.new('Boris', 5, '133_kg')
+pp tiger = Tiger.new('Boris', 5, '133_kg'); puts
 
 
-puts
 
 
 pp tiger.name
 pp tiger.age
 pp tiger.weight
-tiger.attribute
+tiger.attribute; puts
 
 
-puts
 
 
 print "\n" * 2 + "Tiger.class_variables" + "\n" + "-" * 80 + "\n"

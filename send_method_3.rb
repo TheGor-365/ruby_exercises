@@ -13,12 +13,10 @@ end
 something = Something.new name: 'Mike', age: 60, country: 'USA'
 pp something; puts
 
+
 pp something.name
 pp something.age
-pp something.country
-
-
-puts
+pp something.country; puts
 
 
 something.name = 'Steve'

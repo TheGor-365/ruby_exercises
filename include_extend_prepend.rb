@@ -15,11 +15,8 @@ class Cat
 end
 
 pp "include: #{Cat.new.has_home?}"
-pp Cat.ancestors
+pp Cat.ancestors; puts
 
-
-
-puts
 
 
 
@@ -40,11 +37,8 @@ class Cat
 end
 
 pp "prepend: #{Cat.new.has_home?}"
-pp Cat.ancestors
+pp Cat.ancestors; puts
 
-
-
-puts
 
 
 

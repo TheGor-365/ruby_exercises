@@ -11,11 +11,8 @@ end; puts
 
 
 something = Names.new
-pp something
+pp something; puts
 
-
-
-puts
 
 
 

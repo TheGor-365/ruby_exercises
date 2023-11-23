@@ -21,7 +21,7 @@ loop do
   puts "Combination: #{combination}"
 
   if scores[combination]
-    result = scores[combination]
+    result  = scores[combination]
     balance = result.call balance
     puts "Lambda called"
   else

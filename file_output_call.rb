@@ -4,7 +4,7 @@ input = ARGV[0]
 file  = File.new input
 lines = file.readlines
 
-abort "File don't round!" unless File.exist? input
+abort 'File not found' unless File.exist? input
 
 file.close
 

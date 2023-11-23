@@ -8,11 +8,10 @@ pp enum; puts
 enum.each { |byte| puts byte }; puts
 
 
+
 array = [ 1, 2, 3 ]
-pp array.to_enum
+pp array.to_enum; puts
 
-
-puts
 
 
 def some_method(array)

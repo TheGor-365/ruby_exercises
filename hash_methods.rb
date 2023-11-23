@@ -1,4 +1,4 @@
-def plainify data
+def plainify(data)
   result = []
 
   data.each_pair do |band_name, songs|

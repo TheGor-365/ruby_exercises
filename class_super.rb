@@ -8,7 +8,7 @@ class Message
 end
 
 class Email < Message
-  def initialize from, to
+  def initialize(from, to)
     super
   end
 end

@@ -2,10 +2,8 @@ say_hi  = lambda { pp 'Hi' }
 say_bye = lambda { pp 'Bye' }
 
 say_hi.call
-say_bye.call
+say_bye.call; puts
 
-
-puts
 
 
 week = %w[ say_hi say_hi say_hi say_hi say_hi say_bye say_bye ]

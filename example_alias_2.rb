@@ -1,6 +1,6 @@
 class User
   def full_name
-    puts "Johnnie Walker"
+    puts 'Johnnie Walker'
   end
 
   def self.add_rename
@@ -10,22 +10,21 @@ end
 
 class Developer < User
   def full_name
-    puts "Geeky geek"
+    puts 'Geeky geek'
   end
   add_rename
 end
 
-pp Developer.new.name
+
+pp Developer.new.name; puts
 
 
-
-puts
 
 
 
 class User
   def full_name
-    puts "Johnnie Walker"
+    puts 'Johnnie Walker'
   end
 
   def self.add_rename
@@ -35,9 +34,10 @@ end
 
 class Developer < User
   def full_name
-    puts "Geeky geek"
+    puts 'Geeky geek'
   end
   add_rename
 end
+
 
 pp Developer.new.name

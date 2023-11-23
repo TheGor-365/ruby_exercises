@@ -5,10 +5,8 @@ def cat.speak
 end
 
 pp cat.speak
-pp cat.singleton_methods
+pp cat.singleton_methods; puts
 
-
-puts
 
 
 One = Class.new
@@ -18,10 +16,8 @@ def One.speak
 end
 
 pp One.speak
-pp One.singleton_methods
+pp One.singleton_methods; puts
 
-
-puts
 
 
 class One
@@ -32,10 +28,8 @@ end
 
 pp One.singleton_methods
 pp One.classs_method
-pp One.speak
+pp One.speak; puts
 
-
-puts
 
 
 class Two
@@ -49,10 +43,8 @@ class Two
 end
 
 pp Two.classs_method
-pp Two.new.instancce_method
+pp Two.new.instancce_method; puts
 
-
-puts
 
 
 module Modulle

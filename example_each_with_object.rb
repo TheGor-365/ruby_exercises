@@ -37,7 +37,7 @@ pp multipled_gig_nums; puts
 
 
 
-words = %w[one two one one two one one three]
+words = %w[ one two one one two one one three ]
 
 words_counts = words.each_with_object(Hash.new(0)) do |item, hash|
   hash[item] += 1

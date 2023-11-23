@@ -10,10 +10,8 @@ split_1.each do |product|
 	split_2 = product.split(/=/)
 
 	pp split_2
-end
+end; puts
 
-
-puts
 
 
 split_1.each do |product|
@@ -21,10 +19,8 @@ split_1.each do |product|
 	split_3 = split_2[0].split(/_/)
 
 	pp split_3
-end
+end; puts
 
-
-puts
 
 
 split_1.each do |product|

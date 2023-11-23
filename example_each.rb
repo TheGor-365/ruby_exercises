@@ -1,7 +1,7 @@
 s = [
-  ["ham", "swiss"],
-  ["turkey", "cheddar"],
-  ["roast beef", "gruyere"]
+  ['am', 'swiss'],
+  ['turkey', 'cheddar'],
+  ['roast beef', 'gruyere']
 ]
 
 s.each do |si|

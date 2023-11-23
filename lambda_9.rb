@@ -7,6 +7,7 @@ end
 pp batman_ironman_proc
 
 
+
 def batman_ironman_lambda
   victor = lambda { return 'BATMAN win' }
   victor.call

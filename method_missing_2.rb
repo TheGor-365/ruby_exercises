@@ -4,6 +4,8 @@ class Something
   end
 end
 
+
+
 something = Something.new
 
 pp something.aaa

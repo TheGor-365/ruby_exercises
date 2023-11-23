@@ -4,7 +4,7 @@ require 'net/http'
 require 'net/https'
 
 uri = URI('https://httpbin.org')
-get_path = 'get'
+get_path  = 'get'
 post_path = 'post'
 
 Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https', verify_mode: OpenSSL::SSL::VERIFY_NONE) do |http|

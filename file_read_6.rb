@@ -11,5 +11,5 @@ if File.exist? './file.A1.txt'
 
   puts line.sample
 else
-  puts "File don't found!"
+  puts 'File not found'
 end

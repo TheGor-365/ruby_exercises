@@ -14,7 +14,7 @@ while (line = input.gets)
 
   print "Trying password #{line} - "
 
-  if is_wrong_password? line
+  if is_wrong_password?(line)
     pp 'Error'
     input.close
   end

@@ -11,6 +11,8 @@ class Person
   end
 end
 
+
+
 matz = Person.new("Yukihiro")
 dhh  = Person.new("David")
 

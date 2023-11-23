@@ -9,7 +9,7 @@ loop do
 
   product_id = hash[id].to_i
   product_id += amount
-  hash[id] = product_id
+  hash[id]   = product_id
 
   pp hash; puts
 

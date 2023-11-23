@@ -10,10 +10,8 @@ class << zen_1
   end
 end
 
-zen_1.say_hello
+zen_1.say_hello; puts
 
-
-puts
 
 
 class Hi
@@ -30,10 +28,8 @@ def hi.methodd
 end
 
 pp hi.class.instance_methods.include? :methodd
-pp hi.singleton_class.instance_methods.include? :methodd
+pp hi.singleton_class.instance_methods.include? :methodd; puts
 
-
-puts
 
 
 class SomeClass

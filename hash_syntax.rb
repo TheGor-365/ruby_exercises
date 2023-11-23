@@ -11,11 +11,8 @@ soccer_balls_weight = balls[ :soccer_ball ][ :weight ]
 pp soccer_balls_weight
 
 balls[ :soccer_ball ][ :colors ].push(:green)
-pp soccer_balls_colors
+pp soccer_balls_colors; puts
 
-
-
-puts
 
 
 
@@ -42,11 +39,8 @@ def qtys_array
   sum
 end
 
-pp qtys_array
+pp qtys_array; puts
 
-
-
-puts
 
 
 

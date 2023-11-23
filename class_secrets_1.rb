@@ -24,38 +24,24 @@ module NameSpace
 end
 
 
+
 klass = NameSpace::Animal
-pp klass
-
-
-puts
+pp klass; puts
 
 
 object = klass.new('test')
-pp object
-
-
-puts
+pp object; puts
 
 
 pp NameSpace::Animal::TEST
-pp klass::TEST
+pp klass::TEST; puts
 
 
-puts
-
-
-pp TEST
-
-
-puts
+pp TEST; puts
 
 
 pp object.hello
-pp object.hey
-
-
-puts
+pp object.hey; puts
 
 
 pp klass.class

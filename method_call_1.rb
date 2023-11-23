@@ -26,4 +26,4 @@ user.method(:hello).()
 user.method(:hello)[]
 user.tap(&:hello)
 :hello.to_proc.call(user)
-eval("user.hello")
+eval('user.hello')

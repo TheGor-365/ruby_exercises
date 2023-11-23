@@ -1,7 +1,7 @@
 @array_1 = Array.new(10, 1)
 @array_2 = Array.new(10, 1)
 
-def attack array
+def attack(array)
   sleep 0.5
   index = rand 0..9
 

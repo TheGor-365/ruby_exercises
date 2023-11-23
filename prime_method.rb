@@ -1,5 +1,5 @@
 def prime(number)
-  puts "That's not an integer." unless number.is_a? Integer
+  puts 'Not integer' unless number.is_a? Integer
   is_prime = true
 
   for num in 2..number - 1

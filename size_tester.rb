@@ -1,8 +1,6 @@
 array = [ 0, 1, 2 ]
-pp array.size
+pp array.size; puts
 
-
-puts
 
 
 big = 0

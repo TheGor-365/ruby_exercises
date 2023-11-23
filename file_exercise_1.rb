@@ -2,7 +2,7 @@ file = File.open 'text_files/trump.txt', 'r'
 
 @options = {}
 
-def add_to_hash word
+def add_to_hash(word)
   unless word.empty?
     word.downcase!
 

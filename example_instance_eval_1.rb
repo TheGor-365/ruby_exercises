@@ -4,29 +4,25 @@ class MyClass
   end
 end
 
+
+
 pp one = MyClass.new(1)
-pp two = MyClass.new(2)
+pp two = MyClass.new(2); puts
 
-
-puts
 
 
 # one.number
 
 pp one.instance_eval { @number }
-pp two.instance_eval { @number }
+pp two.instance_eval { @number }; puts
 
-
-puts
 
 
 array = []
 array << one.instance_eval { @number }
 array << two.instance_eval { @number }
-pp array
+pp array; puts
 
-
-puts
 
 
 one.instance_eval do

@@ -20,9 +20,7 @@ end
 
 puts 'All lines: ' + lines.length.to_s
 puts 'Empty lines: ' + empty_lines_counter.to_s
-puts 'Last 5 lines: '
-
-puts
+puts 'Last 5 lines: '; puts
 
 for line in last_five_lines
   puts line

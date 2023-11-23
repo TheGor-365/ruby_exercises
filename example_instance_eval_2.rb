@@ -12,7 +12,7 @@ end
 puts
 
 
-def mail &block
+def mail(&block)
   builder = MailBuilder.new
   builder.instance_eval &block
 end

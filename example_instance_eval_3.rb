@@ -22,20 +22,21 @@ steve.dob   = 20010501
 steve.allergies << 'penicillin'
 steve.allergies << 'tree nuts'
 
-pp steve
+pp steve; puts
 
 
-puts
 
 
-sam = Student.new("Sam").tap do |s|
+sam = Student.new('Sam').tap do |s|
   s.grade = 10
-  s.dob = 20100928
-  s.allergies << "cats"
-  s.allergies << "pollen"
+  s.dob   = 20100928
+  s.allergies << 'cats'
+  s.allergies << 'pollen'
 end
 
 pp sam; puts
+
+
 
 
 previous_school = 'Sunny Shores Middle School-Middlesburg-MI'
@@ -50,10 +51,9 @@ previous_school_hash = {
 steve.previous_school = previous_school_hash
 
 pp steve.previous_school
-pp steve.previous_school[:name]
+pp steve.previous_school[:name]; puts
 
 
-puts
 
 
 steve.previous_school = previous_school.split('-').tap do |array|
@@ -64,10 +64,9 @@ steve.previous_school = previous_school.split('-').tap do |array|
   }
 end
 
-pp steve.previous_school
+pp steve.previous_school; puts
 
 
-puts
 
 
 steve.previous_school = previous_school.split('-').instance_eval do |array|
@@ -78,10 +77,9 @@ steve.previous_school = previous_school.split('-').instance_eval do |array|
   }
 end
 
-pp steve.previous_school
+pp steve.previous_school; puts
 
 
-puts
 
 
 pp Student.all_students

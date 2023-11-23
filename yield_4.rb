@@ -4,10 +4,8 @@ def run_5_times
   end
 end
 
-run_5_times { pp 'Something' }
+run_5_times { pp 'Something' }; puts
 
-
-puts
 
 
 def run_6_times

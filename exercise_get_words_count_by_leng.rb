@@ -1,7 +1,7 @@
-def get_words_count_by_lang data
+def get_words_count_by_lang(data)
   words  = data.split
   result = {}
-  
+
   words.each do |word|
     result[word] ||= 0
     result[word] += 1

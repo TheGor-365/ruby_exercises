@@ -30,7 +30,7 @@ when 'update'
   title = gets.chomp
 
   if movies[title.to_sym].nil?
-    puts "Movie not found!"
+    puts 'Movie not found'
   else
     puts "What's the new rating? (Type a number 0 to 4.)"
     rating = gets.chomp

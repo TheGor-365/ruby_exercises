@@ -31,7 +31,7 @@ album_1.add_songs song_2
 puts album_1.name
 
 album_1.songs.each do |song, duration|
-  puts "Album: #{song.name} #{song.duration}"
+  pp "Album: #{song.name} #{song.duration}"
 end
 
 puts album_1.songs[1].name

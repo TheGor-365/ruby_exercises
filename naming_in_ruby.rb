@@ -1,4 +1,4 @@
-def build_query_string query_params
+def build_query_string(query_params)
   query_parts = []
 
   for query_part in query_params.sort

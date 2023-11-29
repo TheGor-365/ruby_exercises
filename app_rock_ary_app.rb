@@ -3,7 +3,7 @@ array = %i[rock scissors paper]
 loop do
   mashine = array[rand(0..2)]
 
-  print 'Make choice... [S]cissors, [R]ock, [P]aper:  '
+  print 'Make choice: [ S ]cissors, [ R ]ock, [ P ]aper  '
   choice = gets.strip.capitalize
 
   case choice

@@ -11,7 +11,7 @@ module Model
     def upcase(attribute_name)
       @upcased ||= []
 
-      define_method "#{attribute_name}" do
+      define_method attribute_name do
         @attributes[attribute_name]
       end
       define_method "#{attribute_name}=" do |value|

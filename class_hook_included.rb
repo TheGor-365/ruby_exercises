@@ -18,11 +18,12 @@ end
 
 class Klass
   include Modulle
+
   who_am_i
-end
+end; puts
 
-puts
 
-pp klass = Klass.new.speak_up('Sarah')
+klass = Klass.new.speak_up('Sarah')
+pp klass
 
 pp Klass.who_am_i

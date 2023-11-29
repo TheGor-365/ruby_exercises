@@ -27,10 +27,8 @@ pp ip_meta.country
 pp ip_meta.city
 pp ip_meta.country_code
 pp ip_meta.lat
-pp ip_meta.lon
+pp ip_meta.lon; puts
 
-
-puts
 
 
 pp ip_meta.instance_variable_get '@country'
@@ -53,7 +51,6 @@ puts '-' * 90
 puts 'ip_meta.instance_variables'
 pp ip_meta.instance_variables.join(' ').split(' ')
 puts '-' * 90
-
 pp ip_meta.send :city
 puts '-' * 90
 pp ip_meta.instance_eval 'lat'

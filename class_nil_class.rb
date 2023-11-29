@@ -11,7 +11,7 @@ class Cage
 end
 
 cage = Cage.new
-# pp cage.raw
+# pp cage.raw; puts
 
 
 
@@ -19,10 +19,9 @@ class Creature
 end
 
 creature = Creature.new
-# pp creature.rawr
+# pp creature.rawr; puts
 
 
-puts
 
 
 class Creature
@@ -31,16 +30,16 @@ class Creature
   end
 end
 
+
 creature = Creature.new
 
 def creature.rawr
   'raaaaawr - 1'
 end
 
-pp creature.rawr # => 'raaaaawr!'
+pp creature.rawr; puts
 
 
-puts
 
 
 module LoudCreature
@@ -53,10 +52,9 @@ end
 creature = Creature.new
 creature.extend(LoudCreature)
 
-pp creature.rawr # => 'raaaaawr!'
+pp creature.rawr; puts
 
 
-puts
 
 
 module QuietCreature
@@ -69,17 +67,15 @@ creature = Creature.new
 creature.extend(LoudCreature)
 creature.extend(QuietCreature)
 
-pp creature.rawr
+pp creature.rawr; puts
 
 
-puts
 
 
 creature = Creature.new
 pp creature.rawr
 
 
-puts
 
 
 class Creature
@@ -88,10 +84,9 @@ class Creature
 end
 
 creature = Creature.new
-pp creature.rawr
+pp creature.rawr; puts
 
 
-puts
 
 
 class Creature
@@ -103,10 +98,9 @@ class Creature
 end
 
 creature = Creature.new
-pp creature.rawr
+pp creature.rawr; puts
 
 
-puts
 
 
 class Creature
@@ -118,15 +112,14 @@ end
 creature = Creature.new
 
 pp creature.rawr
-pp creature.rawor
+pp creature.rawor; puts
 
 
-puts
 
 
 module Beast
   def method_missing(method, *args, &block)
-    "I haven't learned to #{method} yet :("
+    "I haven't learned to #{method} yet"
   end
 end
 

@@ -19,11 +19,13 @@ class Commander
   end
 end
 
+
+
 commander = Commander.new
 array     = Array.new(10) { Robot.new }
 
 10.times do
-  pp "\e[H\e2J"
+  pp '\e[H\e2J'
 
   12.downto(-12) do |y|
     -30.upto(30) do |x|

@@ -5,7 +5,7 @@ end
 
 
 def print_name(first_name, last_name)
-  puts "#{first_name} #{last_name}"
+  pp "#{first_name} #{last_name}"
 end
 
 def read_and_print_name
@@ -26,7 +26,7 @@ class FullName
   end
 
   def print
-    puts "#{@first_name} #{@last_name}"
+    pp "#{@first_name} #{@last_name}"
   end
 end
 

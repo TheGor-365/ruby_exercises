@@ -4,7 +4,7 @@ class Square
   end
 
   def area
-    @width * @width
+    pp @width * @width
   end
 end
 
@@ -12,4 +12,4 @@ end
 
 square = Square.new 23
 
-puts square.area
+square.area

@@ -1,10 +1,8 @@
 require 'active_support/all'
 
 pp Object.const_get 'Module'
-pp Object.const_get 'Class'
+pp Object.const_get 'Class'; puts
 
-
-puts
 
 
 pp 'Module'.constantize

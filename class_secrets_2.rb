@@ -22,7 +22,7 @@ class Animal
 
     def find(term = '')
       driver    = Selenium::WebDriver.for :firefox
-      full_term = self.prepare_uri term + " " + self.name.downcase
+      full_term = self.prepare_uri term + ' ' + self.name.downcase
 
       driver.get "https://ddg.gg/?q=#{full_term}"
     end
@@ -42,23 +42,19 @@ end
 
 
 
-pp Animal.singleton_class
+pp Animal.singleton_class; puts
 
-puts
 
 pp Animal.singleton_class.instance_methods.respond_to? :find
-pp Animal.singleton_class.instance_methods.grep /fin/
+pp Animal.singleton_class.instance_methods.grep /fin/; puts
 
-puts
 
 pp Cat.singleton_class
-pp Cat.singleton_class.superclass
+pp Cat.singleton_class.superclass; puts
 
-puts
 
 pp Cat.singleton_class.instance_methods.respond_to? :find
-pp Cat.singleton_class.instance_methods.grep /fin/
+pp Cat.singleton_class.instance_methods.grep /fin/; puts
 
-puts
 
 pp Cat.avg_height = 20

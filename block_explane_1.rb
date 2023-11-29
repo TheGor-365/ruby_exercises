@@ -1,25 +1,19 @@
-greetings = ['hi', 'howdy', 'hello', 'yooo', 'wasup']
+greetings = %w[ hi howdy hello yooo wasup ]
 
 
-greetings.length.times do |greeting|
-  puts '-----------'
-  puts greeting + 1
-  puts '-----------'
+greetings.length.times do |greeting_index|
+  pp greeting_index
 
-  puts greetings.sample
-  puts greetings[greeting]
-end
+  pp greetings.sample
+  pp greetings[greeting_index]; puts
+end; puts
 
-
-puts
 
 
 greetings.each do |greeting|
-  puts greeting
-end
+  pp greeting
+end; puts
 
-
-puts
 
 
 formatted_greetings = greetings.map do |greeting|
@@ -27,5 +21,5 @@ formatted_greetings = greetings.map do |greeting|
 end
 
 formatted_greetings.each do |greeting|
-  puts greeting
+  pp greeting
 end

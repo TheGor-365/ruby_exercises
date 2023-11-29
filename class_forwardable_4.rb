@@ -22,10 +22,8 @@ decorated_user_2 = UserDecorator.new(User.new('Gor', 'Khachatryan'))
 
 pp decorated_user_1.first_name
 pp decorated_user_1.last_name
-pp decorated_user_1.full_name
+pp decorated_user_1.full_name; puts
 
-
-puts
 
 
 pp decorated_user_2.first_name

@@ -23,28 +23,22 @@ end
 first_truck = Truck.new('Honda', 2000)
 
 first_truck.make
-first_truck.year
+first_truck.year; puts
 
-
-puts
 
 
 second_truck = Truck.new('RAM', 2012)
 
 second_truck.make
-second_truck.year
+second_truck.year; puts
 
-
-puts
 
 
 second_truck = Truck.new
 
 second_truck.make
-second_truck.year
+second_truck.year; puts
 
-
-puts
 
 
 Truck.default_make

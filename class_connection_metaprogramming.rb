@@ -14,34 +14,31 @@ class Connection
   add_connection_variable :something
 end
 
+
 pp connection = Connection.new
 
 pp connection.timeout = 4
-pp connection.instance_variables
+pp connection.instance_variables; puts
 
-
-puts
 
 
 pp connection.protocol
 pp connection.protocol = 'qnq'
-pp connection.instance_variables
+pp connection.instance_variables; puts
 
-
-puts
 
 
 pp connection
 pp connection.protocol = 'ssh'
-pp connection
+pp connection; puts
 
-
-puts
 
 
 pp connection.something
 connection.something = 'something else'
-pp connection.something
+pp connection.something; puts
+
+
 
 pp connection.instance_variables
 pp connection

@@ -1,11 +1,12 @@
 class ApplicationError
   def display_error
-    puts 'Error! Error!'
+    pp 'error'
   end
 end
 
 class SuperBadError < ApplicationError
 end
+
 
 error = SuperBadError.new
 error.display_error

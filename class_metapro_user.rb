@@ -25,4 +25,5 @@ user_2 = User.new
 pp user_2.name
 pp user_2.birthday
 pp user_2.active; puts
+
 pp user_2.attributes

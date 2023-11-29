@@ -1,10 +1,10 @@
 def get_website_contents
-  puts '<body>'
+  pp '<body>'
   yield
-  puts '</body>'
+  pp '</body>'
 end
 
 get_website_contents do
-  puts 'something!!!'
-  puts 'i want more'
+  pp 'something!!!'
+  pp 'i want more'
 end

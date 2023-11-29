@@ -38,12 +38,12 @@ def stats
 end
 
 10.times do
-  puts 'First team attack...'
+  puts 'First team attack'
   attack @array_2
   exit if victory?
   stats; sleep 1; puts
 
-  puts 'Second team attack...'
+  puts 'Second team attack'
   attack @array_1
   exit if victory?
   stats; sleep 1

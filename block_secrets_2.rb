@@ -8,11 +8,8 @@ def my_method(message, callable_1, callable_2)
   pp message
 end
 
-my_method 'Calling block...', ->(message) { puts message }, ->(message) { puts message.upcase.inspect }
+my_method('calling block', -> (message) { pp message }, -> (message) { pp message.upcase }); puts
 
-
-
-puts
 
 
 
@@ -21,13 +18,13 @@ def secondary_method
 end
 
 def my_method(message, callable_1, callable_2)
-  callable_1.call('Hello man')
+  callable_1.call('hello man')
   callable_2.call(message)
+  pp message
 end
 
-my_lambda_1 = ->(message) { puts message }
-my_lambda_2 = ->(message) { puts message }
+lambda_1 = -> (message) { pp message }
+lambda_2 = -> (message) { pp message }
+message  = 'calling block'
 
-message = 'Calling block...'
-
-my_method message, my_lambda_1, my_lambda_2
+my_method(message, lambda_1, lambda_2)

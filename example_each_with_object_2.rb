@@ -9,6 +9,7 @@ pp hash; puts
 
 
 
+
 array = %w[ <John's Person instance> <Marcel's Person instance> <Emmy's Person instance> ]
 
 hash = array.each_with_object({}).with_index do |(element, hash), index|
@@ -16,6 +17,7 @@ hash = array.each_with_object({}).with_index do |(element, hash), index|
 end
 
 pp hash; puts
+
 
 
 

@@ -78,13 +78,12 @@ airport_2.add_planes plane_5
 airport_2.add_planes plane_6
 
 pp airport_1.name
-pp airport_2.name
+pp airport_2.name; puts
 
 pp airport_1.planes
-pp airport_2.planes
+pp airport_2.planes; puts
 
 
-puts
 
 
 countries.each do |country|
@@ -93,10 +92,9 @@ countries.each do |country|
   country.airports.each do |airport|
     puts "Airport #{airport}"
   end
-end
+end; puts
 
 
-puts
 
 
 airports.each do |airport|

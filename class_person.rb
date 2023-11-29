@@ -13,7 +13,7 @@ end
 
 
 
-matz = Person.new("Yukihiro")
-dhh  = Person.new("David")
+matz = Person.new('Yukihiro')
+dhh  = Person.new('David')
 
 pp "Number of Person instances: #{Person.number_of_instances}"

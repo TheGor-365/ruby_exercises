@@ -57,32 +57,27 @@ class Navigator
 
   def build_route(a, b)
     points = []
-    points = route_strategy.new.call a, b
+    points = route_strategy.new.call(a, b)
     points
   end
 end
 
+
 pp navigator = Navigator.new
 
 pp navigator.route_strategy = Walk
-pp navigator.build_route :a, :b
+pp navigator.build_route :a, :b; puts
 
-
-puts
 
 
 pp navigator.route_strategy = Car
-pp navigator.build_route :a, :b
+pp navigator.build_route :a, :b; puts
 
-
-puts
 
 
 pp navigator.route_strategy = Bus
-pp navigator.build_route :a, :b
+pp navigator.build_route :a, :b; puts
 
-
-puts
 
 
 pp navigator.route_strategy = Plane

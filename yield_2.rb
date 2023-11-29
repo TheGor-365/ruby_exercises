@@ -3,4 +3,4 @@ def double(number)
 end
 
 
-double(16) { |number| puts number * 2 }
+double(16) { |number| pp number * 2 }

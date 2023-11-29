@@ -50,5 +50,5 @@ end
 user = User.new('carl', 'smith', 29)
 pp user; puts
 
-notifier_service = NotifierService.new('sms', 'Hello there!!', user).notify
+notifier_service = NotifierService.new('sms', 'Hello there', user).notify
 pp notifier_service

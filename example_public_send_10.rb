@@ -1,8 +1,6 @@
 pp 3 + 4
-pp 3.send :+, 4
+pp 3.send :+, 4; puts
 
-
-puts
 
 
 class Book

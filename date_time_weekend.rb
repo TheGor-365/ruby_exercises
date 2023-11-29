@@ -13,7 +13,7 @@ end
 
 
 if week_day == 0 || week_day == 1
-  puts "#{time.strtime("%H:%M")} #{week_day}: it's weekend!"
+  pp "#{time.strtime("%H:%M")} #{week_day}: it's weekend"
 else
-  puts "Moscow #{time.strftime("%H:%M")}, #{week_day}: work, work, work!!!"
+  pp "Moscow #{time.strftime("%H:%M")}, #{week_day}: work, work, work"
 end

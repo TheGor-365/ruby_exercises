@@ -26,22 +26,20 @@ bus_nav = Navigator.new(:bus).build_route :a, :b
 pp bus_nav; puts
 
 
-pp Navigator.new(:bus).type
 
+pp Navigator.new(:bus).type; puts
 
-puts
 
 
 car_nav = Navigator.new
 pp car_nav; puts
 
 
+
 pp car_nav.build_route :c, :d
 pp car_nav.build_route :c
-pp car_nav.build_route :a, :b, :c, :d, :e
+pp car_nav.build_route :a, :b, :c, :d, :e; puts
 
-
-puts
 
 
 walk_nav = Navigator.new(:walk).build_route :a, :b

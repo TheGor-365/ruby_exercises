@@ -13,7 +13,7 @@ scores = {
 balance = 1000
 
 while true do
-  puts "Press Enter to play..."
+  puts 'Press Enter'
   gets
 
   combination = rand(100..999)
@@ -23,7 +23,7 @@ while true do
     balance = balance + scores[combination]
     puts "You win: plus $#{scores[combination]} to your balance"
   elsif balance <= 0
-    puts "You lose"; exit
+    puts 'You lose'; exit
   else
     balance -= 10
     puts "Minus $#{10}"

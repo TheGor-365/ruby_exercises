@@ -24,11 +24,8 @@ end
 
 song = Song.new
 
-song.send :song_title, 'Send', 'me', 'a', 'River'
+song.send :song_title, 'Send', 'me', 'a', 'River'; puts
 
-
-
-puts
 
 
 
@@ -75,18 +72,15 @@ class Package
   end
 end
 
+
 Package.new.can_sell_each
-Package.new.cannot_sell_each
+Package.new.cannot_sell_each; puts
 
-
-puts
 
 
 Package.new.send('can_sell_each')
-Package.new.send('cannot_sell_each')
+Package.new.send('cannot_sell_each'); puts
 
-
-puts
 
 
 Package.new.public_send('can_sell_each')

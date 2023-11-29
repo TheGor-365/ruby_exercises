@@ -8,7 +8,7 @@ class RandomEngine
   end
 
   def third
-    puts 'three'
+    pp 'three'
   end
 end
 
@@ -33,22 +33,22 @@ end
 
 
 pp random_engine = RandomEngine.get_random_value
-pp random_engine = RandomEngine.to_string
+pp random_engine = RandomEngine.to_string; puts
 
-puts
+
 
 pp random_engine_2 = RandomEngine.new
 pp random_engine_2.third
-pp random_engine_3 = RandomEngine.new.third
+pp random_engine_3 = RandomEngine.new.third; puts
 
-puts
+
 
 pp GameEngine.play
-pp GameEngine.show
+pp GameEngine.show; puts
 
-puts
+
 
 pp game_engine = GameEngine.play
-pp game_engine = GameEngine.show
+pp game_engine = GameEngine.show; puts
 
 pp game_engine

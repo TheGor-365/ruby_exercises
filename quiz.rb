@@ -3,12 +3,12 @@ name = ARGV[0]
 print 'Enter your name: '
 name = STDIN.gets.strip.capitalize
 
-while name == ""
+while name == ''
   print 'Enter your name: '
   name = STDIN.gets.strip.capitalize
 end
 
-puts "Hey #{name}, answer the questions..."
+puts "Hey #{name}, answer the questions"
 sleep 0.3
 
 questions = [
@@ -47,7 +47,7 @@ questions.each do |item|
   user_input = nil
 
   while user_input != 'Y' && user_input != 'N' && user_input != 'W'
-    print 'Enter your choice (Y)es, (N)o or (W)hatever: '
+    print 'Enter your choice ( Y )es, ( N )o or ( W )hatever: '
     user_input = STDIN.gets.strip.capitalize
   end
   yes_answers += 1 if user_input == 'Y'
@@ -57,9 +57,9 @@ puts "\n#{name}"
 puts "Your answers score is: #{yes_answers}"
 
 if yes_answers >= 10
-  puts results[0]
+  pp results[0]
 elsif yes_answers < 10 && yes_answers > 0
-  puts results[1]
+  pp results[1]
 elsif yes_answers <= 0
-  puts results[2]
+  pp results[2]
 end

@@ -23,13 +23,13 @@ loop do
   if scores[combination]
     result  = scores[combination]
     balance = result.call balance
-    puts "Lambda called"
+    puts 'Lambda called'
   else
     balance = sub_5.call balance
   end
 
   puts "Balance: $#{balance}"
-  puts 'Press Enter...'
+  puts 'Press Enter'
   gets
 
   break if balance <= 0

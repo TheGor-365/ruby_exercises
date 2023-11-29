@@ -1,7 +1,7 @@
 def each
   number = 0
 
-  while number < size
+  while number < 5
     yield at(number)
     number += 1
   end
@@ -9,11 +9,9 @@ end
 
 [1, 2, 3].each do |number|
   pp number
-end
+end; puts
 
 
-
-puts
 
 
 
@@ -21,7 +19,7 @@ def each
   return to_enum(:each) unless block_given?
   number = 0
 
-  while number < size
+  while number < 5
     yield at(number)
     number += 1
   end
@@ -29,11 +27,9 @@ end
 
 [1, 2, 3].each do |number|
   pp number.to_s
-end
+end; puts
 
 
-
-puts
 
 
 
@@ -43,17 +39,15 @@ def each_explicit(&block)
   return to_enum(:each) unless block
   number = 0
 
-  while number < size
-    block.call at(number)
+  while number < 5
+    block.call(number)
     number += 1
   end
 end
 
-# pp each_explicit {'2'}
+pp each_explicit {'2'}; puts
 
 
-
-puts
 
 
 
@@ -63,11 +57,9 @@ end
 
 my_proc = Proc.new { |number| pp "|#{number}|" }
 
-run_proc_with_random_number(my_proc)
+run_proc_with_random_number(my_proc); puts
 
 
-
-puts
 
 
 
@@ -75,11 +67,9 @@ def run_proc_with_random_number(&proc)
   proc.call rand(700...1600)
 end
 
-run_proc_with_random_number { |number| pp number * 23.15 }
+run_proc_with_random_number { |number| pp number * 23.15 }; puts
 
 
-
-puts
 
 
 
@@ -91,11 +81,8 @@ pp [1, 2, 3].map { |number| number.to_s }
 pp [1, 2, 3].map { |number| number.send(:to_s) }
 pp [1, 2, 3].map { |number| number.send :to_s }
 
-pp %w[ words upcased ].map { |number| number.send :upcase }
+pp %w[ words upcased ].map { |number| number.send :upcase }; puts
 
-
-
-puts
 
 
 
@@ -106,28 +93,28 @@ class Symbol
 end
 
 pp symbol = :symbol
-pp symbol.to_proc
+pp symbol.to_proc; puts
+
+
 
 
 
 def return_from_proc
   ten = Proc.new { return 10 }.call
 
-  puts "This #{ten} will never be printed."
+  pp "This #{ten} will never be printed"
 end
 
-return_from_proc
+return_from_proc; puts
 
 
-
-puts
 
 
 
 def return_from_lambda
   ten = lambda { return 10 }.call
 
-  puts "The lambda returned #{ten}, and this will be printed."
+  pp "The lambda returned #{ten}, and this will be printed"
 end
 
 return_from_lambda

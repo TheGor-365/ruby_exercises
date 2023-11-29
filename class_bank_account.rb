@@ -31,10 +31,8 @@ end
 checking_account = Account.new 'Gor', 100_000
 
 checking_account.display_balance 1234
-checking_account.display_balance 12345
+checking_account.display_balance 12345; puts
 
-
-puts
 
 
 checking_account.withdraw 1234, 345

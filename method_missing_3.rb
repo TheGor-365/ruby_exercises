@@ -5,7 +5,7 @@ module Albuquerque
 
   def method_missing(name)
     value = @actions[name]
-    puts "if you want to |#{name.upcase}| - you must call |#{value.upcase}|"
+    pp "if you want to |#{name.upcase}| - you must call |#{value.upcase}|"
   end
 end
 

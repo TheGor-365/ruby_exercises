@@ -6,7 +6,10 @@ whatsup do
   pp 'hi_2'
 end
 
-whatsup { pp 'hi_3' }
+whatsup { pp 'hi_3' }; puts
+
+
+
 
 def whatsup
   yield
@@ -16,11 +19,8 @@ whatsup do
   pp 'hi_4'
 end
 
-whatsup { pp 'hi_5' }
+whatsup { pp 'hi_5' }; puts
 
-
-
-puts
 
 
 
@@ -31,12 +31,9 @@ def reached
 end
 
 reached do
-  pp 'the yield'
-end
+  pp 'yield'
+end; puts
 
-
-
-puts
 
 
 
@@ -46,21 +43,15 @@ end
 
 how_old do |name, age|
   pp "#{name} #{age}"
-end
+end; puts
 
-
-
-puts
 
 
 
 [1, 2, 3].each do |number|
-  puts "Number #{number}"
-end
+  pp "number: #{number}"
+end; puts
 
-
-
-puts
 
 
 
@@ -68,11 +59,8 @@ def two(&block)
   pp "two is: #{block.call}"
 end
 
-two { 2 }
+two { 2 }; puts
 
-
-
-puts
 
 
 
@@ -85,13 +73,11 @@ def my_map(array)
   pp new_array
 end
 
-my_map([1, 2, 3]) do |number|
+my_map([5, 10, 15]) do |number|
   number ** 2
-end
+end; puts
 
 
-
-puts
 
 
 
@@ -99,11 +85,9 @@ def method_with_block(&block)
   block.call
 end
 
-method_with_block { pp "#{'calling block for'.upcase} method_with_block" }
+method_with_block { pp "#{'calling block for'.upcase} 'method_with_block' method" }; puts
 
 
-
-puts
 
 
 
@@ -116,26 +100,24 @@ class Car
 end
 
 car = Car.new do |c|
-  c.color = "Red"
+  c.color = 'red'
   c.doors = 4
 end
 
 pp car
-puts "color: #{car.color} \ndoors: #{car.doors}"; puts
+puts "COLOR: #{car.color}; DOORS: #{car.doors}"; puts
+
 
 Bus = Struct.new(:color, :doors, keyword_init: true)
-
-bus = Bus.new(color: 'Green', doors: 3) do |c|
+bus = Bus.new(color: 'green', doors: 3) do |c|
   c.color
   c.doors
 end
 
 pp bus
-puts "color: #{bus.color} \ndoors: #{bus.doors}"
+puts "COLOR: #{bus.color}; DOORS: #{bus.doors}"; puts
 
 
-
-puts
 
 
 
@@ -144,7 +126,7 @@ class Note
 
   def initialize(note=nil)
     @note = note
-    puts "@note is #{@note}"
+    pp "@note is '#{@note}'"
   end
 
   def self.create
@@ -155,23 +137,34 @@ class Note
   end
 
   def write
-    puts "Writing \"#{@note}\" to the database"
+    pp "Writing '#{@note}' to the database"
   end
 
   private
 
   def self.connect
-    puts 'Connecting to the db'
+    pp 'Connecting to the db'
   end
 
   def self.disconnect
-    puts 'Disconnecting from the db'
+    pp 'Disconnecting from the db'
   end
 end
 
 
+note = Note.create { 'H-E-L-L-O' }; puts
 
-note = Note.create { 'Hello' }; puts
+note = Note.create do |s|
+  s
+end; puts
+
 note = Note.create do |s|
   s.inspect
-end
+end; puts
+
+note = Note.create do |s|
+  s
+  'S-E-E-Y-A-A'
+end; puts
+
+pp note

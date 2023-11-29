@@ -1,15 +1,11 @@
-pp 'Do you like cats?' =~ /like/
+pp 'Do you like cats?' =~ /like/; puts
 
-
-puts
 
 
 if 'Do you like cats?'.match(/like/)
   puts 'Match found'
-end
+end; puts
 
-
-puts
 
 
 def contains_vowel(string)
@@ -17,10 +13,8 @@ def contains_vowel(string)
 end
 
 pp contains_vowel('test')
-pp contains_vowel('sky')
+pp contains_vowel('sky'); puts
 
-
-puts
 
 
 def contains_number(string)
@@ -28,18 +22,14 @@ def contains_number(string)
 end
 
 pp contains_number('The year is 2015')
-pp contains_number('The cat is black')
+pp contains_number('The cat is black'); puts
 
-
-puts
 
 
 pp '5a5'.match(/\d.\d/)
 pp '5a5'.match(/\d\.\d/)
-pp '5.5'.match(/\d\.\d/)
+pp '5.5'.match(/\d\.\d/); puts
 
-
-puts
 
 
 def ip_address?(string)
@@ -47,17 +37,13 @@ def ip_address?(string)
 end
 
 pp ip_address?('192.168.1.1')
-pp ip_address?('0000.0000')
+pp ip_address?('0000.0000'); puts
 
-
-puts
 
 
 pp 'Regex are cool'.match /\w{4}/
-pp 'Regex are cool'.match /^\w{4}$/
+pp 'Regex are cool'.match /^\w{4}$/; puts
 
-
-puts
 
 
 Line = Struct.new(:time, :type, :msg)
@@ -67,48 +53,31 @@ def parse_line(line)
   line.match(LOG_FORMAT) { |m| Line.new(*m.captures) }
 end
 
-pp parse_line('12:41 INFO User has logged in.')
+pp parse_line('12:41 INFO User has logged in.'); puts
 
-
-puts
 
 
 pp (m = 'John 31'.match /\w+ (\d+)/)
-pp m[1]
+pp m[1]; puts
 
 
-puts
-
-
-# pp (m = "David 30".match /(?\w+) (?\d+)/)
-# pp m[:age]
-# pp m[:name]
-
-
-puts
 
 
 def number_after_word?(string)
   !!(string =~ /(?<=\w) (\d+)/)
 end
-pp number_after_word?('Grade 99')
+pp number_after_word?('Grade 99'); puts
 
-
-puts
 
 
 puts /a/.class
 pp regexp = Regexp.new('a')
-pp regexp = %r{\w+}
+pp regexp = %r{\w+}; puts
 
 
-puts
 
+pp "abc".match?(/[A-Z]/i); puts
 
-pp "abc".match?(/[A-Z]/i)
-
-
-puts
 
 
 pp 'this is some string'.scan(/\w+/)

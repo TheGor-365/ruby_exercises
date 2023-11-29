@@ -22,7 +22,12 @@ end
 
 
 
-models = ['Airbus-320', 'Boeing-777', 'Il-86']
+models = %w[
+  Airbus-320
+  Boeing-777
+  Il-86
+]
+
 planes = []
 
 100.times do
@@ -31,6 +36,7 @@ planes = []
 
   plane.fly if rand(0..1) == 1
   plane.speed = rand(500..800)
+
   planes << plane
 end
 

@@ -1,22 +1,19 @@
 class User
   def full_name
-    puts "Johnnie Walker"
+    pp 'Johnnie Walker'
   end
 
   alias name full_name
 end
 
-pp User.new.name
+pp User.new.name; puts
 
-
-
-puts
 
 
 
 class User
   def full_name
-    puts "Johnnie Walker"
+    pp 'Johnnie Walker'
   end
 
   alias_method :name, :full_name

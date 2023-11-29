@@ -46,13 +46,13 @@ airport_2.add_planes plane5
 airport_2.add_planes plane6
 
 puts airport_1.name
-puts airport_2.name
+puts airport_2.name; puts
 
-puts airport_1.planes
-puts airport_2.planes
+airport_1.planes.each { |plane| pp plane.model }; puts
+
+pp airport_2.planes; puts
 
 
-puts
 
 
 airports.each do |airport|

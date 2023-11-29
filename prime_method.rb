@@ -6,7 +6,7 @@ def prime(number)
     is_prime = false if number % num == 0
   end
 
-  is_prime ? (puts "#{number} is prime") : (puts "#{number} is not prime")
+  is_prime ? (pp "#{number} is prime") : (pp "#{number} is not prime")
 end
 
 

@@ -16,6 +16,7 @@ pp something; puts
 
 
 
+
 module SomethingIn
   def method_missing(method_name, *arguments)
     arguments.each { |argument| pp argument }
@@ -26,15 +27,12 @@ class Names
   include SomethingIn
 end
 
-
 something = Names.new
+
 pp something; puts
-
-something.method_with_custom_name 'Polly', 'Eric', 'John'
-
+something.method_with_custom_name 'Polly', 'Eric', 'John'; puts
 
 
-puts
 
 
 
@@ -50,8 +48,7 @@ class Names
   include SomethingHash
 end
 
-
 something = Names.new
-pp something; puts
 
+pp something; puts
 something.method_with_custom_name polly: 'Polly', eric: 'Eric', john: 'John'

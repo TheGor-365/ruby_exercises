@@ -29,18 +29,14 @@ class TestInstanceVariables
 end
 
 
-pp TestInstanceVariables.class_method
+pp TestInstanceVariables.class_method; puts
 
-puts
 
 test_inatance_variables = TestInstanceVariables.new
+pp test_inatance_variables; puts
 
-pp test_inatance_variables
 
-puts
+pp test_inatance_variables.instance_method; puts
 
-pp test_inatance_variables.instance_method
-
-puts
 
 pp TestInstanceVariables.class_method

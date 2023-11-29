@@ -47,7 +47,7 @@ array     = Array.new(10) { Robot.new }
 array.push(Dog.new x: -12, y: 12)
 
 10.times do
-  pp "\e[H\e[2J"
+  pp '\e[H\e[2J'
 
   12.downto(-12) do |y|
     -12.upto(12) do |x|
@@ -66,5 +66,5 @@ array.push(Dog.new x: -12, y: 12)
 
   array.each do |somebody|
     commander.move somebody
-  end; sleep 0.05
+  end
 end

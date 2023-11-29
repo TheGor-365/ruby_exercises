@@ -17,5 +17,5 @@ loop do
   hash.each do |name, value|
     total = total + value
   end
-  puts "Total items in cart: #{total}"; puts
+  pp "Total items in cart: #{total}"; puts
 end

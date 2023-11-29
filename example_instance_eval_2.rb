@@ -6,10 +6,8 @@ end
 mail do |f|
   f.subject @subject
   f.name    name
-end
+end; puts
 
-
-puts
 
 
 def mail(&block)

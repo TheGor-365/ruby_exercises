@@ -1,8 +1,5 @@
-pp ['a', 'b', 'c', 'b'].tally
+pp %w[ a b c b ].tally; puts
 
-
-
-puts
 
 
 
@@ -11,11 +8,8 @@ order_two = %i{ sharpener eraser eraser eraser eraser sharpener sharpener sharpe
 
 pp tally_one    = order_one.tally
 pp tally_two    = order_two.tally
-pp weekly_tally = (order_one + order_two).tally
+pp weekly_tally = (order_one + order_two).tally; puts
 
-
-
-puts
 
 
 
@@ -24,11 +18,8 @@ order_two = %i{ sharpener eraser eraser eraser eraser sharpener sharpener sharpe
 
 pp weekly_tally = {}
 pp weekly_tally = order_one.tally
-pp weekly_tally = order_two.tally
+pp weekly_tally = order_two.tally; puts
 
-
-
-puts
 
 
 
@@ -36,22 +27,16 @@ puts
 order = %i{ pen pencil eraser sharpener pen pen }
 
 pp tally = order.tally
-pp tally[:ruler]
+pp tally[:ruler]; puts
 
-
-
-puts
 
 
 
 order = %i{ pen pencil eraser sharpener pen pen }
 
 pp tally = order.tally { puts 'Proc called' }
-pp tally[:ruler]
+pp tally[:ruler]; puts
 
-
-
-puts
 
 
 

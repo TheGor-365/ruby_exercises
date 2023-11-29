@@ -4,11 +4,11 @@ class Animal
   end
 
   def run
-    puts "#{@name} is running..."
+    pp "#{@name} is running"
   end
 
   def jump
-    puts "#{@name} is jumping..."
+    pp "#{@name} is jumping"
   end
 end
 
@@ -19,7 +19,7 @@ class Cat < Animal
   end
 
   def say_meow
-    puts 'Meow'
+    pp 'Meow'
   end
 end
 
@@ -30,7 +30,7 @@ class Dog < Animal
   end
 
   def say_woof
-    puts 'Woof'
+    pp 'Woof'
   end
 end
 
@@ -38,7 +38,7 @@ end
 cat = Cat.new
 
 cat.run
-cat.say_meow
+cat.say_meow; puts
 
 
 dog = Dog.new

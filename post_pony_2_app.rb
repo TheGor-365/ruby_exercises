@@ -9,7 +9,7 @@ password = STDIN.noecho(&:gets).chomp
 puts 'Whom send messege?'
 send_to = STDIN.gets.chomp
 
-puts "Input text: "
+puts 'Input text: '
 body = STDIN.gets.chomp
 
 Pony.mail(

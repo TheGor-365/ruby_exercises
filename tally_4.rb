@@ -1,4 +1,4 @@
-pp words = %w(the be to of and a in that have I it for not not not); puts
+words = %w(the be to of and a in that have I it for not not not); puts
 
 
 word_counts = {}

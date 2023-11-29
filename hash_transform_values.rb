@@ -4,11 +4,8 @@ hash = {
   shugar:    30
 }
 
-pp hash.each { |name, value| hash[name] = value * 5 }
+pp hash.each { |name, value| hash[name] = value * 5 }; puts
 
-
-
-puts
 
 
 
@@ -18,11 +15,8 @@ hash = {
   shugar:    30
 }
 
-pp hash.transform_values { |value| value * 5 }
+pp hash.transform_values { |value| value * 5 }; puts
 
-
-
-puts
 
 
 

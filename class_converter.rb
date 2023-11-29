@@ -9,8 +9,8 @@ class DollarRate
   end
 
   def self.menu
-    puts '1 = Convert rubles'
-    puts '2 = Convert dollars'
+    pp '1 = Convert rubles'
+    pp '2 = Convert dollars'
   end
 
   def convert
@@ -22,8 +22,8 @@ class DollarRate
   end
 
   def show_result
-    puts "The sum: #{@sum}"
-    puts "The converted sum: #{@result.round(2)}"
+    pp "sum: #{@sum}"
+    pp "converted sum: #{@result.round(2)}"
   end
 end
 
@@ -33,10 +33,8 @@ menu = DollarRate.menu; puts
 rate_1 = DollarRate.new 2, 349
 
 rate_1.convert
-rate_1.show_result
+rate_1.show_result; puts
 
-
-puts
 
 
 rate_2 = DollarRate.new 1, 65_678

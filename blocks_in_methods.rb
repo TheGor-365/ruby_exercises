@@ -8,44 +8,42 @@ def collection_filter(collection)
   pp result
 end
 
-my_collection = [ 1, 2, 3 ]
+numbers = [ 1, 2, 3, 4, 5 ]
 
-collection_filter(my_collection, &:even?)
+collection_filter(numbers, &:even?); puts
 
-my_collection.each do |element|
+
+
+
+
+numbers.each do |element|
   pp element.even?
-end
+end; puts
 
 
 
-puts
 
 
-
-collection_filter my_collection do |c|
+collection_filter numbers do |c|
   pp c.inspect
-end
+end; puts
 
 
 
-puts
 
 
+collection_filter(numbers, &:odd?)
 
-collection_filter(my_collection, &:odd?)
-
-my_collection.each do |element|
+numbers.each do |element|
   pp element.odd?
-end
+end; puts
 
 
 
-puts
 
 
+collection_filter(numbers, &:to_s)
 
-collection_filter(my_collection, &:to_s)
-
-my_collection.each do |element|
+numbers.each do |element|
   pp element.to_s
 end

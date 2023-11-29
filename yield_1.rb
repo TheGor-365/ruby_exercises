@@ -7,5 +7,5 @@ def yield_name(name)
 end
 
 
-yield_name('Eric') { |name| puts "My name is #{name}" }
-yield_name('Gor') {|name| puts "My name is #{name}"}
+yield_name('Eric') { |name| pp "My name is #{name}" }
+yield_name('Gor') {|name| pp "My name is #{name}"}

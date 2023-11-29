@@ -1,6 +1,6 @@
 def value_upcaser(params)
   params.each do |name, value|
-    puts "#{name}: #{value.upcase}"
+    pp "#{name}: #{value.upcase}"
   end
 end
 

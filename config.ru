@@ -17,7 +17,7 @@ class MyMiddleware
         [201, headers.merge({'x-created' => 'True'}), ['Item was successfully created']]
       end
     else
-      [404, {}, ["Not Found"]]
+      [404, {}, ['Not Found']]
     end
   end
 end
@@ -25,7 +25,7 @@ end
 class App
   def call(env)
     puts 'app_run'
-    [200, {}, ["success"]]
+    [200, {}, ['success']]
   end
 end
 

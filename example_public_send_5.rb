@@ -7,19 +7,15 @@ end
 pp full_name.send('count', 'i')
 pp full_name.send('size')
 pp full_name.send(:upcase)
-pp full_name.send(:downcase).split
+pp full_name.send(:downcase).split; puts
 
-
-puts
 
 
 pp full_name.public_send('count', 'i')
 pp full_name.public_send('size')
 pp full_name.public_send(:upcase)
-pp full_name.public_send(:downcase).split
+pp full_name.public_send(:downcase).split; puts
 
-
-puts
 
 
 display full_name

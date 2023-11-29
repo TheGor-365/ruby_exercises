@@ -8,11 +8,8 @@ hi_proc.call 'hi'
 hi_lambda.call 'hi'
 
 double_proc.call 5
-double_lambda.call 5
+double_lambda.call 5; puts
 
-
-
-puts
 
 
 
@@ -24,11 +21,8 @@ end
 block_proc = proc do |message|
   pp 'hi'
   return message
-end
+end; puts
 
-
-
-puts
 
 
 
@@ -39,6 +33,6 @@ def block_check(callable)
   pp "I have called #{callable}"
 end
 
-block_check hi_lambda
-block_check block_lambda
-block_check block_proc
+block_check(hi_lambda); puts
+block_check(block_lambda); puts
+block_check(block_proc)

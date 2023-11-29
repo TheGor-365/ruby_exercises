@@ -1,6 +1,4 @@
-class Employee
-
-end
+class Employee; end
 
 class Manager
   @@all = []

@@ -32,6 +32,7 @@ pp hi.singleton_class.instance_methods.include? :methodd; puts
 
 
 
+
 class SomeClass
   class << self
     def test_1
@@ -49,8 +50,9 @@ class << test_object
   end
 end
 
-pp "Singleton's methods of SomeClass"
-pp SomeClass.singleton_methods
 
-pp "Singleton's methods of test_object"
+pp 'Singleton methods of SomeClass'
+pp SomeClass.singleton_methods; puts
+
+pp 'Singleton methods of test_object'
 pp test_object.singleton_methods

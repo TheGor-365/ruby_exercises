@@ -12,7 +12,7 @@ pp cat.singleton_methods; puts
 One = Class.new
 
 def One.speak
-  "I'm class One"
+  'I am class One'
 end
 
 pp One.speak

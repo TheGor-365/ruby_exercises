@@ -23,7 +23,5 @@ class Klass
 end; puts
 
 
-klass = Klass.new.speak_up('Sarah')
-pp klass
-
-pp Klass.who_am_i
+Klass.new.speak_up('Sarah')
+Klass.who_am_i

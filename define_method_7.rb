@@ -4,11 +4,8 @@ define_method('first_example') do |fixed, default = {}|
 end
 
 first_example('Hello', key: :value)
-first_example('Hello')
+first_example('Hello'); puts
 
-
-
-puts
 
 
 

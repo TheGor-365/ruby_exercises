@@ -5,5 +5,7 @@ def even?(_number, &block)
 end
 
 numbers.each do |number|
-  even?(number) { pp "#{number} odd" }
+  even?(number) do
+    pp "#{number} odd"
+  end
 end

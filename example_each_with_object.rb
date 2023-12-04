@@ -94,7 +94,7 @@ pp upcased_animals_values; puts
 params = { one: 1, two: 2, three: 3, four: 4 }
 
 multipled_params = params.each_with_object({}) do |(key, value), hash|
-  hash[key] = value**2
+  hash[key] = value ** 2
 end
 
 params = params.each_with_object({}) do |(key, value), hash|

@@ -13,7 +13,7 @@ class Truck
     pp @year || self.class.default_make
   end
 
-  def initialize(make = nil, year = nil)
+  def initialize(make=nil, year=nil)
     self.make, self.year = make, year
   end
 end

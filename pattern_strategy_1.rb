@@ -22,6 +22,7 @@ class Navigator
   end
 end
 
+
 bus_nav = Navigator.new(:bus).build_route :a, :b
 pp bus_nav; puts
 

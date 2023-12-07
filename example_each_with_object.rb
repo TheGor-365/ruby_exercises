@@ -14,6 +14,7 @@ pp cars_hashes; puts
 
 
 
+
 numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
 multipled_numbers = numbers.each_with_object([]) do |item, array|
@@ -21,6 +22,7 @@ multipled_numbers = numbers.each_with_object([]) do |item, array|
 end
 
 pp multipled_numbers; puts
+
 
 
 
@@ -37,6 +39,7 @@ pp multipled_gig_nums; puts
 
 
 
+
 words = %w[ one two one one two one one three ]
 
 words_counts = words.each_with_object(Hash.new(0)) do |item, hash|
@@ -44,6 +47,7 @@ words_counts = words.each_with_object(Hash.new(0)) do |item, hash|
 end
 
 pp words_counts; puts
+
 
 
 
@@ -68,6 +72,7 @@ pp bes_way_sum; puts
 
 
 
+
 ids = [ 34, 54, 56, 87, 98 ]
 
 multipled_ids = ids.inject([]) do |array, item|
@@ -75,6 +80,7 @@ multipled_ids = ids.inject([]) do |array, item|
 end
 
 pp multipled_ids; puts
+
 
 
 
@@ -91,18 +97,25 @@ pp upcased_animals_values; puts
 
 
 
+
 params = { one: 1, two: 2, three: 3, four: 4 }
 
 multipled_params = params.each_with_object({}) do |(key, value), hash|
   hash[key] = value ** 2
 end
 
+pp multipled_params; puts
+
+
+
+
+
 params = params.each_with_object({}) do |(key, value), hash|
   hash[key] = "#{key} is #{value}"
 end
 
-pp multipled_params
 pp params; puts
+
 
 
 

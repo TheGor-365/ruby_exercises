@@ -25,9 +25,9 @@ def display_3
   yield 'whatsup_3'
 end
 
-my_lambda = -> (message) { pp message.upcase }
+lambda = -> (message) { pp message.upcase }
 
-display_3(&my_lambda); puts
+display_3(&lambda); puts
 
 
 
@@ -41,4 +41,4 @@ def display_4(message, &block)
   secondary_method(&block)
 end
 
-display_4('whatsup_4', &my_lambda)
+display_4('whatsup_4', &lambda)

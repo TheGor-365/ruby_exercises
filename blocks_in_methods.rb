@@ -1,14 +1,13 @@
+numbers = [ 1, 2, 3, 4, 5 ]
+
+
 def collection_filter(collection)
   result = []
-
   collection.each do |element|
     result << element if yield(element)
   end
-
   pp result
 end
-
-numbers = [ 1, 2, 3, 4, 5 ]
 
 collection_filter(numbers, &:even?); puts
 
@@ -16,34 +15,46 @@ collection_filter(numbers, &:even?); puts
 
 
 
+result = []
 numbers.each do |element|
-  pp element.even?
-end; puts
-
-
-
-
-
-collection_filter numbers do |c|
-  pp c.inspect
-end; puts
-
-
-
-
-
-collection_filter(numbers, &:odd?)
-
-numbers.each do |element|
-  pp element.odd?
-end; puts
-
-
-
-
-
-collection_filter(numbers, &:to_s)
-
-numbers.each do |element|
-  pp element.to_s
+  result << element.even?
 end
+pp result; puts
+
+
+
+
+
+collection_filter numbers do |number|
+  number.inspect
+end; puts
+
+
+
+
+
+collection_filter(numbers, &:odd?); puts
+
+
+
+
+
+odds = []
+numbers.each do |element|
+  odds << element.odd?
+end
+pp odds; puts
+
+
+
+
+collection_filter(numbers, &:to_s); puts
+
+
+
+
+string = []
+numbers.each do |element|
+  string << element.to_s
+end
+string.inspect

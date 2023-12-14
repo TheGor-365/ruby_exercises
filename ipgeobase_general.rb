@@ -1,6 +1,6 @@
-require_relative "ipgeobase_general_happymapper"
-require "addressable/template"
-require "net/http"
+require_relative 'ipgeobase_general_happymapper'
+require 'addressable/template'
+require 'net/http'
 
 module Ipgeobase
   class << self

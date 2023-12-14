@@ -61,6 +61,7 @@ countries << country_1
 countries << country_2
 countries << country_3
 
+
 plane_1 = Plane.new 'Boeing-777'
 plane_2 = Plane.new 'Airbus-320'
 plane_3 = Plane.new 'Il-80'
@@ -76,6 +77,7 @@ airport_1.add_planes plane_3
 airport_2.add_planes plane_4
 airport_2.add_planes plane_5
 airport_2.add_planes plane_6
+
 
 pp airport_1.name
 pp airport_2.name; puts

@@ -1,13 +1,13 @@
-require "addressable/template"
+require 'addressable/template'
 require 'happymapper'
 require 'net/http'
 
 module Ipgeobase
   class << self
     def lookup(ip)
-      lookup_uri = Addressable::Template.new("http://{host}{/segments*}{?fields}").expand({
+      lookup_uri = Addressable::Template.new('http://{host}{/segments*}{?fields}').expand({
         'host'     => 'ip-api.com',
-        'segments' => ['xml', "#{ip}"],
+        'segments' => ['xml', ip],
         'fields'   => 'country,countryCode,city,lat,lon'
       })
 

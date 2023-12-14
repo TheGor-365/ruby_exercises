@@ -1,7 +1,7 @@
 module Cat
   def self.my_attr_accessor(*attributes)
     attributes.each do |attribute|
-      define_method "#{attribute}" do
+      define_method attribute do
         self.instance_variable_get "@#{attribute}"
       end
       define_method "#{attribute}=" do |value|

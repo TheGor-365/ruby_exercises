@@ -16,7 +16,7 @@ while (line = input.gets)
   if is_wrong_password? line
     puts '- Error'
   else
-    puts '- Found!'
+    puts '- Found'
     input.close; exit
   end
 end

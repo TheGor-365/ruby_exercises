@@ -6,10 +6,8 @@ users = [
 
 users.each do |user|
   pp user[:address][:city] if user[:address]
-end
+end; puts
 
-
-puts
 
 
 users.each do |user|

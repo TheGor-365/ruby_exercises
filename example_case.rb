@@ -52,5 +52,5 @@ when 'delete'
     puts "#{title} has been removed"
   end
 else
-  puts "Sorry, I didn't understand you"
+  puts 'Sorry, I did not understand you'
 end

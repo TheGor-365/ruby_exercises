@@ -7,4 +7,4 @@ end
 plus_one = proc { |number| number + 1 }
 double   = proc { |number| number * 2 }
 
-apply_blocks(5, [plus_one, double])
+apply_blocks(5, [ plus_one, double ])

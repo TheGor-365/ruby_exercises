@@ -1,4 +1,4 @@
-require "addressable/template"
+require 'addressable/template'
 require 'happymapper'
 require 'net/http'
 

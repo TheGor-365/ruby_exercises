@@ -29,6 +29,7 @@ airport_2 = Airport.new 'DME'
 airports << airport_1
 airports << airport_2
 
+
 plane_1 = Plane.new 'Boeing-777'
 plane_2 = Plane.new 'Airbus-320'
 plane_3 = Plane.new 'Il-80'
@@ -44,6 +45,7 @@ airport_1.add_planes plane_3
 airport_2.add_planes plane4
 airport_2.add_planes plane5
 airport_2.add_planes plane6
+
 
 puts airport_1.name
 puts airport_2.name; puts

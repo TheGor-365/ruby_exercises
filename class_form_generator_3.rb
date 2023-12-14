@@ -14,7 +14,7 @@ module HexletCode
       end
 
       form << "<form "
-      form_attributes.present? ? (form << "#{form_attributes.join(' ')}") : (form << "method='post'")
+      form << (form_attributes.present? ? "#{form_attributes.join(' ')}" : "method='post'")
       form << ">\n\t"
       form << "#{input(struct)}\n"
       form << "</form>"

@@ -5,20 +5,20 @@ rating[:Gor] = 32
 pp rating
 pp [:Gor]
 pp rating[:Gor]
-pp "#{:Gor} #{rating[:Gor]}"
+pp "#{:Gor} #{rating[:Gor]}"; puts
 
-puts
-puts
+
+
 
 
 puts 'New Hash'
 hash = {}
 hash[:Gor] = 'cool man', 'realy'
 
-pp "#{:Gor} #{hash[:Gor][0]}, #{hash[:Gor][1]}"
+pp "#{:Gor} #{hash[:Gor][0]}, #{hash[:Gor][1]}"; puts
 
-puts
-puts
+
+
 
 
 puts 'New Hash'
@@ -38,19 +38,19 @@ end
 
 hash.each_key do |name|
   pp "#{name} #{hash[name]}"
-end
+end; puts
 
-puts
-puts
+
+
 
 
 puts 'Hash x'
 hash = Hash.new('Gor')
 
-pp hash
+pp hash; puts
 
-puts
-puts
+
+
 
 
 puts 'delete key'
@@ -59,10 +59,10 @@ hash.delete('a')
 
 hash.each do |name, value|
   pp "#{name} #{value}"
-end
+end; puts
 
-puts
-puts
+
+
 
 
 puts 'delete value'
@@ -71,10 +71,10 @@ hash.delete(100)
 
 hash.each do |name, value|
   pp "#{name} #{value}"
-end
+end; puts
 
-puts
-puts
+
+
 
 
 puts 'delete found'

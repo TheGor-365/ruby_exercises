@@ -1,11 +1,11 @@
-require "addressable/template"
+require 'addressable/template'
 require 'happymapper'
 require 'net/http'
 
 
 class Ipgeobase
   def self.lookup(ip)
-    query = "fields=country,countryCode,city,lat,lon"
+    query = 'fields=country,countryCode,city,lat,lon'
     lookup = URI.parse "http://ip-api.com/xml/#{ip}?#{query}"
     HappyMapper.parse Net::HTTP.get lookup
   end

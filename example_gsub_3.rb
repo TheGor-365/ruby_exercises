@@ -1,7 +1,4 @@
-pp 'dog'.gsub(/\w+/) { |animal| animal == 'dog' ? 'cat' : 'dog' }
-
-
-puts
+pp 'dog'.gsub(/\w+/) { |animal| animal == 'dog' ? 'cat' : 'dog' }; puts
 
 
 colors = {

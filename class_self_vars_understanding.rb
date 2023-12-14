@@ -1,8 +1,8 @@
 class Employee; end
 
 class Manager
-  @@all = []
   attr_accessor :name, :department, :age
+  @@all = []
 
   def initialize(name, department, age)
     @name, @department, @age = name, department, age

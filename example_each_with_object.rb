@@ -4,11 +4,16 @@ upcased_cars_hashes = cars.each_with_object({}) do |item, hash|
   hash[item] = item.to_s.upcase
 end
 
+pp upcased_cars_hashes
+
+
+
+
+
 cars_hashes = cars.each_with_object({}) do |(name, value), hash|
   hash[name] = "#{name} and #{value}"
 end
 
-pp upcased_cars_hashes
 pp cars_hashes; puts
 
 

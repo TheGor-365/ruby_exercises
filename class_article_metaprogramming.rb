@@ -15,7 +15,6 @@ article = Article.new(
   author:  'John',
   chapter: 'first'
 )
-
 pp article; puts
 
 
@@ -40,10 +39,10 @@ pp article.author; puts
 
 
 
+
 article_3 = Article.new(title: 'Proper', author: 'Eric') do |param|
   param.title
 end
-
 pp article_3; puts
 
 

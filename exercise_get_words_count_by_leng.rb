@@ -9,17 +9,10 @@ def get_words_count_by_lang(data)
   result
 end
 
+
 text = 'php ruby php java javascript go go go'
 
 
 pp get_words_count_by_lang(text)
 
-# simple solution: data.split.tally
-
-# {
-#   php: 2,
-#   ruby: 1,
-#   java: 1,
-#   javascript: 1,
-#   go: 3
-# }
+pp text.split.tally

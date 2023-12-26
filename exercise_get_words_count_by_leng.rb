@@ -14,5 +14,4 @@ text = 'php ruby php java javascript go go go'
 
 
 pp get_words_count_by_lang(text)
-
 pp text.split.tally

@@ -74,13 +74,12 @@ end
 
 
 
-def new_map(array)
-  new_array = []
-
+def new_map(array, *new_array)
   array.each do |item|
     new_array << yield(item)
   end; new_array
 end
+
 
 numbers = [ 1, 2, 3, 4 ]
 
@@ -89,9 +88,10 @@ result = new_map(numbers) do |item|
 end
 pp result
 
+
 words = %w[ cat hat bat ]
 
-result = new_map words do |item|
+result = new_map(words) do |item|
   item.capitalize
 end
 pp result

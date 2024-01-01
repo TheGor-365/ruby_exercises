@@ -235,4 +235,22 @@ class Array
   end
 end
 
-pp [ 1, 2, 3, 4, 5, 6 ].my_select { |element| element.even? }
+pp [ 1, 2, 3, 4, 5, 6 ].my_select { |element| element.even? }; puts
+
+
+
+
+
+
+
+module ModuleArray
+  def my_select
+    array = []
+
+    self.each do |item|
+      array << item if yield(item)
+    end; array
+  end
+end
+
+pp [ 1, 2, 3, 4, 5, 6 ].my_select { |element| element.odd? }

@@ -1,8 +1,8 @@
 require 'ostruct'
 
 
-def make_salad
-  array = []
+
+def make_salad(*array)
   array << yield('lettuce')
   array << yield('carrots')
   array << yield('olive oil')
@@ -40,9 +40,7 @@ pp result; puts
 
 
 
-def make_salad(ingredients)
-  new_array = []
-
+def make_salad(ingredients, *new_array)
   for ingredient in ingredients
     new_array.push yield ingredient
   end; new_array

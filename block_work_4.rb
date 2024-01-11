@@ -73,7 +73,8 @@ salad = Salad.new do |s|
   s.ingredient = 'olive-oil'
 end
 
-pp salad.ingredient; puts
+pp salad.ingredient
+pp salad; puts
 
 
 
@@ -159,7 +160,7 @@ class Collection
   end
 
   def each
-    @items.each { |item| yield item.upcase }
+    @items.each { |item| yield item.upcase! }
   end
 end
 
@@ -190,22 +191,19 @@ pp result; puts
 
 
 
-def conditional_yield(flag)
-  array = []
+def conditional_yield(flag, *array)
   array << yield if flag
-  pp array
 end
 
-conditional_yield(true) { 'Yielded' }
-conditional_yield(false) { 'Not yielded' }; puts
+pp conditional_yield(true) { 'Yielded' }
+pp conditional_yield(false) { 'Not yielded' }; puts
 
 
 
 
 
 
-def yield_return_value
-  array = []
+def yield_return_value(*array)
   result = yield
   array << "Block returned: #{result}"
 end
@@ -248,8 +246,7 @@ pp conditional_yield { 3 > 5 }; puts
 
 
 
-def descriptive_yield
-  array = []
+def descriptive_yield(*array)
   array << yield(age: 30, name: 'Alice')
 end
 
@@ -332,6 +329,7 @@ object = Object.new
 def object.each
   yield 1
   yield 2
+  yield 'word'
 end
 
 array = []

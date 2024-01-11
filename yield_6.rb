@@ -43,7 +43,6 @@ class Fruit
   def each(*array)
     array << 'inside each'
     array << 3.times { yield (@kinds.tap { |kinds| "selecting from #{kinds}"}).sample }
-    pp array
   end
 end
 
@@ -54,5 +53,5 @@ result = fruit.each do |kind|
   array << 'inside block ' + kind
 end
 
-pp fruit.kinds; puts '&'
+pp fruit.kinds
 pp array

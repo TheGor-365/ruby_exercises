@@ -47,9 +47,8 @@ end
 
 
 
-def fib_up_to(max)
+def fib_up_to(max, *result)
   number_1, number_2 = 1, 1
-  result = []
 
   while number_1 <= max
     result << yield(number_1)
@@ -74,9 +73,8 @@ class Array
   end
 end
 
-array = [ 1, 3, 5, 7, 9 ]
-
-result = array.find { |value| value*value > 30 }
+array  = [ 1, 3, 5, 7, 9 ]
+result = array.find { |value| value * value > 30 }
 
 pp result; puts
 
@@ -115,8 +113,7 @@ def many_yields
   yield(:jelly)
 end
 
-def test_methods_can_call_yield_many_times
-  result = []
+def test_methods_can_call_yield_many_times(*result)
   many_yields { |item| result << item }
 end
 
@@ -149,8 +146,8 @@ class Example
     second_method { yield }
   end
 
-  def second_method
-    yield
+  def second_method(*array)
+    array << yield
   end
 end
 
@@ -173,7 +170,9 @@ end
 
 array = []
 
-@items.each { |item| array << item.upcase.to_sym }
+@items.each do |item|
+  array << item.upcase.to_sym
+end
 
 pp array; puts
 
@@ -226,9 +225,7 @@ pp 'Ana'.tap { |name| puts "Hi, #{name.upcase}" }; puts
 
 
 class Array
-  def my_select
-    array = []
-
+  def my_select(*array)
     self.each do |item|
       array << item if yield(item)
     end; array
@@ -244,9 +241,7 @@ pp [ 1, 2, 3, 4, 5, 6 ].my_select { |element| element.even? }; puts
 
 
 module ModuleArray
-  def my_select
-    array = []
-
+  def my_select(*array)
     self.each do |item|
       array << item if yield(item)
     end; array

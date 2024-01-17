@@ -25,13 +25,13 @@ end
 
 
 result = MyApp.configure do |config|
-  config.app_id = 'my_app'
-  config.title = 'My App'
-  config.cookie_name = 'my_app_session'
+  config.app_id = 'app'
+  config.title  = 'App'
+  config.cookie_name = 'app_session'
 end
 
 pp result; puts
 
 pp MyApp.config; puts
 pp MyApp.config.title; puts
-pp MyApp.config.app_id = 'not_my_app'
+pp MyApp.config.app_id = 'not_app'

@@ -1,4 +1,8 @@
-result = { a: 1, b: 2, c: 3 }.reduce(0) { |sum, (key, value)| sum + value }
+params = { a: 1, b: 2, c: 3 }
+
+result = params.reduce(0) do |sum, (key, value)|
+  sum + value
+end
 pp result; puts
 
 
@@ -37,7 +41,9 @@ pp result; puts
 
 
 
-pp [{a: 1}, {b: 2}, {c: 3}].each_with_object({}) { |element, hash| hash.merge!(element) }; puts
+options = [{a: 1}, {b: 2}, {c: 3}]
+
+pp options.each_with_object({}) { |element, hash| hash.merge!(element) }; puts
 
 
 
@@ -70,7 +76,7 @@ pp result; puts
 
 
 
-words = %w{ cat sheep bear }
+words = %w[ cat sheep bear ]
 
 longest = words.reduce(words.first) do |memo, word|
   memo.length > word.length ? memo : word

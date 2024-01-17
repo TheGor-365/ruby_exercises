@@ -16,7 +16,7 @@ end
 
 result = MyApp.configure do |config|
   config.app_id = 'my_app'
-  config.title = 'My App'
+  config.title  = 'My App'
   config.cookie_name = 'my_app_session'
 end
 

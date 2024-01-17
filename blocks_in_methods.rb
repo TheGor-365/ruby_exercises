@@ -7,23 +7,19 @@ def collection_filter(collection, *result)
   end; result
 end
 
-pp collection_filter(numbers, &:even?); puts
+pp collection_filter(numbers, &:even?)
 pp collection_filter(numbers, &:odd?); puts
 
 
 
 
 
-result = []
-numbers.each do |element|
-  result << element.even?
-end
-pp result; puts
+evens = []
+numbers.each { |element| evens << element.even? }
+pp evens
 
 odds = []
-numbers.each do |element|
-  odds << element.odd?
-end
+numbers.each { |element| odds << element.odd? }
 pp odds; puts
 
 
@@ -31,17 +27,8 @@ pp odds; puts
 
 
 
-collection_filter numbers do |number|
-  pp number
-end; puts
 
-
-
-
-
-
-
-pp collection_filter(numbers, &:to_s); puts
+pp collection_filter(numbers, &:to_s)
 
 string = []
 numbers.each do |element|

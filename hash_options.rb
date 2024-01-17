@@ -1,7 +1,7 @@
 @book = {}
 
 def add_person(options)
-  puts 'Already exists' if @book[options[:name]]
+  pp 'Already exists' if @book[options[:name]]
 
   @book[options[:name]] = options[:age]
 end

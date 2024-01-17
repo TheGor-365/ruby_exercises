@@ -1,14 +1,13 @@
 module HexletCode
   class Tag
-    def self.build(name, **attributes)
+    def self.build(name, *result, **attributes)
       attributes = attributes.map { |attr, value| " #{attr}='#{value}'" }
-      result = []
 
       result << "<#{name}"
-      result << "#{attributes.join}"
-      result << ">" if !unpaired?(name)
-      result << "#{yield}" if block_given?
-      result << (unpaired?(name) ? ">" : "</#{name}>")
+      result << attributes.join
+      result << '>' unless unpaired?(name)
+      result << yield if block_given?
+      result << (unpaired?(name) ? '>' : "</#{name}>")
       result.join
     end
 

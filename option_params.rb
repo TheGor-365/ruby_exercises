@@ -1,7 +1,7 @@
 @hash = {}
 
 def add_person(options)
-  puts 'Already exists' if @hash[options[:name]]
+  pp 'Already exists' if @hash[options[:name]]
   @hash[options[:name]] = options[:age]
 end
 

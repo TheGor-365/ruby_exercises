@@ -32,7 +32,7 @@ class User
   end
 
   def get_full_name
-    name + " " + last_name
+    name + ' ' + last_name
   end
 
   attr_accessor :name, :last_name

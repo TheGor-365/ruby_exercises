@@ -4,7 +4,7 @@ class User
   end
 
   def hello
-    puts "Hello, #{@name}"
+    pp "Hello, #{@name}"
   end
 
   def method_missing(_)

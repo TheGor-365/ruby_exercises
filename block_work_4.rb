@@ -143,7 +143,7 @@ def greet(name)
   pp yield(name)
 end
 
-greet('Dave') { |person| "Hi #{person}!" }
+greet('Dave') { |person| "Hi #{person}" }
 greet('Dave') { |person| "#{person} says hello" }; puts
 
 
@@ -289,7 +289,7 @@ application = Application.new
 result = application.configure do |config|
   config.hostname = 'example.com'
   config.protocol = 'https'
-  config.theme = 'dark'
+  config.theme    = 'dark'
 end
 
 pp result

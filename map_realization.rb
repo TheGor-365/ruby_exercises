@@ -1,6 +1,4 @@
-def my_map(collection)
-  result = []
-
+def my_map(collection, *result)
   collection.each do |element|
     result << yield(element)
   end; result

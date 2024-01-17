@@ -1,8 +1,8 @@
 require 'pry-stack_explorer'
 
 def alpha
-  x = 'hello'
-  beta; pp x
+  greeting = 'hello'
+  beta; pp greeting
 end
 
 def beta

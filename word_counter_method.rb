@@ -21,7 +21,7 @@ end
 pp @hash; puts
 
 @hash.each do |name, value|
-  puts "#{value} #{name}"
+  pp "#{value} #{name}"
 end
 
 file.close

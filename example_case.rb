@@ -18,7 +18,7 @@ when 'add'
   title = gets.chomp
 
   if movies[title.to_sym].nil?
-    puts "What's the rating? (Type a number 0 to 4.)"
+    puts 'What is the rating? (Type a number 0 to 4)'
     rating = gets.chomp
     movies[title.to_sym] = rating.to_i
     puts "#{title} has been added with a rating of #{rating}"
@@ -32,7 +32,7 @@ when 'update'
   if movies[title.to_sym].nil?
     puts 'Movie not found'
   else
-    puts "What's the new rating? (Type a number 0 to 4.)"
+    puts 'What is the new rating? (Type a number 0 to 4)'
     rating = gets.chomp
     movies[title.to_sym] = rating.to_i
     puts "#{title} has been updated with new rating of #{rating}"

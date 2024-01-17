@@ -17,6 +17,5 @@ db.execute 'INSERT INTO Users (name) VALUES("user");'
 db.execute 'SELECT * FROM Users' do |row|
   print row['username']
   print "\t\t"
-  puts row['datestamp']
-  puts
+  puts row['datestamp']; puts
 end

@@ -13,6 +13,7 @@ barber = gets.strip
 print 'Enter you color: '
 color = gets.strip
 
+
 input = {
 	somename: 	username,
 	phone: 			phone,
@@ -20,6 +21,7 @@ input = {
 	barber: 		barber,
 	color: 			color
 }
+
 
 def validator(input)
 	params = {
@@ -32,11 +34,11 @@ def validator(input)
 
 	input.each do |name, value|
 		if input[name] == ''
-			puts params[name]
+			pp params[name]
 		end
 	end
 end
 
 
-input.each { |name, value| puts "#{name} #{value}" }
+input.each { |name, value| pp "#{name} #{value}" }
 validator input

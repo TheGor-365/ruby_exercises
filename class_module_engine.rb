@@ -12,5 +12,5 @@ end
 
 
 
+pp RandomEngine.get_random_value
 pp GameEngine.play
-pp RandomEngine.inspect

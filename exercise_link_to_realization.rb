@@ -12,4 +12,4 @@ end
 
 link = link_to 'link_name', '/url', class: 'link'
 
-puts link
+pp link

@@ -8,15 +8,8 @@ class Computer
   def initialize
     @memory = Memory.new
   end
-
-  # def write(data)
-  #   @memory.write data
-  # end
-
-  # def read(index)
-  #   @memory.read index
-  # end
 end
+
 
 class Memory
   def initialize

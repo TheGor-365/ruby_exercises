@@ -14,6 +14,5 @@ SQL
 db.execute 'INSERT INTO Users (name) VALUES("user");'
 
 db.execute 'SELECT * FROM Users' do |row|
-  puts row
-  puts
+  puts row;  puts
 end

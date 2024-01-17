@@ -24,7 +24,7 @@ module Model
       @attribute_options ||= {}
       @attribute_options[name] = options
 
-      define_method "#{name}" do
+      define_method name do
         @attributes[name]
       end
 

@@ -41,8 +41,8 @@ end
 
 
 result = MyApp.configure do
-  app_id "my_app"
-  title "My App"
+  app_id 'my_app'
+  title 'My App'
   cookie_name { "#{app_id}_session" }
 end
 

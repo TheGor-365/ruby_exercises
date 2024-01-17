@@ -4,27 +4,24 @@ module HexletCode
   autoload(:Tag, './class_form_generator_tags.rb')
 
   class << self
-    def form_for(struct, **form_attributes)
-      form = []
-
-      form_attributes = form_attributes.map do |attr, value|
+    def form_for(struct, *form, **attributes)
+      attributes = attributes.map do |attr, value|
         attr == :url ? "action='#{value}'" : "#{attr}='#{value}'"
       end
 
-      form << "<form "
-      form << (form_attributes.present? ? form_attributes.join(' ') : "method='post'")
+      form << '<form '
+      form << (attributes.present? ? attributes.join(' ') : "method='post'")
       form << ">\n  "
       form << "#{input(struct)}\n"
-      form << "</form>"
-
+      form << '</form>'
       form.join
     end
 
     def input(struct, *attributes)
-      input_tag = []
+      input = []
 
       struct.each_pair do |key, value|
-        define_method "#{key}" do
+        define_method key do
           attributes[key]
         end
         define_method "#{key}=" do |value|
@@ -33,11 +30,10 @@ module HexletCode
         attributes << "#{key}='#{value}'"
       end
 
-      input_tag << "<input "
-      input_tag << (attributes.present? ? attributes.join(' ') : "name='' method=''")
-      input_tag << ">"
-
-      input_tag.join
+      input << '<input '
+      input << (attributes.present? ? attributes.join(' ') : "name='' method=''")
+      input << '>'
+      input.join
     end
   end
 end
@@ -50,7 +46,7 @@ user = User.new(name: 'rob', job: 'hexlet', gender: 'm')
 
 html_1 = HexletCode.form_for user, url: 'true', method: 'get' do |f|
   f.input :name, class: 'eric'
-  # f.input :job
+  f.input :job
 end
 
 # <form action="#" method="post">

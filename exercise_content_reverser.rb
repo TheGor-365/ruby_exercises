@@ -1,4 +1,4 @@
-file = File.open 'trump.txt', 'r'
+file   = File.open 'trump.txt', 'r'
 @array = []
 
 file.each_line do |line|

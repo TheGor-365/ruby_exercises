@@ -41,17 +41,17 @@ tiger.attribute; puts
 
 
 
-print "\n" * 2 + "Tiger.class_variables" + "\n" + "-" * 80 + "\n"
+print "\n" * 2 + 'Tiger.class_variables' + "\n" + '-' * 80 + "\n"
 pp Tiger.class_variables
 
-print "\n" * 2 + "Tiger.ancestors" + "\n" + "-" * 80 + "\n"
+print "\n" * 2 + 'Tiger.ancestors' + "\n" + '-' * 80 + "\n"
 pp Tiger.ancestors
 
-print "\n" * 2 + "Tiger.include?(::Cat)" + "\n" + "-" * 80 + "\n"
+print "\n" * 2 + 'Tiger.include?(::Cat)' + "\n" + '-' * 80 + "\n"
 pp Tiger.include?(::Cat)
 
-print "\n" * 2 + "Tiger.included_modules" + "\n" + "-" * 80 + "\n"
+print "\n" * 2 + 'Tiger.included_modules' + "\n" + '-' * 80 + "\n"
 pp Tiger.included_modules
 
-print "\n" * 2 + "Tiger.class_variable_defined?(:@@r)" + "\n" + "-" * 80 + "\n"
+print "\n" * 2 + 'Tiger.class_variable_defined?(:@@r)' + "\n" + '-' * 80 + "\n"
 pp Tiger.class_variable_defined?(:@@r)

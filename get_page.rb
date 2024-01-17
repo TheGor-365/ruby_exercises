@@ -16,7 +16,7 @@ Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https', verify_mode:
   # cookie = response.response['set-cookie'].split('; ')[0]
 
   params = {
-    test: true,
+    test:  true,
     hello: 'world'
   }
 

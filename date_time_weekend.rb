@@ -1,4 +1,4 @@
-time = Time.now
+time     = Time.now
 week_day = time.wday
 
 case week_day
@@ -13,7 +13,7 @@ end
 
 
 if week_day == 0 || week_day == 1
-  pp "#{time.strtime("%H:%M")} #{week_day}: it's weekend"
+  pp "#{time.strtime('%H:%M')} #{week_day}: it's weekend"
 else
-  pp "Moscow #{time.strftime("%H:%M")}, #{week_day}: work, work, work"
+  pp "Moscow #{time.strftime('%H:%M')}, #{week_day}: work, work, work"
 end

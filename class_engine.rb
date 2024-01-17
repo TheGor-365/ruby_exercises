@@ -38,8 +38,9 @@ pp random_engine = RandomEngine.to_string; puts
 
 
 
-pp random_engine_2 = RandomEngine.new
-pp random_engine_2.third
+random_engine_2 = RandomEngine.new
+
+pp random_engine_2.third; puts
 pp random_engine_3 = RandomEngine.new.third; puts
 
 

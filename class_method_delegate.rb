@@ -26,8 +26,17 @@ class Memory
 end
 
 
+
 pp computer = Computer.new; puts
 
+
 pp computer.write 'Ruby'
-pp computer
+pp computer.write 'Java'
+pp computer.write 'Go'; puts
+
+
+pp computer; puts
+
+
 pp computer.read 0
+pp computer.read 2; puts

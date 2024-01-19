@@ -5,7 +5,7 @@ class Article
 
   upcase :title
   upcase :author
-  # upcase :chapter
+  upcase :chapter
 end
 
 
@@ -15,12 +15,13 @@ article = Article.new(
   author:  'John',
   chapter: 'first'
 )
+
 pp article; puts
+pp article.attributes; puts
 
 
 
 
-pp article.attributes
 pp article.title
 pp article.author; puts
 
@@ -43,6 +44,7 @@ pp article.author; puts
 article_3 = Article.new(title: 'Proper', author: 'Eric') do |param|
   param.title
 end
+
 pp article_3; puts
 
 

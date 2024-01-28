@@ -1,14 +1,14 @@
 class SomeClass
-  def self.some_class_method
+  def self.class_method
     self
   end
 
-  def some_instance_method
-    self.class.some_class_method
+  def instance_method
+    self.class.class_method
   end
 end
 
 
 
-pp SomeClass.some_class_method
-pp SomeClass.new.some_instance_method
+pp SomeClass.class_method
+pp SomeClass.new.instance_method

@@ -7,7 +7,7 @@ class Person
 
   def assign(attributes)
     attributes.each do |key, value|
-      instance_variable_set("@#{key}, value")
+      instance_variable_set("@#{key}", value)
     end
   end
 end
@@ -43,8 +43,8 @@ end
 
 
 class Person
-  def initialize(assigns)
-    assign(assigns)
+  def initialize(attributes)
+    assign(attributes)
   end
 
   private
@@ -58,5 +58,6 @@ end
 
 
 pp person = Person.new(name: 'Akshay', age: 31); puts
-pp person.instance_variable_get("@name")
-pp person.instance_variable_get("@age")
+
+pp person.instance_variable_get('@name')
+pp person.instance_variable_get('@age')

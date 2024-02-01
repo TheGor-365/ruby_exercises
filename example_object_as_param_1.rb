@@ -9,7 +9,7 @@ class AnotherClass
     @your_object = your_object
   end
 
-  def some_method(param=nil)
+  def some_method(param = nil)
     'Class: AnotherClass'
     @your_object ? @your_object.some_method : 'no object'
   end

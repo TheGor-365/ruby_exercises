@@ -1,11 +1,11 @@
 Customer = Struct.new(:name, :address) do
   def greeting
-    "Hello #{name}, from #{address}"
+    "hey #{name}, from #{address}"
   end
 end
 
 
-dave = Customer.new('Dave', '123 Main')
+dave = Customer.new('Dave', '23 Main Street')
 
 pp dave; puts
 

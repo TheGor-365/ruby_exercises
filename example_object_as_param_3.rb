@@ -3,13 +3,13 @@ class SomeClass
     update(:@param)
   end
 
- def update(param_name)
-   instance_variable_set(param_name, 1)
- end
+  def update(param_name)
+    instance_variable_set(param_name, 1)
+  end
 
- def print_param
-   @param * 10
- end
+  def print_param
+    @param.to_s
+  end
 end
 
 

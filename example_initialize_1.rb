@@ -1,19 +1,13 @@
 module First
-  def digit
-    1
-  end
+  def digit; 1; end
 end
 
 module Second
-  def digit
-    2
-  end
+  def digit; 2; end
 end
 
 module Third
-  def digit
-    3
-  end
+  def digit; 3; end
 end
 
 class Fourth

@@ -4,8 +4,9 @@ class RandomSequence
   end
 
   def each(*result)
-    result << 'in each'
+    result << 'start'
     @num.times { yield(rand.tap { |value| result << value.round(4) } * @limit) }
+    result << 'end'
     result
   end
 end
